@@ -6,7 +6,7 @@ description:      >
   shows some designs, publications, and open source codes that I've
   created. Feel free to email me if you have any ideas, questions, or requests.
 canonical: http://alexhagen.github.io
-baseurl:  /cv
+baseurl:  /
 
 # Owner/author information
 owner:
