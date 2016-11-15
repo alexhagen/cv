@@ -2,7 +2,7 @@
 layout: post-no-feature
 title: Cirriculum Vitae
 abbr: cv
-permalink: /cv/
+permalink: /
 bibs:
   authored:
     file: authored.html
