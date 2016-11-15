@@ -15,6 +15,9 @@ bibs:
 
 ---
 
+Download: [resume](resume.pdf)  |  [cv](cv.pdf)
+
+
 ## Education
 {: abbr='edu'}
 
