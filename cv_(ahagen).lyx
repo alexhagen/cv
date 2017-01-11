@@ -1,0 +1,793 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\frenchspacing
+\usepackage{amsmath}
+\usepackage{xcolor}
+\definecolor{newblack}{HTML}{285668}
+\definecolor{link}{HTML}{FC8D82}
+\definecolor{red}{HTML}{FC8D82}
+\definecolor{accent}{HTML}{FC8D82}
+
+\makeatletter
+\newcommand{\globalcolor}[1]{%
+  \color{#1}\global\let\default@color\current@color
+}
+\makeatother
+
+
+
+\usepackage{fancyheadings}
+\pagestyle{fancy}
+\renewcommand\headrule{\makebox[\textwidth]{\color{accent}\rule[10pt]{0.5\headwidth}{\headrulewidth}} \vskip-\headrulewidth}
+\chead{\texttt{\tiny{\color{newblack}Alex Hagen · Curriculum Vitae · \today}}}
+\lhead{}
+\rhead{}
+\fancypagestyle{firstpage}{%
+  \fancyhf{}%
+  \fancyhead[C]{}
+  \fancyfoot[C]{\thepage}%
+  \renewcommand{\headrulewidth}{0mm}%
+}  
+\AtBeginDocument{\globalcolor{newblack}\thispagestyle{firstpage}}
+
+\usepackage{titlesec}
+
+\titleformat{\section}
+  {\sffamily\bfseries}{\thesection}{0.5em}{}[{\color{accent}\titlerule[0.8pt]}]
+
+\titlespacing*{\section}
+{0pt}{5.5ex plus 1ex minus .2ex}{0.2ex plus .2ex}
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language american
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "Helvetica"
+\font_sans "default" "Baron Neue"
+\font_typewriter "default" "Monoid"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 10
+\spacing single
+\use_hyperref false
+\papersize letterpaper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plainnat
+\use_bibtopic true
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 0.75in
+\topmargin 0.6in
+\rightmargin 0.75in
+\bottommargin 0.6in
+\headsep 0.2in
+\footskip 0.2in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\bullet 0 0 34 -1
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\align center
+
+\family sans
+\series bold
+\size large
+\noun on
+Alex Hagen
+\family default
+\series default
+\noun default
+
+\begin_inset Newline newline
+\end_inset
+
+
+\family sans
+\size default
+Graduate Researcher
+\family default
+\size large
+
+\begin_inset Newline newline
+\end_inset
+
+
+\size small
+Metastable Fluid and Advanced Research Laboratory
+\begin_inset Newline newline
+\end_inset
+
+Purdue University Nuclear Engineering 
+\begin_inset Newline newline
+\end_inset
+
+Lafayette, Indiana 47904
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 8pt
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Education
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+2017 
+\noun on
+Purdue University
+\noun default
+
+\begin_inset Newline newline
+\end_inset
+
+
+\emph on
+Doctor of Philosophy in Nuclear Engineering, GPA 3.5, August 2017 (Projected)
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\noun on
+2014 Purdue University
+\noun default
+
+\begin_inset Newline newline
+\end_inset
+
+
+\emph on
+Master of Science in Nuclear Engineering, GPA 3.7, August 2014
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\noun on
+2012 Purdue University
+\noun default
+
+\begin_inset Newline newline
+\end_inset
+
+
+\emph on
+Bachelor of Science in Nuclear Engineering, GPA 3.5, May 2012
+\end_layout
+
+\begin_layout Section*
+Research Positions
+\end_layout
+
+\begin_layout Standard
+
+\family sans
+\series bold
+\size footnotesize
+\color red
+Objective of this section:
+\series default
+ To demonstrate my depth and breadth of experience in research type positions.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\noun on
+2012-Now 
+\emph on
+\noun default
+Graduate Researcher - Metastable Fluid Research Laboratory
+\begin_inset Newline newline
+\end_inset
+
+
+\emph default
+Developed methodology for validating multiphysics simulation of Acoustically
+ Tensioned Metastable Fluid Detector system, optimized system with design
+ of a sealing lid, and supported Centrifugally Tensioned Metastable Fluid
+ Detector research group with design and machine drawings
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+2010-12 
+\emph on
+Undergraduate Researcher - Metastable Fluid Research Laboratory
+\begin_inset Newline newline
+\end_inset
+
+
+\emph default
+Developed multiphysics simulation of Acoustically Tensioned Metastable Fluid
+ Detector system, evaulated gamma detection capabilities in Centrifugally
+ Tensioned Metastable Fluid Detector system, supported lab groups with machine
+ drawings and design
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\noun on
+Su.
+\begin_inset space ~
+\end_inset
+
+2011
+\noun default
+ 
+\emph on
+Undergraduate Laboratory Intern - Argonne National Laboratory Nuclear Engineerin
+g Division
+\begin_inset Newline newline
+\end_inset
+
+
+\emph default
+Validated NEAMES project multiphysics fission reactor simulation against
+ pre-existing neutronics codes (VARIANT, DIFF3D) and experimental data
+\end_layout
+
+\begin_layout Section*
+Industrial Positions
+\end_layout
+
+\begin_layout Standard
+
+\family sans
+\size small
+\color red
+Objective of this section: To demonstrate my knowledge of business and industria
+l practices, as well as to highlight my industrial design and CAD skill.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\noun on
+2009-10 
+\emph on
+\noun default
+Industrial Design Assistant - Steiner Enterprises
+\begin_inset Newline newline
+\end_inset
+
+
+\emph default
+Performed development from concept and CAD design of over 10 products in
+ the science education field as main designer.
+ Helped revise and interate on design of over 100 additional products.
+ Created production reports for quality assurance of manufacturing for these
+ products.
+ Main portfolio products include a Van De Graff generator, an Electrophoresis
+ Chamber, and a Centripetal Motion Testing apparatus.
+\end_layout
+
+\begin_layout Section*
+Academic Positions
+\end_layout
+
+\begin_layout Standard
+
+\family sans
+\size small
+\color red
+Objective of this section: To display the variety of positions I have held
+ requiring teaching, speaking, or interaction with students and the public.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\noun on
+2015 
+\emph on
+\noun default
+Mentor for Two Jefferson High School Students
+\begin_inset Newline newline
+\end_inset
+
+
+\emph default
+Coordinated with and mentored Jefferson High School students to complete
+ projects involving acoustic cavitation detection and alternative centrifugal
+ metastable fluid detector manufacturing to compete at the Purdue Regional
+ Science Fair (a fair that leads into the Intel International Science and
+ Engineering Fair).
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Fa.
+\noun on
+
+\begin_inset space ~
+\end_inset
+
+2014 
+\emph on
+\noun default
+Grader - NUCL 402 - Nuclear Power Systems
+\begin_inset Newline newline
+\end_inset
+
+
+\emph default
+Graded homeworks and tests, held weekly office hours, taught class several
+ times, held exam review sessions
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+Nominated and received most votes for Magoon Teaching Assistant Award
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Fa.
+\noun on
+
+\begin_inset space ~
+\end_inset
+
+2014 
+\emph on
+\noun default
+Tutor - NUCL 510 - Reactor Physics
+\begin_inset Newline newline
+\end_inset
+
+
+\emph default
+Helped prepare student who was struggling for first and second exam in Reactor
+ Physics Course
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\noun on
+Su.
+\begin_inset space ~
+\end_inset
+
+2014
+\noun default
+ 
+\emph on
+Summer Undergraduate Research Fellowship Graduate Assistant
+\begin_inset Newline newline
+\end_inset
+
+
+\emph default
+Interacted with students in the SURF program, planned and implemented profession
+al development seminars
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\noun on
+Sp.
+\begin_inset space ~
+\end_inset
+
+2014
+\noun default
+ 
+\emph on
+Teaching Assistant - NUCL 310 - Introduction to Nuclear Reactor Theory
+\emph default
+
+\begin_inset Newline newline
+\end_inset
+
+Graded homeworks and tests, held twice weekly office hours to help students,
+ taught class several times
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Fa.
+\noun on
+
+\begin_inset space ~
+\end_inset
+
+2013 
+\emph on
+\noun default
+Mentor for Jefferson High School Student
+\begin_inset Newline newline
+\end_inset
+
+
+\emph default
+Coordinated with and mentored a Jefferson High School student to complete
+ a project involving laser induced cavitation and pressure profilimetry
+ to compete at the Purdue Regional Science Fair (a fair that leads into
+ the Intel International Science and Engineering Fair).
+ Student won a gold medal for the engineering division at the fair.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\noun on
+Fa.
+\begin_inset space ~
+\end_inset
+
+2013
+\noun default
+ 
+\emph on
+Teaching Assistant - NUCL 300 - Nuclear Structure and Radiation Interactions
+\emph default
+
+\begin_inset Newline newline
+\end_inset
+
+Graded homeworks and tests, held weekly office hours to help students, taught
+ class several times
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+Nominated for Magoon Teaching Assistant Award
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\noun on
+Fa.
+\begin_inset space ~
+\end_inset
+
+2012
+\noun default
+ 
+\emph on
+Grader - NUCL 300 - Nuclear Structure and Radiation Interactions
+\emph default
+
+\begin_inset Newline newline
+\end_inset
+
+Graded homeworks and tests, taught class several times
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\noun on
+Fa.
+\begin_inset space ~
+\end_inset
+
+2012
+\noun default
+ 
+\emph on
+Grader - NUCL 200 - Introduction to Nuclear Engineering
+\emph default
+
+\begin_inset Newline newline
+\end_inset
+
+Graded homeworks and tests
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+Fa.
+\noun on
+
+\begin_inset space ~
+\end_inset
+
+2011 
+\emph on
+\noun default
+Mentor for Jefferson High School Student
+\begin_inset Newline newline
+\end_inset
+
+
+\emph default
+Coordinated with and mentored a Jefferson High School student to complete
+ a project involving 
+\begin_inset Formula $\left(\gamma,n\right)$
+\end_inset
+
+ production and detection to compete at the Purdue Regional Science Fair
+ (a fair that leads into the Intel International Science and Engineering
+ Fair).
+ Student won a gold medal for the engineering division at the fair.
+\end_layout
+
+\begin_layout Section*
+Selected Articles and Thesis
+\end_layout
+
+\begin_layout Standard
+
+\family sans
+\size small
+\color red
+Objective of this section: To demonstrate my involvement in valuable work
+ to the scientific community, especially those projects where I have lead.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintAll"
+bibfiles "/Users/ahagen/bibs/authored"
+options "plain"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Recognition
+\end_layout
+
+\begin_layout Standard
+
+\family sans
+\size small
+\color red
+Objective of this section: To demonstrate my success relative to others
+ in the same fields as I.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring MMMMM
+2014 
+\emph on
+Best Poster Award at ICONE 15
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring MMMMM
+2014 
+\emph on
+Best Paper Award at ICONE 15
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring MMMMM
+2014 
+\emph on
+Nominated and received most votes for Magoon Teaching Excellence Teaching
+ Assistant Award
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring MMMMM
+2013 
+\emph on
+Nominated for Magoon Teaching Excellence Teaching Assistant Award
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring MMMMM
+2007 
+\emph on
+National Merit Scholar
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring MMMMM
+2006-07 
+\emph on
+Indiana Delegate for International Science and Engineering Fair
+\end_layout
+
+\begin_layout Section*
+Leadership Positions
+\end_layout
+
+\begin_layout Standard
+
+\family sans
+\size small
+\color red
+Objective of this section: To show positions, whether elected or appointed,
+ in which I have been trusted to lead peers and colleagues.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring MMMMM
+2015-16 
+\emph on
+President of Nuclear Engineering Graduate Organization
+\emph default
+
+\begin_inset Newline newline
+\end_inset
+
+Planned and implemented programs including Health and Wellness 5 Foods Cooking
+ Demo, Qualification Exams lunch, and Faculty Mentorship awards
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring MMMMM
+2015-16 
+\emph on
+Clerk of Purdue Graduate Student Government
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring MMMMM
+2014-15 
+\emph on
+Assistant Coach - Tippco U14 Girls Soccer Team
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring MMMMM
+2014-16 
+\emph on
+Co-Chair of Purdue Graduate Student Government's Advancment Committee
+\begin_inset Newline newline
+\end_inset
+
+
+\emph default
+Planned and implemented volunteerism programs including Adopt a Highway
+ cleanup, Food Drive Movie Night, Pi Day Celebration with Imagination Station,
+ and Books for Liberia book retrieval and shipment to Monrovia
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring MMMMM
+2013-16 
+\emph on
+Senator (Representing Nuclear Engineering) in Purdue Graduate Student Government
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring MMMMM
+2014-15 
+\emph on
+Vice President of Nuclear Engineering Graduate Organization
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring MMMMM
+2013 
+\emph on
+Color Commentator for High School Soccer Games for Walton Webcasting
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring MMMMM
+2011-12 
+\emph on
+President of Purdue University Men's Club Soccer
+\begin_inset Newline newline
+\end_inset
+
+
+\emph default
+Scheduled competitive season of games through Midwest American Soccer League
+ and complied with university guidelines for competition and transportation
+ to and from games.
+ Worked alongside a faculty advisor to perform a coaching search, interviewed
+ candidates and finally hired coach.
+ Lead 50% of practices.
+ Designed and sold apparel and merchandise advertising team.
+\end_layout
+
+\begin_layout Section*
+Afiliations
+\end_layout
+
+\begin_layout Itemize
+American Nuclear Society
+\end_layout
+
+\begin_layout Itemize
+Nuclear Engineering Graduate Organization
+\end_layout
+
+\begin_layout Itemize
+American Society of Mechanical Engineers
+\end_layout
+
+\begin_layout Section*
+Biometrics
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $VO_{2}\mathrm{max}$
+\end_inset
+
+ of 
+\begin_inset Formula $50$
+\end_inset
+
+ - judged by workout metrics
+\end_layout
+
+\begin_layout Section*
+Teamwork
+\end_layout
+
+\begin_layout Section*
+Mechatronics
+\end_layout
+
+\end_body
+\end_document
