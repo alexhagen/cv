@@ -13,11 +13,48 @@
 \usepackage{fancyheadings}
 \pagestyle{fancy}
 \chead{\textit{Alex Hagen · Resume · \today}}
-\usepackage{mathpazo}
-\usepackage{bibtopic}
+
+\usepackage[backend=biber,defernumbers=true,%
+            firstinits=true,%
+            isbn=false, url=false, doi=false,%
+            eprint=false, maxnames=99]{biblatex}
 \AtBeginDocument{\thispagestyle{empty}}
+\addbibresource{/home/ahagen/bibs/authored.bib}
+
+\def\makenamesetup{%
+  \def\bibnamedelima{~}%
+  \def\bibnamedelimb{ }%
+  \def\bibnamedelimc{ }%
+  \def\bibnamedelimd{ }%
+  \def\bibnamedelimi{ }%
+  \def\bibinitperiod{.}%
+  \def\bibinitdelim{~}%
+  \def\bibinithyphendelim{.-}}    
+\newcommand*{\makename}[2]{\begingroup\makenamesetup\xdef#1{#2}\endgroup}
+
+\newcommand*{\boldname}[3]{%
+  \def\lastname{#1}%
+  \def\firstname{#2}%
+  \def\firstinit{#3}}
+\boldname{}{}{}
+
+% Patch new definitions
+\renewcommand{\mkbibnamegiven}[1]{%
+  \ifboolexpr{ ( test {\ifdefequal{\firstname}{\namepartgiven}} or test {\ifdefequal{\firstinit}{\namepartgiven}} ) and test {\ifdefequal{\lastname}{\namepartfamily}} }
+  {\mkbibbold{#1}}{#1}%
+}
+
+\renewcommand{\mkbibnamefamily}[1]{%
+  \ifboolexpr{ ( test {\ifdefequal{\firstname}{\namepartgiven}} or test {\ifdefequal{\firstinit}{\namepartgiven}} ) and test {\ifdefequal{\lastname}{\namepartfamily}} }
+  {\mkbibbold{#1}}{#1}%
+}
+
+\boldname{Hagen}{Alexander}{A.}
 \end_preamble
 \use_default_options false
+\begin_modules
+biblatex
+\end_modules
 \maintain_unincluded_children false
 \language american
 \language_package default
@@ -36,7 +73,7 @@
 \graphics default
 \default_output_format default
 \output_sync 0
-\bibtex_command default
+\bibtex_command biber
 \index_command default
 \paperfontsize 11
 \spacing single
@@ -55,8 +92,8 @@
 \use_package undertilde 0
 \cite_engine basic
 \cite_engine_type default
-\biblio_style plainnat
-\use_bibtopic true
+\biblio_style 
+\use_bibtopic false
 \use_indices false
 \paperorientation portrait
 \suppress_date false
@@ -91,9 +128,10 @@
 \begin_layout Standard
 \align center
 
-\size large
+\size larger
 \noun on
 Alex Hagen
+\size large
 \noun default
 
 \begin_inset Newline newline
@@ -300,7 +338,13 @@ Performed design, CAD, and prototyping duties as part of a design team of
 \begin_layout Standard
 
 \series bold
-Honors and Awards
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Teaching Roles
 \begin_inset Newline newline
 \end_inset
 
@@ -316,11 +360,23 @@ height "1pt"
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset VSpace -13pt
 \end_inset
 
 
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+2016 Mentor for Jefferson High School Student
+\begin_inset Newline newline
+\end_inset
+
+Again mentored a Jeffereson High School student in preparing a project for
+ the Purdue Regional Science Fair.
+ The project involved simulation of energy thresholds for cavitation in
+ a centrifugally tensioned metastable fluid detector.
 \end_layout
 
 \begin_layout Labeling
@@ -336,11 +392,12 @@ Mentor for Two Jefferson High School Students
 
 
 \emph default
-Coordinated with and mentored Jefferson High School students to complete
- projects involving acoustic cavitation detection and alternative centrifugal
- metastable fluid detector manufacturing to compete at the Purdue Regional
- Science Fair (a fair that leads into the Intel International Science and
- Engineering Fair).
+Mentored Jefferson High School students to complete projects involving acoustic
+ cavitation detection and alternative centrifugal metastable fluid detector
+ manufacturing to compete at the Purdue Regional Science Fair.
+ Students received a Gold Medal in the engineering category, a Silver Medal
+ in the mathematics and computer science category, and a United States Navy
+ Award.
 \end_layout
 
 \begin_layout Labeling
@@ -452,11 +509,11 @@ Mentor for Jefferson High School Student
 
 
 \emph default
-Coordinated with and mentored a Jefferson High School student to complete
- a project involving laser induced cavitation and pressure profilimetry
- to compete at the Purdue Regional Science Fair (a fair that leads into
- the Intel International Science and Engineering Fair).
- Student won a gold medal for the engineering division at the fair.
+Mentored a Jefferson High School student to complete a project involving
+ laser induced cavitation and pressure profilimetry to compete at the Purdue
+ Regional Science Fair (a fair that leads into the Intel International Science
+ and Engineering Fair).
+ Student won a Gold Medal for the engineering division at the fair.
 \end_layout
 
 \begin_layout Labeling
@@ -546,8 +603,8 @@ Mentor for Jefferson High School Student
 
 
 \emph default
-Coordinated with and mentored a Jefferson High School student to complete
- a project involving 
+Mentored a Jefferson High School student to complete a project involving
+ 
 \begin_inset Formula $\left(\gamma,n\right)$
 \end_inset
 
@@ -557,10 +614,15 @@ Coordinated with and mentored a Jefferson High School student to complete
  Student won a gold medal for the engineering division at the fair.
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 
 \series bold
-Honors and Awards
+Selected Publications
 \begin_inset Newline newline
 \end_inset
 
@@ -583,20 +645,281 @@ height "1pt"
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Note Note
+\begin_layout Itemize
+\begin_inset Note Comment
 status open
 
 \begin_layout Plain Layout
-\begin_inset CommandInset bibtex
-LatexCommand bibtex
-btprint "btPrintAll"
-bibfiles "C:/Users/Alex/bibs/authored"
-options "plain"
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Archambault2016d"
 
 \end_inset
 
 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+fullcite{Archambault2016d}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hagen2015b"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+fullcite{Hagen2015b}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hagen2014a"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+fullcite{Hagen2014a}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Taleyarkhan2013"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+fullcite{Taleyarkhan2013}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Selected Conference Publications and Presentations
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100line%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -13pt
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hagen2016a"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+fullcite{Hagen2016a}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Archambault2016c"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+fullcite{Archambault2016c}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hagen2014"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+fullcite{Hagen2014}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Webster2014"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+fullcite{Webster2014}
 \end_layout
 
 \end_inset
@@ -640,7 +963,20 @@ November
 
 2016 
 \noun default
-ANS Young Member's Group Best Paper
+ANS Winter Meeting Best Paper Award
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\noun on
+November
+\begin_inset space ~
+\end_inset
+
+2016 
+\noun default
+ANS Young Member's Group Best Paper Award
 \end_layout
 
 \begin_layout Labeling
@@ -653,7 +989,7 @@ October
 
 2016 
 \noun default
-IEEE Sensors Conference 1st Prize Demo
+IEEE Sensors Conference Demonstration 1st Prize
 \end_layout
 
 \begin_layout Labeling
@@ -745,7 +1081,7 @@ April
 \begin_layout Standard
 
 \series bold
-Additional Experience
+Leadership Roles
 \begin_inset Newline newline
 \end_inset
 
@@ -766,6 +1102,27 @@ height "1pt"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\noun on
+August
+\begin_inset space \space{}
+\end_inset
+
+2012
+\begin_inset space \space{}
+\end_inset
+
+-
+\begin_inset space \space{}
+\end_inset
+
+Present
+\noun default
+ President/Officer of NEGO (Nuclear Engineering Graduate Organization)
 \end_layout
 
 \begin_layout Labeling
@@ -822,27 +1179,6 @@ May
 \labelwidthstring 00.00.0000
 
 \noun on
-August
-\begin_inset space \space{}
-\end_inset
-
-2012
-\begin_inset space \space{}
-\end_inset
-
--
-\begin_inset space \space{}
-\end_inset
-
-Present
-\noun default
- President/Officer of NEGO (Nuclear Engineering Graduate Organization)
-\end_layout
-
-\begin_layout Labeling
-\labelwidthstring 00.00.0000
-
-\noun on
 Nov
 \begin_inset space \space{}
 \end_inset
@@ -891,6 +1227,27 @@ American Society of Mechanical Engineers (ASME) National Student Member
 \begin_layout Itemize
 Institute of Electrical and Electronics Engineers (IEEE) National Student
  Member
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintAll"
+bibfiles "/home/ahagen/bibs/authored"
+options "plain"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body
