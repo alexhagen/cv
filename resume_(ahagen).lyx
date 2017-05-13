@@ -19,7 +19,7 @@
             isbn=false, url=false, doi=false,%
             eprint=false, maxnames=99]{biblatex}
 \AtBeginDocument{\thispagestyle{empty}}
-\addbibresource{/home/ahagen/bibs/authored.bib}
+\addbibresource{/Users/ahagen/bibs/authored.bib}
 
 \def\makenamesetup{%
   \def\bibnamedelima{~}%
@@ -138,12 +138,20 @@ Alex Hagen
 \end_inset
 
 
+\shape slanted
 \emph on
+\color gray
 (765)-418-4155
 \begin_inset Newline newline
 \end_inset
 
 ahagen@purdue.edu
+\begin_inset Newline newline
+\end_inset
+
+
+\size small
+http://alexhagen.github.io/portfolio
 \end_layout
 
 \begin_layout Standard
@@ -1237,7 +1245,7 @@ status open
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 btprint "btPrintAll"
-bibfiles "/home/ahagen/bibs/authored"
+bibfiles "/Users/ahagen/bibs/authored"
 options "plain"
 
 \end_inset
