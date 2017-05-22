@@ -15,7 +15,7 @@
 \chead{\textit{Alex Hagen · Resume · \today}}
 
 \usepackage[backend=biber,defernumbers=true,%
-            firstinits=true,%
+            firstinits=true, language=english,%
             isbn=false, url=false, doi=false,%
             eprint=false, maxnames=99]{biblatex}
 \AtBeginDocument{\thispagestyle{empty}}
@@ -50,6 +50,18 @@
 }
 
 \boldname{Hagen}{Alexander}{A.}
+\usepackage{xcolor}
+\definecolor{black}{HTML}{142735}
+\definecolor{blue}{HTML}{285668}
+\definecolor{grey}{HTML}{999999}
+\definecolor{darkgrey}{HTML}{285668}
+\makeatletter
+\newcommand{\globalcolor}[1]{%
+  \color{#1}\global\let\default@color\current@color
+}
+\makeatother
+
+\AtBeginDocument{\globalcolor{black}}
 \end_preamble
 \use_default_options false
 \begin_modules
@@ -60,12 +72,12 @@ biblatex
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman "default" "default"
-\font_sans "default" "default"
+\font_roman "default" "Crimson Text [PfEd]"
+\font_sans "default" "Source Sans Pro"
 \font_typewriter "default" "default"
 \font_math "auto" "auto"
 \font_default_family default
-\use_non_tex_fonts false
+\use_non_tex_fonts true
 \font_sc false
 \font_osf false
 \font_sf_scale 100 100
@@ -111,7 +123,7 @@ biblatex
 \tocdepth 3
 \paragraph_separation skip
 \defskip medskip
-\quotes_language english
+\quotes_language swedish
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -128,11 +140,17 @@ biblatex
 \begin_layout Standard
 \align center
 
+\family sans
+\series bold
 \size larger
 \noun on
-Alex Hagen
+\color black
+ALEX HAGEN
+\family default
+\series default
 \size large
 \noun default
+\color inherit
 
 \begin_inset Newline newline
 \end_inset
@@ -140,7 +158,7 @@ Alex Hagen
 
 \shape slanted
 \emph on
-\color gray
+\color blue
 (765)-418-4155
 \begin_inset Newline newline
 \end_inset
@@ -155,7 +173,7 @@ http://alexhagen.github.io/portfolio
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace 5pt
+\begin_inset VSpace 1pt
 \end_inset
 
 
@@ -163,9 +181,15 @@ http://alexhagen.github.io/portfolio
 
 \begin_layout Standard
 
+\family sans
 \series bold
-Education
-\series default
+\color black
+EDUCATION
+\color inherit
+
+\begin_inset VSpace -10pt
+\end_inset
+
 
 \begin_inset Newline newline
 \end_inset
@@ -183,7 +207,7 @@ height "1pt"
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace -13pt
+\begin_inset VSpace -20pt
 \end_inset
 
 
@@ -191,7 +215,11 @@ height "1pt"
 
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
-2016 
+
+\noun on
+2009-Current
+\noun default
+ 
 \noun on
 Purdue University
 \noun default
@@ -210,14 +238,36 @@ Master of Science in Nuclear Engineering, GPA 3.7, August 2014
 \begin_inset Newline newline
 \end_inset
 
+
+\color white
+a
+\color blue
+
+\begin_inset space \qquad{}
+\end_inset
+
+Concentration in Computational Science and Engineering
+\color inherit
+
+\begin_inset Newline newline
+\end_inset
+
 Bachelor of Science in Nuclear Engineering, GPA 3.5, May 2012
 \end_layout
 
 \begin_layout Standard
 
+\family sans
 \series bold
-Research Positions
+\color black
+RESEARCH POSITIONS
+\family default
 \series default
+\color inherit
+
+\begin_inset VSpace -10pt
+\end_inset
+
 
 \begin_inset Newline newline
 \end_inset
@@ -235,7 +285,7 @@ height "1pt"
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace -13pt
+\begin_inset VSpace -20pt
 \end_inset
 
 
@@ -254,11 +304,14 @@ Graduate Researcher - Metastable Fluid Research Laboratory
 
 
 \emph default
-Proving efficiency of Tensioned Metastable Fluid Detectors for us in active
- interrogation schemes under DNDO grant, developing methodology for validating
+Worked towards interdiction and detection of smuggled special nuclear material
+ at borders.
+ Improved efficacy of Tensioned Metastable Fluid Detectors for use in active
+ interrogation schemes under DNDO grant, developed methodology for validating
  multiphysics simulation of Acoustically Tensioned Metastable Fluid Detector
- system, and supported Centrifugally Tensioned Metastable Fluid Detector
- research group with design and machine drawings
+ systems, and designed Centrifugally Tensioned Metastable Fluid Detector
+ system with machine design, nuclear particle simulation, firmware and hardware
+ development, and characterization for passive interrogation.
 \end_layout
 
 \begin_layout Labeling
@@ -280,15 +333,22 @@ g Division
 
 
 \emph default
-Validated NEAMES project multiphysics fission reactor simulation against
- pre-existing neutronics codes (VARIANT, DIFF3D) and experimental data
+Supported team simulating and developing next generation fast fission reactors.
+ Validated multiphysics fission reactor simulation against legacy neutronics
+ codes and experimental data.
 \end_layout
 
 \begin_layout Standard
 
+\family sans
 \series bold
-Industrial Experience
+INDUSTRIAL EXPERIENCE
+\family default
 \series default
+
+\begin_inset VSpace -10pt
+\end_inset
+
 
 \begin_inset Newline newline
 \end_inset
@@ -306,7 +366,7 @@ height "1pt"
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace -13pt
+\begin_inset VSpace -20pt
 \end_inset
 
 
@@ -345,292 +405,16 @@ Performed design, CAD, and prototyping duties as part of a design team of
 
 \begin_layout Standard
 
+\family sans
 \series bold
-\begin_inset Note Note
-status open
+SELECTED PUBLICATIONS
+\family default
+\series default
 
-\begin_layout Plain Layout
-
-\series bold
-Teaching Roles
-\begin_inset Newline newline
+\begin_inset VSpace -10pt
 \end_inset
 
 
-\begin_inset CommandInset line
-LatexCommand rule
-offset "0.5ex"
-width "100line%"
-height "1pt"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset VSpace -13pt
-\end_inset
-
-
-\end_layout
-
-\begin_layout Labeling
-\labelwidthstring 00.00.0000
-2016 Mentor for Jefferson High School Student
-\begin_inset Newline newline
-\end_inset
-
-Again mentored a Jeffereson High School student in preparing a project for
- the Purdue Regional Science Fair.
- The project involved simulation of energy thresholds for cavitation in
- a centrifugally tensioned metastable fluid detector.
-\end_layout
-
-\begin_layout Labeling
-\labelwidthstring 00.00.0000
-
-\noun on
-2015 
-\emph on
-\noun default
-Mentor for Two Jefferson High School Students
-\begin_inset Newline newline
-\end_inset
-
-
-\emph default
-Mentored Jefferson High School students to complete projects involving acoustic
- cavitation detection and alternative centrifugal metastable fluid detector
- manufacturing to compete at the Purdue Regional Science Fair.
- Students received a Gold Medal in the engineering category, a Silver Medal
- in the mathematics and computer science category, and a United States Navy
- Award.
-\end_layout
-
-\begin_layout Labeling
-\labelwidthstring 00.00.0000
-Fa.
-\noun on
-
-\begin_inset space ~
-\end_inset
-
-2014 
-\emph on
-\noun default
-Grader - NUCL 402 - Nuclear Power Systems
-\begin_inset Newline newline
-\end_inset
-
-
-\emph default
-Graded homeworks and tests, held weekly office hours, taught class several
- times, held exam review sessions
-\begin_inset Newline newline
-\end_inset
-
-
-\series bold
-Nominated and received most votes for Magoon Teaching Assistant Award
-\end_layout
-
-\begin_layout Labeling
-\labelwidthstring 00.00.0000
-Fa.
-\noun on
-
-\begin_inset space ~
-\end_inset
-
-2014 
-\emph on
-\noun default
-Tutor - NUCL 510 - Reactor Physics
-\begin_inset Newline newline
-\end_inset
-
-
-\emph default
-Helped prepare student who was struggling for first and second exam in Reactor
- Physics Course
-\end_layout
-
-\begin_layout Labeling
-\labelwidthstring 00.00.0000
-
-\noun on
-Su.
-\begin_inset space ~
-\end_inset
-
-2014
-\noun default
- 
-\emph on
-Summer Undergraduate Research Fellowship Graduate Assistant
-\begin_inset Newline newline
-\end_inset
-
-
-\emph default
-Interacted with students in the SURF program, planned and implemented profession
-al development seminars
-\end_layout
-
-\begin_layout Labeling
-\labelwidthstring 00.00.0000
-
-\noun on
-Sp.
-\begin_inset space ~
-\end_inset
-
-2014
-\noun default
- 
-\emph on
-Teaching Assistant - NUCL 310 - Introduction to Nuclear Reactor Theory
-\emph default
-
-\begin_inset Newline newline
-\end_inset
-
-Graded homeworks and tests, held twice weekly office hours to help students,
- taught class several times
-\end_layout
-
-\begin_layout Labeling
-\labelwidthstring 00.00.0000
-Fa.
-\noun on
-
-\begin_inset space ~
-\end_inset
-
-2013 
-\emph on
-\noun default
-Mentor for Jefferson High School Student
-\begin_inset Newline newline
-\end_inset
-
-
-\emph default
-Mentored a Jefferson High School student to complete a project involving
- laser induced cavitation and pressure profilimetry to compete at the Purdue
- Regional Science Fair (a fair that leads into the Intel International Science
- and Engineering Fair).
- Student won a Gold Medal for the engineering division at the fair.
-\end_layout
-
-\begin_layout Labeling
-\labelwidthstring 00.00.0000
-
-\noun on
-Fa.
-\begin_inset space ~
-\end_inset
-
-2013
-\noun default
- 
-\emph on
-Teaching Assistant - NUCL 300 - Nuclear Structure and Radiation Interactions
-\emph default
-
-\begin_inset Newline newline
-\end_inset
-
-Graded homeworks and tests, held weekly office hours to help students, taught
- class several times
-\begin_inset Newline newline
-\end_inset
-
-
-\series bold
-Nominated for Magoon Teaching Assistant Award
-\end_layout
-
-\begin_layout Labeling
-\labelwidthstring 00.00.0000
-
-\noun on
-Fa.
-\begin_inset space ~
-\end_inset
-
-2012
-\noun default
- 
-\emph on
-Grader - NUCL 300 - Nuclear Structure and Radiation Interactions
-\emph default
-
-\begin_inset Newline newline
-\end_inset
-
-Graded homeworks and tests, taught class several times
-\end_layout
-
-\begin_layout Labeling
-\labelwidthstring 00.00.0000
-
-\noun on
-Fa.
-\begin_inset space ~
-\end_inset
-
-2012
-\noun default
- 
-\emph on
-Grader - NUCL 200 - Introduction to Nuclear Engineering
-\emph default
-
-\begin_inset Newline newline
-\end_inset
-
-Graded homeworks and tests
-\end_layout
-
-\begin_layout Labeling
-\labelwidthstring 00.00.0000
-Fa.
-\noun on
-
-\begin_inset space ~
-\end_inset
-
-2011 
-\emph on
-\noun default
-Mentor for Jefferson High School Student
-\begin_inset Newline newline
-\end_inset
-
-
-\emph default
-Mentored a Jefferson High School student to complete a project involving
- 
-\begin_inset Formula $\left(\gamma,n\right)$
-\end_inset
-
- production and detection to compete at the Purdue Regional Science Fair
- (a fair that leads into the Intel International Science and Engineering
- Fair).
- Student won a gold medal for the engineering division at the fair.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-Selected Publications
 \begin_inset Newline newline
 \end_inset
 
@@ -647,7 +431,7 @@ height "1pt"
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace -13pt
+\begin_inset VSpace -20pt
 \end_inset
 
 
@@ -782,9 +566,24 @@ fullcite{Taleyarkhan2013}
 \end_layout
 
 \begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
 
+
+\end_layout
+
+\begin_layout Standard
+
+\family sans
 \series bold
-Selected Conference Publications and Presentations
+SELECTED CONFERENCE PUBLICATIONS AND PRESENTATIONS
+\family default
+\series default
+
+\begin_inset VSpace -10pt
+\end_inset
+
+
 \begin_inset Newline newline
 \end_inset
 
@@ -801,7 +600,7 @@ height "1pt"
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace -13pt
+\begin_inset VSpace -20pt
 \end_inset
 
 
@@ -937,8 +736,16 @@ fullcite{Webster2014}
 
 \begin_layout Standard
 
+\family sans
 \series bold
-Honors and Awards
+HONORS AND AWARDS
+\family default
+\series default
+
+\begin_inset VSpace -10pt
+\end_inset
+
+
 \begin_inset Newline newline
 \end_inset
 
@@ -955,10 +762,23 @@ height "1pt"
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace -13pt
+\begin_inset VSpace -20pt
 \end_inset
 
 
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\noun on
+May
+\begin_inset space ~
+\end_inset
+
+2017
+\noun default
+ Department of Energy Innovation in Nuclear Technology R&D Award
 \end_layout
 
 \begin_layout Labeling
@@ -1088,8 +908,16 @@ April
 
 \begin_layout Standard
 
+\family sans
 \series bold
-Leadership Roles
+LEADERSHIP ROLES
+\family default
+\series default
+
+\begin_inset VSpace -10pt
+\end_inset
+
+
 \begin_inset Newline newline
 \end_inset
 
@@ -1106,7 +934,7 @@ height "1pt"
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace -13pt
+\begin_inset VSpace -20pt
 \end_inset
 
 
@@ -1128,7 +956,11 @@ August
 \begin_inset space \space{}
 \end_inset
 
-Present
+May
+\begin_inset space ~
+\end_inset
+
+2017
 \noun default
  President/Officer of NEGO (Nuclear Engineering Graduate Organization)
 \end_layout
@@ -1198,9 +1030,15 @@ Nov
 
 \begin_layout Standard
 
+\family sans
 \series bold
-Professional Associations
+PROFESSIONAL ASSOCIATIONS
+\family default
 \series default
+
+\begin_inset VSpace -10pt
+\end_inset
+
 
 \begin_inset Newline newline
 \end_inset
@@ -1218,7 +1056,7 @@ height "1pt"
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace -13pt
+\begin_inset VSpace -20pt
 \end_inset
 
 

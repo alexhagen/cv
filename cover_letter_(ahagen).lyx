@@ -1,0 +1,347 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass letter
+\begin_preamble
+\frenchspacing
+\usepackage{amsmath}
+\newcommand{\ø}{\raisebox{.3ex}{\tiny$\; \bullet \;$}}
+\renewcommand{\arraystretch}{1.25}
+\usepackage{fancyheadings}
+\pagestyle{fancy}
+\chead{\textit{\today}}
+
+\usepackage[backend=biber,defernumbers=true,%
+            firstinits=true, language=english,%
+            isbn=false, url=false, doi=false,%
+            eprint=false, maxnames=99]{biblatex}
+\AtBeginDocument{\thispagestyle{empty}}
+\addbibresource{/home/ahagen/bibs/authored.bib}
+
+\def\makenamesetup{%
+  \def\bibnamedelima{~}%
+  \def\bibnamedelimb{ }%
+  \def\bibnamedelimc{ }%
+  \def\bibnamedelimd{ }%
+  \def\bibnamedelimi{ }%
+  \def\bibinitperiod{.}%
+  \def\bibinitdelim{~}%
+  \def\bibinithyphendelim{.-}}    
+\newcommand*{\makename}[2]{\begingroup\makenamesetup\xdef#1{#2}\endgroup}
+
+\newcommand*{\boldname}[3]{%
+  \def\lastname{#1}%
+  \def\firstname{#2}%
+  \def\firstinit{#3}}
+\boldname{}{}{}
+
+% Patch new definitions
+\renewcommand{\mkbibnamegiven}[1]{%
+  \ifboolexpr{ ( test {\ifdefequal{\firstname}{\namepartgiven}} or test {\ifdefequal{\firstinit}{\namepartgiven}} ) and test {\ifdefequal{\lastname}{\namepartfamily}} }
+  {\mkbibbold{#1}}{#1}%
+}
+
+\renewcommand{\mkbibnamefamily}[1]{%
+  \ifboolexpr{ ( test {\ifdefequal{\firstname}{\namepartgiven}} or test {\ifdefequal{\firstinit}{\namepartgiven}} ) and test {\ifdefequal{\lastname}{\namepartfamily}} }
+  {\mkbibbold{#1}}{#1}%
+}
+
+\boldname{Hagen}{Alexander}{A.}
+\usepackage{xcolor}
+\definecolor{black}{HTML}{142735}
+\definecolor{blue}{HTML}{285668}
+\definecolor{grey}{HTML}{999999}
+\definecolor{darkgrey}{HTML}{285668}
+\makeatletter
+\newcommand{\globalcolor}[1]{%
+  \color{#1}\global\let\default@color\current@color
+}
+\makeatother
+
+\AtBeginDocument{\globalcolor{black}}
+\usepackage{lipsum}
+\end_preamble
+\use_default_options false
+\begin_modules
+biblatex
+\end_modules
+\maintain_unincluded_children false
+\language american
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "Crimson Text [PfEd]"
+\font_sans "default" "Source Sans Pro"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command biber
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize letterpaper
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style 
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 0.6in
+\rightmargin 1in
+\bottommargin 0.6in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language swedish
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\bullet 0 0 34 -1
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout My Address
+Alex Hagen
+\begin_inset Newline newline
+\end_inset
+
+225 N.
+ 2nd St., 3C
+\begin_inset Newline newline
+\end_inset
+
+Lafayette, IN, 47901
+\end_layout
+
+\begin_layout Send To Address
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Opening
+To the application reviewer for the 
+\begin_inset Quotes sld
+\end_inset
+
+software engineer
+\begin_inset Quotes srd
+\end_inset
+
+ position,
+\end_layout
+
+\begin_layout Standard
+I am writing to apply to ANSYS for the software engineer position.
+ I am currently finishing my dissertation at Purdue University in Nuclear
+ Engineering, doing work developing neutron detectors for national security
+ purposes.
+ My resume and application may be non-traditional, as my degree is not software
+ oriented and my dissertation is experimentally focused, so I wanted to
+ highlight a few things that I've done on the software engineering side
+ of things.
+\end_layout
+
+\begin_layout Standard
+The thesis I wrote for my master's degree was targeted toward simulation
+ work, in fact earning me a 
+\begin_inset Quotes sld
+\end_inset
+
+Computational Science in Engineering
+\begin_inset Quotes srd
+\end_inset
+
+ concentration on that degree.
+ I developed and validated a finite element model of our acoustically run
+ neutron detector.
+ The validation part of the work won me an award at the 2015 International
+ Conference on Nuclear Engineering in Prague.
+ During that work, I also was able to take a lot of coursework focusing
+ on computational methods; a 681 mechanical engineering course on finite
+ element method and boundary element method, and a 697 nuclear engineering
+ course based on advanced simulation techniques for plasma physics were
+ the pinacles of those plan.
+\end_layout
+
+\begin_layout Standard
+Before that, I also had the good fortune to work in a high performance computing
+ environment at Argonne National Laboratory for a summer undergraduate laborator
+y internship.
+ Although my work was in general supporting the principle investigators
+ by simulating two reactors on legacy neutronics codes, I was able to perform
+ these computations on largely parallel resources, ultimately on Blue Gene
+ P - the state of the art machine at Argonne during that time (2011).
+\end_layout
+
+\begin_layout Standard
+But besides the formal training I've received, I've also been active in
+ development besides.
+ My research has required me to run the line between data analyst, developer,
+ and experimenter.
+ I've been either primary or second in writing the firmware for the different
+ types of detectors we are developing, with the detectors recently winning
+ the best demo award at the 2016 IEEE sensors conference.
+ I've also received awards for my data analysis and simulation work, particularl
+y the best paper at the 2016 American Nuclear Society Winter Meeting.
+ I highilight these awards to show my success at different types of computationa
+l science and software/firmware development.
+ 
+\end_layout
+
+\begin_layout Standard
+I also currently maintain many open source codes, generally written in Python.
+ I'm particularly proud of a single-dimensional data analysis framework
+ I have called 
+\begin_inset CommandInset href
+LatexCommand href
+name "PyM"
+target "https://alexhagen.github.io/pym"
+
+\end_inset
+
+; a data visualization module I've written named 
+\begin_inset CommandInset href
+LatexCommand href
+name "PyG"
+target "https://alexhagen.github.io/pyg"
+
+\end_inset
+
+; a set of classes in C++ for quicker development of our detector firmware
+ called 
+\begin_inset CommandInset href
+LatexCommand href
+name "cppm"
+target "https://alexhagen.github.io/cppm"
+
+\end_inset
+
+; and a wrapper, visualizer, and analyzer for a nuclear particle transport
+ code that I call 
+\begin_inset CommandInset href
+LatexCommand href
+name "wig"
+target "https://alexhagen.github.io/wig"
+
+\end_inset
+
+.
+ I mention these for two reasons, to give you a chance to glance through
+ their documentation to get an idea of my abilities, and because these four
+ projects have helped me become adept at development.
+ They've helped particularly in learning unit testing and version control,
+ which are traits that I gather scientific programmers are usually below-par
+ on.
+\end_layout
+
+\begin_layout Standard
+I hope that I have helped highlight a few resume items that may help you
+ decide my appropriateness for the software developer position opening.
+ I hope to be able to interview and work with ANSYS.
+\end_layout
+
+\begin_layout Closing
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+Looking forward to your response and feedback,
+\backslash
+
+\backslash
+%
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+fromsig{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename signature.svg
+	width 5cm
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+} 
+\backslash
+
+\backslash
+%
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+fromname{Alex Hagen}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
