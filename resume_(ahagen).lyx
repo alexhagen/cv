@@ -19,7 +19,7 @@
             isbn=false, url=false, doi=false,%
             eprint=false, maxnames=99]{biblatex}
 \AtBeginDocument{\thispagestyle{empty}}
-\addbibresource{/home/ahagen/bibs/authored.bib}
+\addbibresource{/Users/ahagen/bibs/authored.bib}
 
 \def\makenamesetup{%
   \def\bibnamedelima{~}%
@@ -69,7 +69,7 @@ biblatex
 \end_modules
 \maintain_unincluded_children false
 \language american
-\language_package default
+\language_package babel
 \inputencoding auto
 \fontencoding global
 \font_roman "default" "Crimson Text [PfEd]"
@@ -173,7 +173,7 @@ http://alexhagen.github.io/portfolio
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace 1pt
+\begin_inset VSpace 10pt
 \end_inset
 
 
@@ -187,7 +187,7 @@ http://alexhagen.github.io/portfolio
 EDUCATION
 \color inherit
 
-\begin_inset VSpace -10pt
+\begin_inset VSpace -8pt
 \end_inset
 
 
