@@ -62,6 +62,7 @@
 \makeatother
 
 \AtBeginDocument{\globalcolor{black}}
+\usepackage{tikz}
 \end_preamble
 \use_default_options false
 \begin_modules
@@ -145,6 +146,136 @@ biblatex
 \size larger
 \noun on
 \color black
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="left" valignment="top" width="0pt">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{flushright}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+tikz
+\backslash
+node[circle,draw,minimum width=2.5cm,
+\end_layout
+
+\begin_layout Plain Layout
+
+           path picture={
+\end_layout
+
+\begin_layout Plain Layout
+
+               
+\backslash
+node at (path picture bounding box.center){
+\end_layout
+
+\begin_layout Plain Layout
+
+                   
+\backslash
+includegraphics[width=2.5cm]{avatar}
+\end_layout
+
+\begin_layout Plain Layout
+
+               };
+\end_layout
+
+\begin_layout Plain Layout
+
+           }]{};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{flushright}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\shape slanted
+\size small
+\emph on
+\color blue
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "50col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+
+\family sans
+\series bold
+\size larger
+\noun on
+\color black
 ALEX HAGEN
 \family default
 \series default
@@ -170,6 +301,21 @@ ahagen@purdue.edu
 
 \size small
 http://alexhagen.github.io/portfolio
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1028,6 +1174,180 @@ Nov
  International Patent Holder for Polylactic Acid Based Adhesives
 \end_layout
 
+\begin_layout Standard
+
+\family sans
+\series bold
+SKILLS
+\family default
+\series default
+
+\begin_inset VSpace -10pt
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100line%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -20pt
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+3d Cad
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Tools:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Solidworks - 8 Years
+\end_layout
+
+\begin_layout Itemize
+Blender - 3 Years
+\end_layout
+
+\begin_layout Itemize
+Autodesk Fusion 360 - 1 Year
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+Data Analysis
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Tools:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Matlab - 12 Years
+\end_layout
+
+\begin_layout Itemize
+Python - 5 Years
+\end_layout
+
+\begin_layout Itemize
+ROOT Toolkit - 1 Year
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+Firmware
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Tools:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+C++ - 4 Years
+\end_layout
+
+\begin_layout Itemize
+Python
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+Physical Simulation
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Tools:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+COMSOL - 6 Years
+\end_layout
+
+\begin_layout Itemize
+Fortran - 5 Years
+\end_layout
+
+\begin_layout Itemize
+Python
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+Hardware Design
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Tools:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+EagleCAD - 2 Years
+\end_layout
+
+\begin_layout Itemize
+KiCAD - 2 Years
+\end_layout
+
+\begin_layout Itemize
+LTSpice - 1 Year
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+Software Development
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Tools:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Python - 5 Years
+\end_layout
+
+\begin_layout Itemize
+Git - 5 Years
+\end_layout
+
+\begin_layout Itemize
+Android/Java - 2 Years
+\end_layout
+
+\end_deeper
+\end_deeper
 \begin_layout Standard
 
 \family sans
