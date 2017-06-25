@@ -63,6 +63,186 @@
 
 \AtBeginDocument{\globalcolor{black}}
 \usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{adjustbox}
+\usepackage{varwidth}
+\usepackage{ifthen}
+\pagenumbering{gobble}
+\usetikzlibrary{positioning}
+\usepackage[scale=0.95]{opensans}
+\DeclareRobustCommand\ltseries{\fontseries{l}\selectfont}
+
+\DeclareTextFontCommand{\textlt}{\ltseries}
+
+\tikzset{
+  pics/carc/.style args={#1:#2:#3}{
+    code={
+      \draw[pic actions] (#1:#3) arc(#1:#2:#3);
+    }
+  }
+}
+
+
+\newcommand{\setangles}[3]{
+\ifthenelse{\equal{#1}{NA}}{
+        \pgfmathsetmacro{\startangle}{225.0}
+        \pgfmathsetmacro{\endangle}{-45}
+      }{
+      	\ifthenelse{\equal{#1}{#2}}{
+        \pgfmathsetmacro{\startangle}{230.0 - (270.0 * #1 / #3)}
+        \pgfmathsetmacro{\endangle}{220.0 - (270.0 * #2 / #3)}
+      	}{
+      	\pgfmathsetmacro{\startangle}{225.0 - (270.0 * #1 / #3)}
+        \pgfmathsetmacro{\endangle}{225.0 - (270.0 * #2 / #3)}
+      	}
+      }
+}
+
+\newcommand{\setanglestwo}[3]{
+\ifthenelse{\equal{#1}{NA}}{
+        \pgfmathsetmacro{\startangletwo}{225.0}
+        \pgfmathsetmacro{\endangletwo}{-45}
+      }{
+      	\ifthenelse{\equal{#1}{#2}}{
+        \pgfmathsetmacro{\startangletwo}{230.0 - (270.0 * #1 / #3)}
+        \pgfmathsetmacro{\endangletwo}{220.0 - (270.0 * #2 / #3)}
+      	}{
+      	\pgfmathsetmacro{\startangletwo}{225.0 - (270.0 * #1 / #3)}
+        \pgfmathsetmacro{\endangletwo}{225.0 - (270.0 * #2 / #3)}
+      	}
+      }
+}
+
+\newcommand{\setanglesthree}[3]{
+\ifthenelse{\equal{#1}{NA}}{
+        \pgfmathsetmacro{\startanglethree}{225.0}
+        \pgfmathsetmacro{\endanglethree}{-45}
+      }{
+      	\ifthenelse{\equal{#1}{#2}}{
+        \pgfmathsetmacro{\startanglethree}{230.0 - (270.0 * #1 / #3)}
+        \pgfmathsetmacro{\endanglethree}{220.0 - (270.0 * #2 / #3)}
+      	}{
+      	\pgfmathsetmacro{\startanglethree}{225.0 - (270.0 * #1 / #3)}
+        \pgfmathsetmacro{\endanglethree}{225.0 - (270.0 * #2 / #3)}
+      	}
+      }
+}
+
+\newcommand{\skillstext}[2]{\color{blue} #1 \\ \color{blue} \scriptsize #2 Years}
+\newcommand{\titletext}[1]{\color{blue} #1 }
+
+\newcommand{\dial}[3]{
+  \raisebox{-0.5\height}{
+    \begin{tikzpicture}
+      % Set some constants for the dial size and the width of the dial
+      \pgfmathsetmacro{\dialsize}{1.25}
+      \pgfmathsetmacro{\leaderlength}{1.375}
+      % Adjust the text spacing (line spacing)
+      \setlength{\baselineskip}{2pt}
+      % Calculate the angle based on the rating provided in arguments
+      \setangles{0}{#3}{12.0}
+
+      % Draw the arc and the background arc
+      \pic[line width=0.1in, grey] {carc=225:-45:\dialsize};
+      \pic[line width=0.1in, blue]{carc=\startangle:\endangle:\dialsize};
+      % Put the average value in the center
+      \node[align=center]{\titletext{#1}};
+      % Draw the lines to put the low and high values on
+      \draw[line width=0.5pt, blue] (\endangle:\dialsize - 0.15) -- (\endangle:\dialsize + 0.25) arc (\endangle:-45:\dialsize+0.25) -- ++(0:\leaderlength);
+      \pgfgetlastxy{\XCoord}{\YCoord};
+      \node[align=right, anchor=south east] (high) at (\XCoord, \YCoord) {\skillstext{#2}{#3}};
+    \end{tikzpicture}
+  }
+}
+
+\newcommand{\dialtwo}[5]{
+  \raisebox{-0.5\height}{
+    \begin{tikzpicture}
+      % Set some constants for the dial size and the width of the dial
+      \pgfmathsetmacro{\dialsize}{1.25}
+      \pgfmathsetmacro{\leaderlength}{2.0}
+      % Adjust the text spacing (line spacing)
+      \setlength{\baselineskip}{2pt}
+      % Calculate the angle based on the rating provided in arguments
+      \setangles{0}{#3}{12.0}
+
+      % Draw the arc and the background arc
+      \pic[line width=0.1in, grey] {carc=225:-45:\dialsize};
+      \pic[line width=0.1in, blue]{carc=\startangle:\endangle:\dialsize};
+      \pgfmathsetmacro{\dialsizetwo}{1.50}
+      \pgfmathsetmacro{\leaderlengthtwo}{1.5}
+
+      % Calculate the angle based on the rating provided in arguments
+      \setanglestwo{0}{#5}{12.0}
+      \pic[line width=0.1in, grey] {carc=225:-45:\dialsizetwo};
+      \pic[line width=0.1in, blue]{carc=\startangletwo:\endangletwo:\dialsizetwo};
+      % Put the average value in the center
+      \node[align=center]{\titletext{#1}};
+      % Draw the lines to put the low and high values on
+      \draw[line width=0.5pt, blue] (\endangle:\dialsize - 0.15) -- (\endangle:\dialsize + 0.25) arc (\endangle:-45:\dialsize+0.25) -- ++(0:\leaderlength);
+      \pgfgetlastxy{\XCoord}{\YCoord};
+      \node[align=right, anchor=south east] (high) at (\XCoord, \YCoord) {\skillstext{#2}{#3}};
+      
+      % Put the average value in the center
+      % Draw the lines to put the low and high values on
+      \draw[line width=0.5pt, blue] (\endangletwo:\dialsizetwo - 0.15) -- (\endangletwo:\dialsizetwo + 0.25) arc (\endangletwo:0:\dialsizetwo+0.25) -- ++(0:\leaderlengthtwo);
+      \pgfgetlastxy{\XCoord}{\YCoord};
+      \node[align=right, anchor=south east] (high) at (\XCoord, \YCoord) {\skillstext{#4}{#5}};
+    \end{tikzpicture}
+  }
+}
+
+\newcommand{\dialthree}[7]{
+  \raisebox{-0.5\height}{
+    \begin{tikzpicture}
+      % Set some constants for the dial size and the width of the dial
+      \pgfmathsetmacro{\dialsize}{1.25}
+      \pgfmathsetmacro{\leaderlength}{2.0}
+      % Adjust the text spacing (line spacing)
+      \setlength{\baselineskip}{2pt}
+      % Calculate the angle based on the rating provided in arguments
+      \setangles{0}{#3}{12.0}
+
+      % Draw the arc and the background arc
+      \pic[line width=0.1in, grey] {carc=225:-45:\dialsize};
+      \pic[line width=0.1in, blue]{carc=\startangle:\endangle:\dialsize};
+      \pgfmathsetmacro{\dialsizetwo}{1.50}
+      \pgfmathsetmacro{\leaderlengthtwo}{1.5}
+
+      % Calculate the angle based on the rating provided in arguments
+      \setanglestwo{0}{#5}{12.0}
+      \pic[line width=0.1in, grey] {carc=225:-45:\dialsizetwo};
+      \pic[line width=0.1in, blue]{carc=\startangletwo:\endangletwo:\dialsizetwo};
+      \pgfmathsetmacro{\dialsizethree}{1.75}
+      \pgfmathsetmacro{\leaderlengththree}{1.5}
+      % Calculate the angle based on the rating provided in arguments
+      \setanglesthree{0}{#7}{12.0}
+      \pic[line width=0.1in, grey] {carc=225:-45:\dialsizethree};
+      \pic[line width=0.1in, blue]{carc=\startanglethree:\endanglethree:\dialsizethree};
+      % Put the average value in the center
+      \node[align=center]{\titletext{#1}};
+      % Draw the lines to put the low and high values on
+      \draw[line width=0.5pt, blue] (\endangle:\dialsize - 0.15) -- (\endangle:\dialsize + 0.25) arc (\endangle:-45:\dialsize+0.25) -- ++(0:\leaderlength);
+      \pgfgetlastxy{\XCoord}{\YCoord};
+      \node[align=right, anchor=south east] (high) at (\XCoord, \YCoord) {\skillstext{#2}{#3}};
+      
+      % Put the average value in the center
+      % Draw the lines to put the low and high values on
+      \draw[line width=0.5pt, blue] (\endangletwo:\dialsizetwo - 0.15) -- (\endangletwo:\dialsizetwo + 0.25) arc (\endangletwo:0:\dialsizetwo+0.25) -- ++(0:\leaderlengthtwo);
+      \pgfgetlastxy{\XCoord}{\YCoord};
+      \node[align=right, anchor=south east] (high) at (\XCoord, \YCoord) {\skillstext{#4}{#5}};
+      
+
+      
+      % Put the average value in the center
+      % Draw the lines to put the low and high values on
+      \draw[line width=0.5pt, blue] (\endanglethree:\dialsizethree - 0.15) -- (\endanglethree:\dialsizethree + 0.25) arc (\endanglethree:45:\dialsizethree+0.25) -- ++(0:\leaderlengththree);
+      \pgfgetlastxy{\XCoord}{\YCoord};
+      \node[align=right, anchor=south east] (high) at (\XCoord, \YCoord) {\skillstext{#6}{#7}};
+      
+    \end{tikzpicture}
+  }
+}
 \end_preamble
 \use_default_options false
 \begin_modules
@@ -300,7 +480,7 @@ ahagen@purdue.edu
 
 
 \size small
-http://alexhagen.github.io/portfolio
+http://alexhagen.github.io
 \end_layout
 
 \end_inset
@@ -848,38 +1028,6 @@ fullcite{Hagen2014}
 
 \end_layout
 
-\begin_layout Itemize
-\begin_inset Note Comment
-status open
-
-\begin_layout Plain Layout
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Webster2014"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-fullcite{Webster2014}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Standard
 
 \family sans
@@ -989,33 +1137,8 @@ July
 
 2014
 \noun default
- Lead Author on paper recieving Best Poster Award at ICONE 22
-\end_layout
-
-\begin_layout Labeling
-\labelwidthstring 00.00.0000
-
-\noun on
-July
-\begin_inset space \space{}
-\end_inset
-
-2014
-\noun default
- Author on paper recieving Best Paper Award at ICONE 22
-\end_layout
-
-\begin_layout Labeling
-\labelwidthstring 00.00.0000
-
-\noun on
-December
-\begin_inset space \space{}
-\end_inset
-
-2014
-\noun default
- Voted top candidate for Magoon Teaching Excellence Teaching Assistant Award
+ Lead Author on paper recieving Best Poster Award and author on paper recieving
+ Best Paper Award at ICONE 22
 \end_layout
 
 \begin_layout Labeling
@@ -1202,197 +1325,195 @@ height "1pt"
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace -20pt
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering 
+\backslash
+resizebox{0.8
+\backslash
+columnwidth}{!}{
+\end_layout
+
 \end_inset
 
 
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+dialthree{Software 
+\backslash
+
+\backslash
+ Development}{Python}{5}{Git}{4}{Android (Java)}{2}
 \end_layout
-
-\begin_layout Itemize
-3d Cad
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Tools:
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Solidworks - 8 Years
-\end_layout
-
-\begin_layout Itemize
-Blender - 3 Years
-\end_layout
-
-\begin_layout Itemize
-Autodesk Fusion 360 - 1 Year
-\end_layout
-
-\end_deeper
-\end_deeper
-\begin_layout Itemize
-Data Analysis
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Tools:
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Matlab - 12 Years
-\end_layout
-
-\begin_layout Itemize
-Python - 5 Years
-\end_layout
-
-\begin_layout Itemize
-ROOT Toolkit - 1 Year
-\end_layout
-
-\end_deeper
-\end_deeper
-\begin_layout Itemize
-Firmware
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Tools:
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-C++ - 4 Years
-\end_layout
-
-\begin_layout Itemize
-Python
-\end_layout
-
-\end_deeper
-\end_deeper
-\begin_layout Itemize
-Physical Simulation
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Tools:
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-COMSOL - 6 Years
-\end_layout
-
-\begin_layout Itemize
-Fortran - 5 Years
-\end_layout
-
-\begin_layout Itemize
-Python
-\end_layout
-
-\end_deeper
-\end_deeper
-\begin_layout Itemize
-Hardware Design
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Tools:
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-EagleCAD - 2 Years
-\end_layout
-
-\begin_layout Itemize
-KiCAD - 2 Years
-\end_layout
-
-\begin_layout Itemize
-LTSpice - 1 Year
-\end_layout
-
-\end_deeper
-\end_deeper
-\begin_layout Itemize
-Software Development
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Tools:
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Python - 5 Years
-\end_layout
-
-\begin_layout Itemize
-Git - 5 Years
-\end_layout
-
-\begin_layout Itemize
-Android/Java - 2 Years
-\end_layout
-
-\end_deeper
-\end_deeper
-\begin_layout Standard
-
-\family sans
-\series bold
-PROFESSIONAL ASSOCIATIONS
-\family default
-\series default
-
-\begin_inset VSpace -10pt
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset CommandInset line
-LatexCommand rule
-offset "0.5ex"
-width "100line%"
-height "1pt"
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset VSpace -20pt
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+dialthree{3d Cad}{Solidworks}{8}{Blender}{3}{Fusion 360}{1}
+\end_layout
+
 \end_inset
 
 
 \end_layout
 
-\begin_layout Itemize
-American Nuclear Society (ANS) National Student Member
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+dialthree{Data 
+\backslash
+
+\backslash
+ Analysis}{Matlab}{12}{Python}{5}{ROOT Toolkit}{1}
 \end_layout
 
-\begin_layout Itemize
-American Society of Mechanical Engineers (ASME) National Student Member
+\end_inset
+
+
 \end_layout
 
-\begin_layout Itemize
-Institute of Electrical and Electronics Engineers (IEEE) National Student
- Member
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+dialtwo{Firmware 
+\backslash
+
+\backslash
+ Design}{C++}{4}{AtMega}{3}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+dialtwo{Physical 
+\backslash
+
+\backslash
+ Simulation}{COMSOL}{6}{Fortran}{5}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+dialthree{Hardware 
+\backslash
+
+\backslash
+ Design}{Eagle}{2}{KiCAD}{2}{LTSpice}{1}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
