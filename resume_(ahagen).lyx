@@ -19,7 +19,7 @@
             isbn=false, url=false, doi=false,%
             eprint=false, maxnames=99]{biblatex}
 \AtBeginDocument{\thispagestyle{empty}}
-\addbibresource{/Users/ahagen/bibs/authored.bib}
+\addbibresource{/home/ahagen/bibs/authored.bib}
 
 \def\makenamesetup{%
   \def\bibnamedelima{~}%
