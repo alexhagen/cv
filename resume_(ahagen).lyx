@@ -19,7 +19,7 @@
             isbn=false, url=false, doi=false,%
             eprint=false, maxnames=99]{biblatex}
 \AtBeginDocument{\thispagestyle{empty}}
-\addbibresource{/home/ahagen/bibs/authored.bib}
+\addbibresource{/Users/ahagen/bibs/authored.bib}
 
 \def\makenamesetup{%
   \def\bibnamedelima{~}%
@@ -1256,7 +1256,7 @@ May
 
 2016
 \noun default
- Chair of Purdue Graduate Student Government Advancment Committee
+ Chair of Purdue Graduate Student Government (PGSG) Advancment Committee
 \end_layout
 
 \begin_layout Labeling
@@ -1295,6 +1295,11 @@ Nov
 2013
 \noun default
  International Patent Holder for Polylactic Acid Based Adhesives
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+2012 President and Captain of Purdue Men's Club Soccer
 \end_layout
 
 \begin_layout Standard
