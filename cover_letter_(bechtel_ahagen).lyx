@@ -1,0 +1,345 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass letter
+\begin_preamble
+\frenchspacing
+\usepackage{amsmath}
+\newcommand{\ø}{\raisebox{.3ex}{\tiny$\; \bullet \;$}}
+\renewcommand{\arraystretch}{1.25}
+\usepackage{fancyheadings}
+\pagestyle{fancy}
+\chead{\textit{\today}}
+
+\usepackage[backend=biber,defernumbers=true,%
+            firstinits=true, language=english,%
+            isbn=false, url=false, doi=false,%
+            eprint=false, maxnames=99]{biblatex}
+\AtBeginDocument{\thispagestyle{empty}}
+\addbibresource{/home/ahagen/bibs/authored.bib}
+
+\def\makenamesetup{%
+  \def\bibnamedelima{~}%
+  \def\bibnamedelimb{ }%
+  \def\bibnamedelimc{ }%
+  \def\bibnamedelimd{ }%
+  \def\bibnamedelimi{ }%
+  \def\bibinitperiod{.}%
+  \def\bibinitdelim{~}%
+  \def\bibinithyphendelim{.-}}    
+\newcommand*{\makename}[2]{\begingroup\makenamesetup\xdef#1{#2}\endgroup}
+
+\newcommand*{\boldname}[3]{%
+  \def\lastname{#1}%
+  \def\firstname{#2}%
+  \def\firstinit{#3}}
+\boldname{}{}{}
+
+% Patch new definitions
+\renewcommand{\mkbibnamegiven}[1]{%
+  \ifboolexpr{ ( test {\ifdefequal{\firstname}{\namepartgiven}} or test {\ifdefequal{\firstinit}{\namepartgiven}} ) and test {\ifdefequal{\lastname}{\namepartfamily}} }
+  {\mkbibbold{#1}}{#1}%
+}
+
+\renewcommand{\mkbibnamefamily}[1]{%
+  \ifboolexpr{ ( test {\ifdefequal{\firstname}{\namepartgiven}} or test {\ifdefequal{\firstinit}{\namepartgiven}} ) and test {\ifdefequal{\lastname}{\namepartfamily}} }
+  {\mkbibbold{#1}}{#1}%
+}
+
+\boldname{Hagen}{Alexander}{A.}
+\usepackage{xcolor}
+\definecolor{black}{HTML}{142735}
+\definecolor{blue}{HTML}{285668}
+\definecolor{grey}{HTML}{999999}
+\definecolor{darkgrey}{HTML}{285668}
+\makeatletter
+\newcommand{\globalcolor}[1]{%
+  \color{#1}\global\let\default@color\current@color
+}
+\makeatother
+
+\AtBeginDocument{\globalcolor{black}}
+\usepackage{lipsum}
+\end_preamble
+\use_default_options false
+\begin_modules
+biblatex
+\end_modules
+\maintain_unincluded_children false
+\language american
+\language_package babel
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "Crimson Text [PfEd]"
+\font_sans "default" "Source Sans Pro"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command biber
+\index_command default
+\paperfontsize 10
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize letterpaper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style 
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 0.6in
+\rightmargin 1in
+\bottommargin 0.6in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language swedish
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\bullet 0 0 34 -1
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout My Address
+Alex Hagen
+\begin_inset Newline newline
+\end_inset
+
+225 N.
+ 2nd St., 3C
+\begin_inset Newline newline
+\end_inset
+
+Lafayette, IN, 47901
+\end_layout
+
+\begin_layout Send To Address
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Opening
+To the application reviewer,
+\end_layout
+
+\begin_layout Standard
+I am writing to apply to Bechtel for the Control Systems Engineer position.
+ 
+\end_layout
+
+\begin_layout Standard
+I write this letter for two main reasons: First, I write to describe my
+ research in relation to the position I am applying for.
+ Secondly, I write to make the hiring manager aware of my timeframe and
+ when I would be available for work, if selected.
+\end_layout
+
+\begin_layout Standard
+The research I will be presenting for that PhD defense pertains to the use
+ of novel neutron detectors - Tensioned Metastable Fluid Detectors - in
+ passive and active interrogation for special nuclear material interdiction.
+ This requires that I am involved in the entire process of detector creation,
+ from design, to manufacturing, to creation of hardware and firmware (usually
+ in C++ or Python), and finally to integration in data anlysis databases
+ that we keep at the lab.
+ I have spanned the gamut of engineering in the creation of these detectors,
+ from the drawings required for manufacturing - for which I use Solidworks,
+ comparisons to ANSI specifications, to calculations on their efficiency
+ and other figures of merit.
+ I've attained good effect through these skills: a presentation in the Instrumen
+tation and Controls session about the results achieved by the detectors
+ won the 2016 American Nuclear Society Young Members' Group Best Paper Award.
+ I am also required to document every step of this process for further research
+ and use, and do so through proven written communication skills - I have
+ upwards of 10 authored/coauthored archival papers.
+\end_layout
+
+\begin_layout Standard
+I also write to point out my leadership and interpersonal communication
+ skills.
+ I have demonstrated these continually throughout my education, but particularly
+ during my leadership positions.
+ These have included the 2 year president of the Purdue Nuclear Engineering
+ Graduate Organization, the 2 year chair of the volunteerism committee for
+ Purdue Graduate Student Government, and the president and captain of the
+ Purdue Club Soccer program.
+\end_layout
+
+\begin_layout Standard
+I have many years experience with computer based engineering tools, from
+ the Microsoft Office suite to engineering and finite element analysis tools
+ such as Solidworks and COMSOL.
+ Outside of skills and positions listed on my resume, I also maintain several
+ open source codes and distribute these via Github.
+ Of particular interest to the reviewer may be my wrapper, analysis package
+ and visualizer for MCNP that I call 
+\emph on
+wig
+\emph default
+.
+ I also maintain a data analysis library that I call 
+\emph on
+PyM
+\emph default
+ and a visualization module I call 
+\emph on
+PyG
+\emph default
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+wig: 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://alexhagen.github.io/alexhagen/wig"
+
+\end_inset
+
+, PyM: 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://alexhagen.github.io/alexhagen/pym"
+
+\end_inset
+
+, PyG: 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://alexhagen.github.io/alexhagen/pyg"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+, all written in Python, documented and published via Github.
+\end_layout
+
+\begin_layout Standard
+I have just passed my preliminary defense for my PhD in Nuclear Engineering
+ from Purdue University.
+ My advisor and I have agreed to finish research and writing of my final
+ dissertation by the end of the year and I will be available for work, if
+ selected, in January of 2018.
+\end_layout
+
+\begin_layout Standard
+I hope that I have highlighted some skills that would make me a useful candidate
+ to Bechtel.
+ Further, I hope that I will be able to interview and see if I can contribute
+ to the great work that Bechtel is doing.
+\end_layout
+
+\begin_layout Closing
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+Looking forward to your response and feedback,
+\backslash
+
+\backslash
+%
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+fromsig{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename signature.svg
+	width 5cm
+
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+} 
+\backslash
+
+\backslash
+%
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+fromname{Alex Hagen}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
