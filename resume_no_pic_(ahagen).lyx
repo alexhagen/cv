@@ -319,137 +319,8 @@ biblatex
 \begin_body
 
 \begin_layout Standard
+\noindent
 \align center
-
-\family sans
-\series bold
-\size larger
-\noun on
-\color black
-\begin_inset Tabular
-<lyxtabular version="3" rows="1" columns="2">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="left" valignment="top" width="0pt">
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Box Frameless
-position "c"
-hor_pos "c"
-has_inner_box 1
-inner_pos "c"
-use_parbox 0
-use_makebox 0
-width "45col%"
-special "none"
-height "1in"
-height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
-status open
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{flushright}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-tikz
-\backslash
-node[circle,draw,minimum width=2.5cm,
-\end_layout
-
-\begin_layout Plain Layout
-
-           path picture={
-\end_layout
-
-\begin_layout Plain Layout
-
-               
-\backslash
-node at (path picture bounding box.center){
-\end_layout
-
-\begin_layout Plain Layout
-
-                   
-\backslash
-includegraphics[width=2.5cm]{avatar}
-\end_layout
-
-\begin_layout Plain Layout
-
-               };
-\end_layout
-
-\begin_layout Plain Layout
-
-           }]{};
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{flushright}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\shape slanted
-\size small
-\emph on
-\color blue
-\begin_inset Box Frameless
-position "c"
-hor_pos "c"
-has_inner_box 1
-inner_pos "c"
-use_parbox 0
-use_makebox 0
-width "50col%"
-special "none"
-height "1in"
-height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
-status open
-
-\begin_layout Plain Layout
 
 \family sans
 \series bold
@@ -481,21 +352,6 @@ ahagen@purdue.edu
 
 \size small
 http://alexhagen.github.io
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -555,11 +411,12 @@ Purdue University
 
 
 \emph on
-Doctorate of Philosophy in Nuclear Engineering, December 2017 (Projected)
+Doctorate of Philosophy in Nuclear Engineering, GPA 3.6, December 2017 (Projected
+)
 \begin_inset Newline newline
 \end_inset
 
-Master of Science in Nuclear Engineering, August 2014
+Master of Science in Nuclear Engineering, GPA 3.7, August 2014
 \begin_inset Newline newline
 \end_inset
 
@@ -577,7 +434,7 @@ Concentration in Computational Science and Engineering
 \begin_inset Newline newline
 \end_inset
 
-Bachelor of Science in Nuclear Engineering, May 2012
+Bachelor of Science in Nuclear Engineering, GPA 3.5, May 2012
 \end_layout
 
 \begin_layout Standard
@@ -1255,7 +1112,7 @@ May
 
 2016
 \noun default
- Chair of Purdue Graduate Student Government (PGSG) Advancment Committee
+ Chair of Purdue Graduate Student Government Advancment Committee
 \end_layout
 
 \begin_layout Labeling
@@ -1294,11 +1151,6 @@ Nov
 2013
 \noun default
  International Patent Holder for Polylactic Acid Based Adhesives
-\end_layout
-
-\begin_layout Labeling
-\labelwidthstring 00.00.0000
-2012 President and Captain of Purdue Men's Club Soccer
 \end_layout
 
 \begin_layout Standard
