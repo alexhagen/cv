@@ -172,30 +172,42 @@ To the application reviewer,
 \end_layout
 
 \begin_layout Standard
-I am writing to apply to SAIC for the E-Site Systems Engineer Level 3.
+I am writing to apply to QSC for the Software Engineer position.
  
 \end_layout
 
 \begin_layout Standard
-I write this letter for two main reasons: First, I write to describe my
- research in relation to the position I am applying for.
- Secondly, I write to make the hiring manager aware of my timeframe and
- when I would be available for work, if selected.
+I write for two reasons, to highlight my familiarity with audio products
+ and to describe my software engineering experience.
 \end_layout
 
 \begin_layout Standard
 The research I will be presenting for that PhD defense pertains to the use
  of novel neutron detectors - Tensioned Metastable Fluid Detectors - in
  passive and active interrogation for special nuclear material interdiction.
- I write firmware and control software for the detectors (as well as design
- the detectors), with the detectors recently winning the best demo award
- at the 2016 IEEE Sensors conference.
+ One such detector is the Acoustically Tensioned Metastable Fluid Detector
+ - a detector requiring precise acoustics (at or above the audible range)
+ to tense fluid enough to detect neutrons.
+ While this is not directly audio equipment development, the similarities
+ between the two are profound.
+ I have been immersed in the design and simulation of these chambers for
+ 10 years now.
+\end_layout
+
+\begin_layout Standard
+I also write firmware and control software for the detectors (as well as
+ design the detectors), which requires me to interact with the detector
+ itself and a whole suite of other sensors (including IR and thermocouple).
+ The results are then reported by the firmware both over serial connection
+ and through TCP network connections.
+ The detectors recently won the best demo award at the 2016 IEEE Sensors
+ conference.
  I have also received awards for my data analysis and simulation work (done
- using Python, Matlab, MCNP, and COMSOL primarily), particularly the best
- paper at the 2016 American Nuclear Society Winter Meeting for my paper
- analyzing our detection methodology for highly enriched uranium and the
- to-be announced 2017 Innovations in Nuclear Technology R&D Award for the
- same methodology.
+ using Python, Matlab, MCNP, and COMSOL primarily on Linux/Ubuntu OS), particula
+rly the best paper at the 2016 American Nuclear Society Winter Meeting for
+ my paper analyzing our detection methodology for highly enriched uranium
+ and the to-be announced 2017 Innovations in Nuclear Technology R&D Award
+ for the same methodology.
 \end_layout
 
 \begin_layout Standard
@@ -285,18 +297,10 @@ ng itself.
 \end_layout
 
 \begin_layout Standard
-I have just passed my preliminary defense for my PhD in Nuclear Engineering
- from Purdue University.
- My advisor and I have agreed to finish research and writing of my final
- dissertation by the end of the year and I will be available for work, if
- selected, in January of 2018.
-\end_layout
-
-\begin_layout Standard
 I hope that I have highlighted some skills that would make me a useful candidate
- to SAIC.
+ to QSC.
  Further, I hope that I will be able to interview and see if I can contribute
- to the great work that SAIC is doing.
+ to the great work that QSC is doing.
 \end_layout
 
 \begin_layout Closing

@@ -172,61 +172,62 @@ To the application reviewer,
 \end_layout
 
 \begin_layout Standard
-I am writing to apply to Echodyne for any engineering position, or to probe
- if my skill set would be useful to Echodyne.
+I am writing to apply to Lockeed Martin for the Software Engineer position.
 \end_layout
 
 \begin_layout Standard
-The research I will be presenting for my PhD defense pertains to the use
+I write to highlight my software engineering experience.
+ It is likely that my resume won't jump out as the ideal software engineering
+ candidate, but I hope to demonstrate my proficiency and agility when it
+ comes to software development.
+ I have experience in use of many different programming languages and practices
+ in various situations - from coursework, to commerical, research, and even
+ open source situations.
+\end_layout
+
+\begin_layout Standard
+The research I will be presenting for that PhD defense pertains to the use
  of novel neutron detectors - Tensioned Metastable Fluid Detectors - in
  passive and active interrogation for special nuclear material interdiction.
- This requires that I am involved in the entire process of detector creation,
- from design, to manufacturing, to creation of hardware and firmware (usually
- in C++ or Python), and finally to integration in data anlysis databases
- that we keep at the lab.
- I have spanned the gamut of engineering in the creation of these detectors,
- from the drawings required for manufacturing - for which I use Solidworks,
- comparisons to ANSI specifications, to calculations on their efficiency
- and other figures of merit.
- I've attained good effect through these skills: a presentation in the Instrumen
-tation and Controls session about the results achieved by the detectors
- won the 2016 American Nuclear Society Young Members' Group Best Paper Award.
- I am also required to document every step of this process for further research
- and use, and do so through proven written communication skills - I have
- upwards of 10 authored/coauthored archival papers.
+ I design the detectors, and write firmware and control software, with the
+ detectors recently winning the best demo award at the 2016 IEEE Sensors
+ conference.
+ I have also received awards for my data analysis and simulation work (done
+ using Python, Matlab, MCNP, and COMSOL primarily), particularly the best
+ paper at the 2016 American Nuclear Society Winter Meeting for my paper
+ analyzing our detection methodology for highly enriched uranium and the
+ to-be announced 2017 Innovations in Nuclear Technology R&D Award for the
+ same methodology.
 \end_layout
 
 \begin_layout Standard
-I also write to point out my leadership and interpersonal communication
- skills.
- I have demonstrated these continually throughout my education, but particularly
- during my leadership positions.
- These have included the 2 year president of the Purdue Nuclear Engineering
- Graduate Organization, the 2 year chair of the volunteerism committee for
- Purdue Graduate Student Government, and the president and captain of the
- Purdue Club Soccer program.
+Before my current research, I performed even more software development and
+ computational science work.
+ I earned a 
+\begin_inset Quotes sld
+\end_inset
+
+Computational Science in Engineering
+\begin_inset Quotes srd
+\end_inset
+
+ concentration on my MSNE by developing a finite element model of our acoustical
+ly run neutron detector.
+ The work won me an award at the 2015 International Conference on Nuclear
+ Engineering in Prague.
+ Before that, I worked in a high performance computing environment at Argonne
+ National Laboratory for a summer internship, using MC2 and VARIANT to validate
+ fast reactor simulations.
+ I was able to perform these computations on high performance computing
+ resources, ultimately on Blue Gene P.
 \end_layout
 
 \begin_layout Standard
-I have many years experience with computer based engineering tools, from
- engineering and finite element analysis tools such as Solidworks and COMSOL.
- Outside of skills and positions listed on my resume, I also maintain several
- open source codes and distribute these via Github.
+I also maintain several open source codes and distribute these via Github.
  Of particular interest to the reviewer may be my wrapper, analysis package
- and visualizer for MCNP that I call 
-\emph on
-wig
-\emph default
-.
- I also maintain a data analysis library that I call 
-\emph on
-PyM
-\emph default
- and a visualization module I call 
-\emph on
-PyG
-\emph default
-
+ and visualizer for MCNP that I call wig.
+ I also maintain a data analysis library that I call PyM and a visualization
+ module I call PyG
 \begin_inset Foot
 status open
 
@@ -258,13 +259,16 @@ target "https://alexhagen.github.io/alexhagen/pyg"
 \end_inset
 
 , all written in Python, documented and published via Github.
+ I highlight these codes so that the reviewer could assess my abilities
+ for unit testing, version control, documentation, and the methods and programmi
+ng itself.
 \end_layout
 
 \begin_layout Standard
 I hope that I have highlighted some skills that would make me a useful candidate
- to Echodyne.
+ to Lockeed Martin.
  Further, I hope that I will be able to interview and see if I can contribute
- to the great work that Echodyne is doing.
+ to the great work that Lockeed Martin is doing.
 \end_layout
 
 \begin_layout Closing
