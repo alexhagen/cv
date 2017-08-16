@@ -19,7 +19,7 @@
             isbn=false, url=false, doi=false,%
             eprint=false, maxnames=99]{biblatex}
 \AtBeginDocument{\thispagestyle{empty}}
-\addbibresource{/home/ahagen/bibs/authored.bib}
+\addbibresource{/Users/ahagen/bibs/authored.bib}
 
 \def\makenamesetup{%
   \def\bibnamedelima{~}%
@@ -164,7 +164,7 @@
       % Adjust the text spacing (line spacing)
       \setlength{\baselineskip}{2pt}
       % Calculate the angle based on the rating provided in arguments
-      \setangles{0}{#3}{12.0}
+      \setangles{0}{#3}{10.0}
 
       % Draw the arc and the background arc
       \pic[line width=0.1in, grey] {carc=225:-45:\dialsize};
@@ -173,7 +173,7 @@
       \pgfmathsetmacro{\leaderlengthtwo}{1.5}
 
       % Calculate the angle based on the rating provided in arguments
-      \setanglestwo{0}{#5}{12.0}
+      \setanglestwo{0}{#5}{10.0}
       \pic[line width=0.1in, grey] {carc=225:-45:\dialsizetwo};
       \pic[line width=0.1in, blue]{carc=\startangletwo:\endangletwo:\dialsizetwo};
       % Put the average value in the center
@@ -201,7 +201,7 @@
       % Adjust the text spacing (line spacing)
       \setlength{\baselineskip}{2pt}
       % Calculate the angle based on the rating provided in arguments
-      \setangles{0}{#3}{12.0}
+      \setangles{0}{#3}{10.0}
 
       % Draw the arc and the background arc
       \pic[line width=0.1in, grey] {carc=225:-45:\dialsize};
@@ -210,13 +210,13 @@
       \pgfmathsetmacro{\leaderlengthtwo}{1.5}
 
       % Calculate the angle based on the rating provided in arguments
-      \setanglestwo{0}{#5}{12.0}
+      \setanglestwo{0}{#5}{10.0}
       \pic[line width=0.1in, grey] {carc=225:-45:\dialsizetwo};
       \pic[line width=0.1in, blue]{carc=\startangletwo:\endangletwo:\dialsizetwo};
       \pgfmathsetmacro{\dialsizethree}{1.75}
       \pgfmathsetmacro{\leaderlengththree}{1.5}
       % Calculate the angle based on the rating provided in arguments
-      \setanglesthree{0}{#7}{12.0}
+      \setanglesthree{0}{#7}{10.0}
       \pic[line width=0.1in, grey] {carc=225:-45:\dialsizethree};
       \pic[line width=0.1in, blue]{carc=\startanglethree:\endanglethree:\dialsizethree};
       % Put the average value in the center
@@ -1366,7 +1366,7 @@ May
 2017
 \emph default
 \color inherit
- President/Officer of NEGO (Nuclear Engineering Graduate Organization)
+ President of NEGO (Nuclear Engineering Graduate Organization)
 \end_layout
 
 \begin_layout Labeling
@@ -1487,7 +1487,7 @@ status open
 \backslash
 centering 
 \backslash
-resizebox{0.9
+resizebox{1.0
 \backslash
 columnwidth}{!}{
 \end_layout
@@ -1513,11 +1513,11 @@ status open
 
 
 \backslash
-dialthree{Software 
+dialthree{Scientific 
 \backslash
 
 \backslash
- Development}{Python}{5}{Git}{4}{Android (Java)}{2}
+ Programming}{MATLAB}{10}{Fortran}{5}{Python}{5}
 \end_layout
 
 \end_inset
@@ -1559,11 +1559,11 @@ status open
 
 
 \backslash
-dialthree{Data 
+dialthree{Physical 
 \backslash
 
 \backslash
- Analysis}{Matlab}{12}{Python}{5}{ROOT Toolkit}{1}
+ Simulation}{COMSOL}{6}{MCNP}{3}{LTSpice}{1}
 \end_layout
 
 \end_inset
@@ -1586,11 +1586,11 @@ status open
 
 
 \backslash
-dialtwo{Firmware 
+dialthree{Software 
 \backslash
 
 \backslash
- Design}{C++}{4}{AtMega}{3}
+ Development}{C++}{4}{Git}{4}{Java}{3}
 \end_layout
 
 \end_inset
@@ -1611,11 +1611,19 @@ status open
 
 
 \backslash
-dialtwo{Physical 
+dialthree{Electronic 
 \backslash
 
 \backslash
- Simulation}{COMSOL}{6}{Fortran}{5}
+ and 
+\backslash
+
+\backslash
+ Firmware 
+\backslash
+
+\backslash
+ Development}{Arduino}{3}{Eagle}{2}{KiCAD}{2}
 \end_layout
 
 \end_inset
@@ -1629,22 +1637,6 @@ dialtwo{Physical
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-dialthree{Hardware 
-\backslash
-
-\backslash
- Design}{Eagle}{2}{KiCAD}{2}{LTSpice}{1}
-\end_layout
-
-\end_inset
-
 
 \end_layout
 
