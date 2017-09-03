@@ -243,6 +243,12 @@
     \end{tikzpicture}
   }
 }
+
+\AtBeginDocument{
+\begin{tikzpicture}[remember picture,overlay]
+\draw[line width=25pt,color=blue] (current page.north east) -- (current page.north west);
+\end{tikzpicture}
+}
 \end_preamble
 \use_default_options false
 \begin_modules
@@ -300,6 +306,8 @@ biblatex
 \topmargin 0.6in
 \rightmargin 0.75in
 \bottommargin 0.6in
+\headheight 0.25cm
+\headsep 0.25in
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation skip
@@ -358,6 +366,83 @@ status open
 \noindent
 \align center
 
+\shape slanted
+\size large
+\emph on
+\color blue
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "35col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align right
+\begin_inset Graphics
+	filename logo_concept.pdf
+	height 4em
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "35col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align left
+
 \family sans
 \series bold
 \size largest
@@ -382,6 +467,21 @@ ALEX HAGEN
 \end_inset
 
 ahagen@purdue.edu
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -469,10 +569,9 @@ Portfolio - alexhagen.github.io
 
 \family sans
 \series bold
-\color black
+\size small
+\color blue
 EDUCATION
-\color inherit
-
 \begin_inset VSpace -8pt
 \end_inset
 
@@ -493,7 +592,10 @@ height "1pt"
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace -20pt
+
+\size small
+\color blue
+\begin_inset VSpace -30pt
 \end_inset
 
 
@@ -528,42 +630,80 @@ Purdue University
 \end_inset
 
 
+\begin_inset space \hspace*{}
+\length -5em
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "l"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "95col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength
+\backslash
+itemsep{-0.50em}
+\end_layout
+
+\end_inset
+
+Doctorate of Philosophy in Nuclear Engineering, 
 \emph on
-Doctorate of Philosophy in Nuclear Engineering, Final Defense in December
- 2017
+Final Defense in December 2017
+\end_layout
+
+\begin_layout Itemize
+Master of Science in Nuclear Engineering, Minor in Computational Science
+ and Engineering, 
+\emph on
+August 2014
+\end_layout
+
+\begin_layout Itemize
+Bachelor of Science in Nuclear Engineering, 
+\emph on
+May 2012
+\end_layout
+
+\end_inset
+
+
 \begin_inset Newline newline
 \end_inset
 
-Master of Science in Nuclear Engineering, August 2014
-\begin_inset Newline newline
-\end_inset
 
-
-\color white
-a
-\color blue
-
-\begin_inset space \qquad{}
-\end_inset
-
-Concentration in Computational Science and Engineering
-\color inherit
-
-\begin_inset Newline newline
-\end_inset
-
-Bachelor of Science in Nuclear Engineering, May 2012
 \end_layout
 
 \begin_layout Standard
 
 \family sans
 \series bold
-\color black
+\size small
+\color blue
 RESEARCH POSITIONS
 \family default
 \series default
-\color inherit
 
 \begin_inset VSpace -10pt
 \end_inset
@@ -585,7 +725,10 @@ height "1pt"
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace -20pt
+
+\size small
+\color blue
+\begin_inset VSpace -30pt
 \end_inset
 
 
@@ -622,6 +765,11 @@ Present
 
 \emph default
 
+\begin_inset space \hspace*{}
+\length -5em
+\end_inset
+
+
 \begin_inset Box Frameless
 position "t"
 hor_pos "l"
@@ -629,7 +777,7 @@ has_inner_box 1
 inner_pos "t"
 use_parbox 0
 use_makebox 0
-width "85col%"
+width "95col%"
 special "none"
 height "1in"
 height_special "totalheight"
@@ -655,23 +803,18 @@ itemsep{-0.50em}
 
 \end_inset
 
-Worked towards interdiction and detection of smuggled special nuclear material
- at borders
+Performed successful proof of concepts for 4 new special nuclear material
+ interdiction methods
 \end_layout
 
 \begin_layout Itemize
-Improved efficacy of Tensioned Metastable Fluid Detectors for use in active
- interrogation schemes under DNDO grant
+Developed Tensioned Metastable Fluid Detectors for use in active interrogation
+ for the DHS/DNDO
 \end_layout
 
 \begin_layout Itemize
 Developed validation method and multiphysics simulation of Acoustically
- Tensioned Metastable Fluid Detector systems
-\end_layout
-
-\begin_layout Itemize
-Designed and characterized Centrifugally Tensioned Metastable Fluid Detector
- system
+ Tensioned Detector systems
 \end_layout
 
 \end_inset
@@ -716,6 +859,11 @@ g Division
 
 \emph default
 
+\begin_inset space \hspace*{}
+\length -5em
+\end_inset
+
+
 \begin_inset Box Frameless
 position "t"
 hor_pos "l"
@@ -723,7 +871,7 @@ has_inner_box 1
 inner_pos "t"
 use_parbox 0
 use_makebox 0
-width "85col%"
+width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
@@ -749,12 +897,8 @@ itemsep{-0.50em}
 
 \end_inset
 
-Validated multiphysics fission reactor simulation against legacy neutronics
- codes and experimental data
-\end_layout
-
-\begin_layout Itemize
-Supported team simulating and developing next generation fast fission reactors
+Validated multiphysics fission reactor simulation against legacy codes and
+ experiment
 \end_layout
 
 \end_inset
@@ -766,6 +910,8 @@ Supported team simulating and developing next generation fast fission reactors
 
 \family sans
 \series bold
+\size small
+\color blue
 INDUSTRIAL EXPERIENCE
 \family default
 \series default
@@ -790,7 +936,93 @@ height "1pt"
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace -20pt
+
+\size small
+\color blue
+\begin_inset VSpace -30pt
+\end_inset
+
+
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\emph on
+\color blue
+Dec.
+\begin_inset space ~
+\end_inset
+
+2012
+\begin_inset space ~
+\end_inset
+
+-
+\begin_inset space ~
+\end_inset
+
+Present
+\emph default
+\noun on
+\color inherit
+ Engineering Consultant - Sagamore Adams Laboratories, LLC.
+\emph on
+\noun default
+
+\begin_inset Newline newline
+\end_inset
+
+
+\emph default
+
+\begin_inset space \hspace*{}
+\length -5em
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "l"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength
+\backslash
+itemsep{-0.50em}
+\end_layout
+
+\end_inset
+
+Conceptualized, designed, and characterized 2 novel neutron detector systems
+ that were released to market
+\end_layout
+
+\begin_layout Itemize
+Upgraded neutron detection systems per customer requirements for homeland
+ security applications
+\end_layout
+
 \end_inset
 
 
@@ -831,6 +1063,11 @@ Jan.
 
 \emph default
 
+\begin_inset space \hspace*{}
+\length -5em
+\end_inset
+
+
 \begin_inset Box Frameless
 position "t"
 hor_pos "l"
@@ -838,7 +1075,7 @@ has_inner_box 1
 inner_pos "t"
 use_parbox 0
 use_makebox 0
-width "85col%"
+width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
@@ -864,13 +1101,12 @@ itemsep{-0.50em}
 
 \end_inset
 
-Designed, drafted, and prototyped as part of a small product design team
- in the educational products industry
+Designed, drafted, and prototyped products as part of a small team for the
+ education industry
 \end_layout
 
 \begin_layout Itemize
-Developed 6 products from concept to production - including rotational physics
- instructional kit, electrophoresis chambers, and a Van de Graaf generator
+Developed 6 products from concept to production for the marketplace
 \end_layout
 
 \begin_layout Itemize
@@ -881,18 +1117,14 @@ Sourced, revised, or formalized the machine drawings and designs of over
 \end_inset
 
 
-\emph on
-
-\begin_inset Newline newline
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
 
 \family sans
 \series bold
+\size small
+\color blue
 SELECTED PUBLICATIONS AND CONFERENCE PRESENTATIONS
 \family default
 \series default
@@ -917,7 +1149,10 @@ height "1pt"
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace -20pt
+
+\size small
+\color blue
+\begin_inset VSpace -30pt
 \end_inset
 
 
@@ -938,138 +1173,65 @@ itemsep{-0.50em}
 
 \end_inset
 
-
-\begin_inset Note Comment
-status open
-
-\begin_layout Plain Layout
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Hagen2016a"
-
+Hagen, et al.
+ 
+\begin_inset Quotes sld
 \end_inset
 
-
-\end_layout
-
+Detection of Special Nuclear Material in Cargo using Continuous Neutron
+ Interrogation and Tension Metastable Fluid Detector.
+\begin_inset Quotes srd
 \end_inset
 
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-fullcite{Hagen2016a}
-\end_layout
-
-\end_inset
-
-
+ 
+\emph on
+Transactions of the American Nuclear Society
+\emph default
+, 2016
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Note Comment
-status open
-
-\begin_layout Plain Layout
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Archambault2016d"
-
+Archambault, Hagen, et al.
+ 
+\begin_inset Quotes sld
 \end_inset
 
-
-\end_layout
-
+Threshold Rejection Mode Active Interrogation of SNMs...
+ ...with Centrifugal and Acoustic Tensioned Metastable Fluid Detectors.
+\begin_inset Quotes srd
 \end_inset
 
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-fullcite{Archambault2016d}
-\end_layout
-
-\end_inset
-
-
+ 
+\emph on
+Transactions of Nuclear Science
+\emph default
+, 2016.
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Note Comment
-status open
-
-\begin_layout Plain Layout
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Hagen2015b"
-
+Hagen, et al.
+ 
+\begin_inset Quotes sld
 \end_inset
 
-
-\end_layout
-
+Characterization and Optimization of a Tensioned Metastable Fluid Nuclear
+ Particle Sensor Using Laser Based Profilometry.
+\begin_inset Quotes srd
 \end_inset
 
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-fullcite{Hagen2015b}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Note Comment
-status open
-
-\begin_layout Plain Layout
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Hagen2014"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-fullcite{Hagen2014}
-\end_layout
-
-\end_inset
-
-
+ 
+\emph on
+Journal of Nuclear Engineering and Radiation Science
+\emph default
+, 2015
 \end_layout
 
 \begin_layout Standard
 
 \family sans
 \series bold
+\size small
+\color blue
 PATENTS
 \family default
 \series default
@@ -1094,7 +1256,10 @@ height "1pt"
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace -20pt
+
+\size small
+\color blue
+\begin_inset VSpace -30pt
 \end_inset
 
 
@@ -1115,36 +1280,14 @@ itemsep{-0.50em}
 
 \end_inset
 
-
-\begin_inset Note Comment
-status open
-
-\begin_layout Plain Layout
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Taleyarkhan2014"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-fullcite{Taleyarkhan2014}
-\end_layout
-
-\end_inset
-
-
+Taleyarkhan, Bakken, Fisher, Hagen, Kostry.
+ Polylactic acid adhesive compositions and methods for their preparation
+ and use.
+ 
+\emph on
+World Patent # WO2014078720A1
+\emph default
+, 2014
 \end_layout
 
 \begin_layout Standard
@@ -1158,160 +1301,8 @@ fullcite{Taleyarkhan2014}
 
 \family sans
 \series bold
-HONORS AND AWARDS
-\family default
-\series default
-
-\begin_inset VSpace -10pt
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset CommandInset line
-LatexCommand rule
-offset "0.5ex"
-width "100line%"
-height "1pt"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset VSpace -20pt
-\end_inset
-
-
-\end_layout
-
-\begin_layout Labeling
-\labelwidthstring 00.00.0000
-
-\emph on
+\size small
 \color blue
-May
-\begin_inset space ~
-\end_inset
-
-2017
-\emph default
-\color inherit
- Department of Energy Innovation in Nuclear Technology R&D Award
-\end_layout
-
-\begin_layout Labeling
-\labelwidthstring 00.00.0000
-
-\emph on
-\color blue
-Nov.
-\begin_inset space ~
-\end_inset
-
-2016
-\emph default
-\noun on
-\color inherit
- 
-\noun default
-ANS Young Member's Group Best Paper Award
-\end_layout
-
-\begin_layout Labeling
-\labelwidthstring 00.00.0000
-
-\emph on
-\color blue
-Oct.
-\begin_inset space ~
-\end_inset
-
-2016
-\emph default
-\noun on
-\color inherit
- 
-\noun default
-IEEE Sensors Conference Demonstration 1st Prize
-\end_layout
-
-\begin_layout Labeling
-\labelwidthstring 00.00.0000
-
-\emph on
-\color blue
-Apr.
-\begin_inset space ~
-\end_inset
-
-2016
-\emph default
-\color inherit
- Purdue Engineering Outstanding Service Award
-\end_layout
-
-\begin_layout Labeling
-\labelwidthstring 00.00.0000
-
-\emph on
-\color blue
-July
-\begin_inset space ~
-\end_inset
-
-2014
-\emph default
-\color inherit
- Received Best Poster Award and Best Paper Award at International Conference
- on Nuclear Engineering 22
-\end_layout
-
-\begin_layout Labeling
-\labelwidthstring 00.00.0000
-
-\emph on
-\color blue
-Apr.
-\begin_inset space \space{}
-\end_inset
-
-2007
-\emph default
-\color inherit
- National Merit Scholarship
-\end_layout
-
-\begin_layout Labeling
-\labelwidthstring 00.00.0000
-
-\emph on
-\color blue
-Apr.
-\begin_inset space \space{}
-\end_inset
-
-2006,
-\begin_inset space \space{}
-\end_inset
-
-Apr.
-\begin_inset space \space{}
-\end_inset
-
-2007
-\emph default
-\color inherit
- Two Time Delegate to Intel International Science and Engineering Fair
-\end_layout
-
-\begin_layout Standard
-
-\family sans
-\series bold
 LEADERSHIP ROLES
 \family default
 \series default
@@ -1336,14 +1327,31 @@ height "1pt"
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace -20pt
+
+\size small
+\color blue
+\begin_inset VSpace -30pt
 \end_inset
 
 
 \end_layout
 
-\begin_layout Labeling
-\labelwidthstring 00.00.0000
+\begin_layout Itemize
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength
+\backslash
+itemsep{-0.50em}
+\end_layout
+
+\end_inset
+
 
 \emph on
 \color blue
@@ -1369,8 +1377,8 @@ May
  President of NEGO (Nuclear Engineering Graduate Organization)
 \end_layout
 
-\begin_layout Labeling
-\labelwidthstring 00.00.0000
+\begin_layout Itemize
+\noindent
 
 \emph on
 \color blue
@@ -1396,8 +1404,8 @@ May
  Chair of Purdue Graduate Student Government (PGSG) Advancment Committee
 \end_layout
 
-\begin_layout Labeling
-\labelwidthstring 00.00.0000
+\begin_layout Itemize
+\noindent
 
 \emph on
 \color blue
@@ -1420,24 +1428,24 @@ May
 2016
 \emph default
 \color inherit
- Senator representing Nuclear Engineering to PGSG
+ Senator representing Nuclear Engineering to Purdue Graduate Senate
 \end_layout
 
-\begin_layout Labeling
-\labelwidthstring 00.00.0000
+\begin_layout Itemize
+\noindent
 
 \emph on
 \color blue
-May
-\begin_inset space ~
+May.
+\begin_inset space \space{}
 \end_inset
 
 2011
-\begin_inset space ~
+\begin_inset space \space{}
 \end_inset
 
 -
-\begin_inset space ~
+\begin_inset space \space{}
 \end_inset
 
 May
@@ -1454,6 +1462,138 @@ May
 
 \family sans
 \series bold
+\size small
+\color blue
+HONORS AND AWARDS
+\family default
+\series default
+
+\begin_inset VSpace -10pt
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100line%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size small
+\color blue
+\begin_inset VSpace -30pt
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength
+\backslash
+itemsep{-0.50em}
+\end_layout
+
+\end_inset
+
+
+\emph on
+\color blue
+May
+\begin_inset space ~
+\end_inset
+
+2017
+\emph default
+\color inherit
+ Department of Energy Innovation in Nuclear Technology R&D Award
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+\color blue
+Nov.
+\begin_inset space ~
+\end_inset
+
+2016
+\emph default
+\noun on
+\color inherit
+ 
+\noun default
+ANS Young Member's Group Best Paper Award
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+\color blue
+Oct.
+\begin_inset space ~
+\end_inset
+
+2016
+\emph default
+\noun on
+\color inherit
+ 
+\noun default
+IEEE Sensors Conference Demonstration 1st Prize
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+\color blue
+Apr.
+\begin_inset space ~
+\end_inset
+
+2016
+\emph default
+\color inherit
+ Purdue Engineering Outstanding Service Award
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+\color blue
+July
+\begin_inset space ~
+\end_inset
+
+2014
+\emph default
+\color inherit
+ Received Best Poster Award and Best Paper Award at Intl.
+ Conference on Nuclear Engineering 22
+\end_layout
+
+\begin_layout Standard
+
+\family sans
+\series bold
+\size small
+\color blue
 SKILLS
 \family default
 \series default
@@ -1659,27 +1799,45 @@ status open
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Comment
+\begin_inset ERT
 status open
 
 \begin_layout Plain Layout
-\begin_inset CommandInset bibtex
-LatexCommand bibtex
-btprint "btPrintAll"
-bibfiles "/home/ahagen/bibs/authored"
-options "abbrvnat"
+
+
+\backslash
+begin{tikzpicture}[remember picture,overlay]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[line width=25pt,color=blue] (current page.north east) -- (current page.north
+ west);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
 
 \end_inset
 
 
 \end_layout
 
-\end_inset
+\begin_layout Standard
+\noindent
+\align center
 
-
+\family sans
+\series bold
+\size footnotesize
+\color blue
+REFERENCES AVAILABLE UPON REQUEST
 \end_layout
 
 \end_body

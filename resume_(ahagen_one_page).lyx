@@ -19,7 +19,7 @@
             isbn=false, url=false, doi=false,%
             eprint=false, maxnames=99]{biblatex}
 \AtBeginDocument{\thispagestyle{empty}}
-\addbibresource{/home/ahagen/bibs/authored.bib}
+\addbibresource{/Users/ahagen/bibs/authored.bib}
 
 \def\makenamesetup{%
   \def\bibnamedelima{~}%
@@ -399,7 +399,7 @@ status open
 \noindent
 \align right
 \begin_inset Graphics
-	filename logo_concept.svg
+	filename logo_concept.pdf
 	height 4em
 
 \end_inset

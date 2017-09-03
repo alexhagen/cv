@@ -1,0 +1,370 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass letter
+\begin_preamble
+\frenchspacing
+\usepackage{amsmath}
+\newcommand{\ø}{\raisebox{.3ex}{\tiny$\; \bullet \;$}}
+\renewcommand{\arraystretch}{1.25}
+\usepackage{fancyheadings}
+\pagestyle{fancy}
+\chead{\textit{\today}}
+
+\usepackage[backend=biber,defernumbers=true,%
+            firstinits=true, language=english,%
+            isbn=false, url=false, doi=false,%
+            eprint=false, maxnames=99]{biblatex}
+\AtBeginDocument{\thispagestyle{empty}}
+\addbibresource{/home/ahagen/bibs/authored.bib}
+
+\def\makenamesetup{%
+  \def\bibnamedelima{~}%
+  \def\bibnamedelimb{ }%
+  \def\bibnamedelimc{ }%
+  \def\bibnamedelimd{ }%
+  \def\bibnamedelimi{ }%
+  \def\bibinitperiod{.}%
+  \def\bibinitdelim{~}%
+  \def\bibinithyphendelim{.-}}    
+\newcommand*{\makename}[2]{\begingroup\makenamesetup\xdef#1{#2}\endgroup}
+
+\newcommand*{\boldname}[3]{%
+  \def\lastname{#1}%
+  \def\firstname{#2}%
+  \def\firstinit{#3}}
+\boldname{}{}{}
+
+% Patch new definitions
+\renewcommand{\mkbibnamegiven}[1]{%
+  \ifboolexpr{ ( test {\ifdefequal{\firstname}{\namepartgiven}} or test {\ifdefequal{\firstinit}{\namepartgiven}} ) and test {\ifdefequal{\lastname}{\namepartfamily}} }
+  {\mkbibbold{#1}}{#1}%
+}
+
+\renewcommand{\mkbibnamefamily}[1]{%
+  \ifboolexpr{ ( test {\ifdefequal{\firstname}{\namepartgiven}} or test {\ifdefequal{\firstinit}{\namepartgiven}} ) and test {\ifdefequal{\lastname}{\namepartfamily}} }
+  {\mkbibbold{#1}}{#1}%
+}
+
+\boldname{Hagen}{Alexander}{A.}
+\usepackage{xcolor}
+\definecolor{black}{HTML}{142735}
+\definecolor{blue}{HTML}{285668}
+\definecolor{grey}{HTML}{999999}
+\definecolor{darkgrey}{HTML}{285668}
+\makeatletter
+\newcommand{\globalcolor}[1]{%
+  \color{#1}\global\let\default@color\current@color
+}
+\makeatother
+
+\AtBeginDocument{\globalcolor{black}}
+\usepackage{lipsum}
+
+\usepackage{tikz}
+\end_preamble
+\use_default_options false
+\begin_modules
+biblatex
+\end_modules
+\maintain_unincluded_children false
+\language american
+\language_package babel
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "Crimson Text [PfEd]"
+\font_sans "default" "Source Sans Pro"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command biber
+\index_command default
+\paperfontsize 10
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize letterpaper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style 
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 0.6in
+\rightmargin 1in
+\bottommargin 0.6in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language swedish
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\bullet 0 0 34 -1
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout My Address
+Alex Hagen
+\begin_inset Newline newline
+\end_inset
+
+225 N.
+ 2nd St., 3C
+\begin_inset Newline newline
+\end_inset
+
+Lafayette, IN, 47901
+\end_layout
+
+\begin_layout Send To Address
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Opening
+To the application reviewer,
+\end_layout
+
+\begin_layout Standard
+I am writing to apply to Pacific Northwest National Laboratory for the Post
+ Doctorate RA in Nuclear Monitoring.
+ The research I will be presenting for my upcoming PhD defense is on the
+ use of novel neutron detectors - Tensioned Metastable Fluid Detectors -
+ in passive and active interrogation for special nuclear material interdiction.
+ I design the detectors, and write automation firmware and control software,
+ with the detectors recently winning the best demo award at the 2016 IEEE
+ Sensors conference.
+ I have also received awards for my data analysis and simulation work (done
+ using C++, Python, Matlab, Fortran, MCNP, and COMSOL), particularly the
+ best paper at the 2016 American Nuclear Society Winter Meeting for my paper
+ analyzing our detection methodology for highly enriched uranium and the
+ 2017 Innovations in Nuclear Technology R&D Award for the same methodology.
+\end_layout
+
+\begin_layout Standard
+In the work on these methods, I've developed some of the skills that the
+ call for Nuclear Monitoring Post-Doc references.
+ I've been required to perform gamma-ray spectroscopy - most recently for
+ enrichment verification of unknown samples of uranium dioxide with inclusions
+ and without enrichment standards to compare against.
+ I've also had to creatively use MCNP/MCNP-Polimi on many diverse problems
+ in our detection context - from photoneutron production and subsequent
+ detection in a clinical bremsstrahlung accelerator source to the directionally
+ dependent spectra and its effect on our detector in a 
+\begin_inset Formula $d+d$
+\end_inset
+
+ neutron generator.
+ I've also been secondarily involved in a line of research using our detectors
+ to detect the alpha decay from radon gas - a line of research which requires
+ the use of ORIGEN for detemination of the activities of radon progeny and
+ further modeling of its transport into our detection fluid.
+\end_layout
+
+\begin_layout Standard
+Outside of the scientific studies for our TMFDs, I've also been integral
+ in the physical development and manufacturing of these detectors.
+ As a consultant to Sagamore Adams Laboratories, which is commercializing
+ the detectors, I've developed through simulation the rotordynamic stability
+ requirements or acoustic focusing requirements for each detector, drafted
+ every single drawing from glassblowing to machining and additive manufacturing,
+ and even manufactured by hand some of these detectors.
+ My experience in a manufacturing context is now approaching 10 years, between
+ my time in the educational products industry (at Steiner Enterprises) and
+ my time at the Metastable Fluids Research Lab and Sagamore Adams Laboratories.
+\end_layout
+
+\begin_layout Standard
+Inherent to all of my work is a great deal of data analysis, and I am proud
+ of my data analytics and software/algorithm development skills.
+ Besides the computation inherent in my publications, I also maintain several
+ open source codes.
+ Of particular interest to the reviewer may be my wrapper, analysis package
+ and visualizer for the nuclear transport code MCNP that I call 
+\emph on
+wig
+\emph default
+.
+ I also maintain a data analysis library that I call 
+\emph on
+PyM
+\emph default
+ and a visualization module I call 
+\emph on
+PyG
+\emph default
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+wig: 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://alexhagen.github.io/alexhagen/wig"
+
+\end_inset
+
+, PyM: 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://alexhagen.github.io/alexhagen/pym"
+
+\end_inset
+
+, PyG: 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://alexhagen.github.io/alexhagen/pyg"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+, all written in Python, documented and published via Github.
+ I highlight these to show that I have diversified my skillset so that I
+ can take part in all levels of engineering and design on products.
+\end_layout
+
+\begin_layout Standard
+While my application does not provide the experience with HYSPLIT or STOMP
+ that the reviewer may be looking for, I hope I have demonstrated my ability
+ to perform a scientific/engineering analysis from simulation all the way
+ through manufacturing and characterization.
+ I hope to have an opportunity to discuss how I could be a useful contributor
+ to the nuclear monitoring project.
+\end_layout
+
+\begin_layout Closing
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+Looking forward to your response,
+\backslash
+
+\backslash
+%
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+fromsig{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename signature.svg
+	width 5cm
+
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+} 
+\backslash
+
+\backslash
+%
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+fromname{Alex Hagen}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[remember picture,overlay]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[line width=25pt,color=blue] (current page.north east) -- (current page.north
+ west);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
