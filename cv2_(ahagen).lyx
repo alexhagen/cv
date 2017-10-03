@@ -1,0 +1,2803 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\frenchspacing
+\usepackage{amsmath}
+\newcommand{\ø}{\raisebox{.3ex}{\tiny$\; \bullet \;$}}
+\renewcommand{\arraystretch}{1.25}
+\usepackage{fancyheadings}
+\pagestyle{fancy}
+\chead{\textit{Alex Hagen · Resume · \today}}
+
+\usepackage[backend=biber,defernumbers=true,%
+            firstinits=true, language=english,%
+            isbn=false, url=false, doi=false,%
+            eprint=false, maxnames=99]{biblatex}
+\AtBeginDocument{\thispagestyle{empty}}
+\addbibresource{/Users/ahagen/bibs/authored.bib}
+
+\def\makenamesetup{%
+  \def\bibnamedelima{~}%
+  \def\bibnamedelimb{ }%
+  \def\bibnamedelimc{ }%
+  \def\bibnamedelimd{ }%
+  \def\bibnamedelimi{ }%
+  \def\bibinitperiod{.}%
+  \def\bibinitdelim{~}%
+  \def\bibinithyphendelim{.-}}    
+\newcommand*{\makename}[2]{\begingroup\makenamesetup\xdef#1{#2}\endgroup}
+
+\newcommand*{\boldname}[3]{%
+  \def\lastname{#1}%
+  \def\firstname{#2}%
+  \def\firstinit{#3}}
+\boldname{}{}{}
+
+% Patch new definitions
+\renewcommand{\mkbibnamegiven}[1]{%
+  \ifboolexpr{ ( test {\ifdefequal{\firstname}{\namepartgiven}} or test {\ifdefequal{\firstinit}{\namepartgiven}} ) and test {\ifdefequal{\lastname}{\namepartfamily}} }
+  {\mkbibbold{#1}}{#1}%
+}
+
+\renewcommand{\mkbibnamefamily}[1]{%
+  \ifboolexpr{ ( test {\ifdefequal{\firstname}{\namepartgiven}} or test {\ifdefequal{\firstinit}{\namepartgiven}} ) and test {\ifdefequal{\lastname}{\namepartfamily}} }
+  {\mkbibbold{#1}}{#1}%
+}
+
+\boldname{Hagen}{Alexander}{A.}
+\usepackage{xcolor}
+\definecolor{black}{HTML}{142735}
+\definecolor{blue}{HTML}{285668}
+\definecolor{grey}{HTML}{999999}
+\definecolor{darkgrey}{HTML}{285668}
+\makeatletter
+\newcommand{\globalcolor}[1]{%
+  \color{#1}\global\let\default@color\current@color
+}
+\makeatother
+
+\AtBeginDocument{\globalcolor{black}}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{adjustbox}
+\usepackage{varwidth}
+\usepackage{ifthen}
+\pagenumbering{gobble}
+\usetikzlibrary{positioning}
+\usepackage[scale=0.95]{opensans}
+\DeclareRobustCommand\ltseries{\fontseries{l}\selectfont}
+
+\DeclareTextFontCommand{\textlt}{\ltseries}
+
+\tikzset{
+  pics/carc/.style args={#1:#2:#3}{
+    code={
+      \draw[pic actions] (#1:#3) arc(#1:#2:#3);
+    }
+  }
+}
+
+
+\newcommand{\setangles}[3]{
+\ifthenelse{\equal{#1}{NA}}{
+        \pgfmathsetmacro{\startangle}{225.0}
+        \pgfmathsetmacro{\endangle}{-45}
+      }{
+      	\ifthenelse{\equal{#1}{#2}}{
+        \pgfmathsetmacro{\startangle}{230.0 - (270.0 * #1 / #3)}
+        \pgfmathsetmacro{\endangle}{220.0 - (270.0 * #2 / #3)}
+      	}{
+      	\pgfmathsetmacro{\startangle}{225.0 - (270.0 * #1 / #3)}
+        \pgfmathsetmacro{\endangle}{225.0 - (270.0 * #2 / #3)}
+      	}
+      }
+}
+
+\newcommand{\setanglestwo}[3]{
+\ifthenelse{\equal{#1}{NA}}{
+        \pgfmathsetmacro{\startangletwo}{225.0}
+        \pgfmathsetmacro{\endangletwo}{-45}
+      }{
+      	\ifthenelse{\equal{#1}{#2}}{
+        \pgfmathsetmacro{\startangletwo}{230.0 - (270.0 * #1 / #3)}
+        \pgfmathsetmacro{\endangletwo}{220.0 - (270.0 * #2 / #3)}
+      	}{
+      	\pgfmathsetmacro{\startangletwo}{225.0 - (270.0 * #1 / #3)}
+        \pgfmathsetmacro{\endangletwo}{225.0 - (270.0 * #2 / #3)}
+      	}
+      }
+}
+
+\newcommand{\setanglesthree}[3]{
+\ifthenelse{\equal{#1}{NA}}{
+        \pgfmathsetmacro{\startanglethree}{225.0}
+        \pgfmathsetmacro{\endanglethree}{-45}
+      }{
+      	\ifthenelse{\equal{#1}{#2}}{
+        \pgfmathsetmacro{\startanglethree}{230.0 - (270.0 * #1 / #3)}
+        \pgfmathsetmacro{\endanglethree}{220.0 - (270.0 * #2 / #3)}
+      	}{
+      	\pgfmathsetmacro{\startanglethree}{225.0 - (270.0 * #1 / #3)}
+        \pgfmathsetmacro{\endanglethree}{225.0 - (270.0 * #2 / #3)}
+      	}
+      }
+}
+
+\newcommand{\skillstext}[2]{\color{blue} #1 \\ \color{blue} \scriptsize #2 Years}
+\newcommand{\titletext}[1]{\color{blue} #1 }
+
+\newcommand{\dial}[3]{
+  \raisebox{-0.5\height}{
+    \begin{tikzpicture}
+      % Set some constants for the dial size and the width of the dial
+      \pgfmathsetmacro{\dialsize}{1.25}
+      \pgfmathsetmacro{\leaderlength}{1.375}
+      % Adjust the text spacing (line spacing)
+      \setlength{\baselineskip}{2pt}
+      % Calculate the angle based on the rating provided in arguments
+      \setangles{0}{#3}{12.0}
+
+      % Draw the arc and the background arc
+      \pic[line width=0.1in, grey] {carc=225:-45:\dialsize};
+      \pic[line width=0.1in, blue]{carc=\startangle:\endangle:\dialsize};
+      % Put the average value in the center
+      \node[align=center]{\titletext{#1}};
+      % Draw the lines to put the low and high values on
+      \draw[line width=0.5pt, blue] (\endangle:\dialsize - 0.15) -- (\endangle:\dialsize + 0.25) arc (\endangle:-45:\dialsize+0.25) -- ++(0:\leaderlength);
+      \pgfgetlastxy{\XCoord}{\YCoord};
+      \node[align=right, anchor=south east] (high) at (\XCoord, \YCoord) {\skillstext{#2}{#3}};
+    \end{tikzpicture}
+  }
+}
+
+\newcommand{\dialtwo}[5]{
+  \raisebox{-0.5\height}{
+    \begin{tikzpicture}
+      % Set some constants for the dial size and the width of the dial
+      \pgfmathsetmacro{\dialsize}{1.25}
+      \pgfmathsetmacro{\leaderlength}{2.0}
+      % Adjust the text spacing (line spacing)
+      \setlength{\baselineskip}{2pt}
+      % Calculate the angle based on the rating provided in arguments
+      \setangles{0}{#3}{10.0}
+
+      % Draw the arc and the background arc
+      \pic[line width=0.1in, grey] {carc=225:-45:\dialsize};
+      \pic[line width=0.1in, blue]{carc=\startangle:\endangle:\dialsize};
+      \pgfmathsetmacro{\dialsizetwo}{1.50}
+      \pgfmathsetmacro{\leaderlengthtwo}{1.5}
+
+      % Calculate the angle based on the rating provided in arguments
+      \setanglestwo{0}{#5}{10.0}
+      \pic[line width=0.1in, grey] {carc=225:-45:\dialsizetwo};
+      \pic[line width=0.1in, blue]{carc=\startangletwo:\endangletwo:\dialsizetwo};
+      % Put the average value in the center
+      \node[align=center]{\titletext{#1}};
+      % Draw the lines to put the low and high values on
+      \draw[line width=0.5pt, blue] (\endangle:\dialsize - 0.15) -- (\endangle:\dialsize + 0.25) arc (\endangle:-45:\dialsize+0.25) -- ++(0:\leaderlength);
+      \pgfgetlastxy{\XCoord}{\YCoord};
+      \node[align=right, anchor=south east] (high) at (\XCoord, \YCoord) {\skillstext{#2}{#3}};
+      
+      % Put the average value in the center
+      % Draw the lines to put the low and high values on
+      \draw[line width=0.5pt, blue] (\endangletwo:\dialsizetwo - 0.15) -- (\endangletwo:\dialsizetwo + 0.25) arc (\endangletwo:0:\dialsizetwo+0.25) -- ++(0:\leaderlengthtwo);
+      \pgfgetlastxy{\XCoord}{\YCoord};
+      \node[align=right, anchor=south east] (high) at (\XCoord, \YCoord) {\skillstext{#4}{#5}};
+    \end{tikzpicture}
+  }
+}
+
+\newcommand{\dialthree}[7]{
+  \raisebox{-0.5\height}{
+    \begin{tikzpicture}
+      % Set some constants for the dial size and the width of the dial
+      \pgfmathsetmacro{\dialsize}{1.25}
+      \pgfmathsetmacro{\leaderlength}{2.0}
+      % Adjust the text spacing (line spacing)
+      \setlength{\baselineskip}{2pt}
+      % Calculate the angle based on the rating provided in arguments
+      \setangles{0}{#3}{10.0}
+
+      % Draw the arc and the background arc
+      \pic[line width=0.1in, grey] {carc=225:-45:\dialsize};
+      \pic[line width=0.1in, blue]{carc=\startangle:\endangle:\dialsize};
+      \pgfmathsetmacro{\dialsizetwo}{1.50}
+      \pgfmathsetmacro{\leaderlengthtwo}{1.5}
+
+      % Calculate the angle based on the rating provided in arguments
+      \setanglestwo{0}{#5}{10.0}
+      \pic[line width=0.1in, grey] {carc=225:-45:\dialsizetwo};
+      \pic[line width=0.1in, blue]{carc=\startangletwo:\endangletwo:\dialsizetwo};
+      \pgfmathsetmacro{\dialsizethree}{1.75}
+      \pgfmathsetmacro{\leaderlengththree}{1.5}
+      % Calculate the angle based on the rating provided in arguments
+      \setanglesthree{0}{#7}{10.0}
+      \pic[line width=0.1in, grey] {carc=225:-45:\dialsizethree};
+      \pic[line width=0.1in, blue]{carc=\startanglethree:\endanglethree:\dialsizethree};
+      % Put the average value in the center
+      \node[align=center]{\titletext{#1}};
+      % Draw the lines to put the low and high values on
+      \draw[line width=0.5pt, blue] (\endangle:\dialsize - 0.15) -- (\endangle:\dialsize + 0.25) arc (\endangle:-45:\dialsize+0.25) -- ++(0:\leaderlength);
+      \pgfgetlastxy{\XCoord}{\YCoord};
+      \node[align=right, anchor=south east] (high) at (\XCoord, \YCoord) {\skillstext{#2}{#3}};
+      
+      % Put the average value in the center
+      % Draw the lines to put the low and high values on
+      \draw[line width=0.5pt, blue] (\endangletwo:\dialsizetwo - 0.15) -- (\endangletwo:\dialsizetwo + 0.25) arc (\endangletwo:0:\dialsizetwo+0.25) -- ++(0:\leaderlengthtwo);
+      \pgfgetlastxy{\XCoord}{\YCoord};
+      \node[align=right, anchor=south east] (high) at (\XCoord, \YCoord) {\skillstext{#4}{#5}};
+      
+
+      
+      % Put the average value in the center
+      % Draw the lines to put the low and high values on
+      \draw[line width=0.5pt, blue] (\endanglethree:\dialsizethree - 0.15) -- (\endanglethree:\dialsizethree + 0.25) arc (\endanglethree:45:\dialsizethree+0.25) -- ++(0:\leaderlengththree);
+      \pgfgetlastxy{\XCoord}{\YCoord};
+      \node[align=right, anchor=south east] (high) at (\XCoord, \YCoord) {\skillstext{#6}{#7}};
+      
+    \end{tikzpicture}
+  }
+}
+
+\AtBeginDocument{
+\begin{tikzpicture}[remember picture,overlay]
+\draw[line width=25pt,color=blue] (current page.north east) -- (current page.north west);
+\end{tikzpicture}
+}
+\end_preamble
+\use_default_options false
+\begin_modules
+biblatex
+\end_modules
+\maintain_unincluded_children false
+\language american
+\language_package babel
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "Crimson Text [PfEd]"
+\font_sans "default" "Source Sans Pro"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command biber
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize letterpaper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style 
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 0.75in
+\topmargin 0.6in
+\rightmargin 0.75in
+\bottommargin 0.6in
+\headheight 0.25cm
+\headsep 0.25in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language swedish
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\bullet 0 0 34 -1
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\noindent
+\align center
+
+\shape slanted
+\size small
+\emph on
+\color blue
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "70col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+
+\shape slanted
+\size large
+\emph on
+\color blue
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "35col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align right
+\begin_inset Graphics
+	filename logo_concept.pdf
+	height 4em
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "35col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align left
+
+\family sans
+\series bold
+\size largest
+\noun on
+\color black
+ALEX HAGEN
+\family default
+\series default
+\size large
+\noun default
+\color inherit
+
+\begin_inset Newline newline
+\end_inset
+
+
+\shape slanted
+\emph on
+\color blue
+(765)-418-4155
+\begin_inset Newline newline
+\end_inset
+
+ahagen@purdue.edu
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "25col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\noindent
+
+\size footnotesize
+\emph on
+\color blue
+\begin_inset Graphics
+	filename linkedin_icon.svg
+	height 0.75em
+
+\end_inset
+
+ linkedin.com/in/alexander-hagen
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename github_icon.svg
+	height 0.75em
+
+\end_inset
+
+ github.com/alexhagen
+\begin_inset Newline newline
+\end_inset
+
+Portfolio - alexhagen.github.io
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 10pt
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family sans
+\series bold
+\size small
+\color blue
+EDUCATION
+\begin_inset VSpace -8pt
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100line%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size small
+\color blue
+\begin_inset VSpace -30pt
+\end_inset
+
+
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\emph on
+\color blue
+Jan.
+\begin_inset space ~
+\end_inset
+
+2009
+\begin_inset space ~
+\end_inset
+
+-
+\begin_inset space ~
+\end_inset
+
+Present
+\emph default
+\color inherit
+ 
+\noun on
+Purdue University
+\noun default
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset space \hspace*{}
+\length -5em
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "l"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "95col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength
+\backslash
+itemsep{-0.50em}
+\end_layout
+
+\end_inset
+
+Doctorate of Philosophy in Nuclear Engineering, 
+\emph on
+Final Defense in December 2017
+\end_layout
+
+\begin_layout Itemize
+Master of Science in Nuclear Engineering, Minor in Computational Science
+ and Engineering, 
+\emph on
+August 2014
+\end_layout
+
+\begin_layout Itemize
+Bachelor of Science in Nuclear Engineering, 
+\emph on
+May 2012
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family sans
+\series bold
+\size small
+\color blue
+RESEARCH POSITIONS
+\family default
+\series default
+
+\begin_inset VSpace -10pt
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100line%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size small
+\color blue
+\begin_inset VSpace -30pt
+\end_inset
+
+
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\emph on
+\color blue
+May
+\begin_inset space ~
+\end_inset
+
+2012
+\begin_inset space ~
+\end_inset
+
+-
+\begin_inset space ~
+\end_inset
+
+Present
+\emph default
+\noun on
+\color inherit
+ Graduate Researcher - Metastable Fluid Research Laboratory
+\emph on
+\noun default
+
+\begin_inset Newline newline
+\end_inset
+
+
+\emph default
+
+\begin_inset space \hspace*{}
+\length -5em
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "l"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "95col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength
+\backslash
+itemsep{-0.50em}
+\end_layout
+
+\end_inset
+
+Performed successful proof of concepts for 4 new special nuclear material
+ interdiction methods
+\end_layout
+
+\begin_layout Itemize
+Developed Tensioned Metastable Fluid Detectors for use in active interrogation
+ for the DHS/DNDO
+\end_layout
+
+\begin_layout Itemize
+Developed validation method and multiphysics simulation of Acoustically
+ Tensioned detector systems
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\shape slanted
+\color blue
+Oct.
+\begin_inset space ~
+\end_inset
+
+2010
+\begin_inset space ~
+\end_inset
+
+-
+\begin_inset space ~
+\end_inset
+
+May
+\begin_inset space ~
+\end_inset
+
+2012
+\shape default
+\color inherit
+ 
+\noun on
+Undergraduate Researcher - Metastable Fluid Research Laboratory
+\noun default
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset space \hspace*{}
+\length -5em
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "l"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "95col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength
+\backslash
+itemsep{-0.50em}
+\end_layout
+
+\end_inset
+
+Extended previous work on acoustics simulation of Acoustically Tensioned
+ detector systems
+\end_layout
+
+\begin_layout Itemize
+Evaluated photon detection capabilities of Centrifugally Tensioned detector
+ system
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\emph on
+\color blue
+May
+\begin_inset space ~
+\end_inset
+
+2011
+\begin_inset space ~
+\end_inset
+
+-
+\begin_inset space ~
+\end_inset
+
+Aug.
+\begin_inset space ~
+\end_inset
+
+2011
+\emph default
+\color inherit
+ 
+\noun on
+Undergraduate Laboratory Intern - Argonne National Laboratory Nuclear Engineerin
+g Division
+\emph on
+\noun default
+
+\begin_inset Newline newline
+\end_inset
+
+
+\emph default
+
+\begin_inset space \hspace*{}
+\length -5em
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "l"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength
+\backslash
+itemsep{-0.50em}
+\end_layout
+
+\end_inset
+
+Validated multiphysics fission reactor simulation against legacy codes and
+ experiment
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family sans
+\series bold
+\size small
+\color blue
+INDUSTRIAL EXPERIENCE
+\family default
+\series default
+
+\begin_inset VSpace -10pt
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100line%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size small
+\color blue
+\begin_inset VSpace -30pt
+\end_inset
+
+
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\emph on
+\color blue
+Dec.
+\begin_inset space ~
+\end_inset
+
+2012
+\begin_inset space ~
+\end_inset
+
+-
+\begin_inset space ~
+\end_inset
+
+Present
+\emph default
+\noun on
+\color inherit
+ Engineering Consultant - Sagamore Adams Laboratories, LLC.
+\emph on
+\noun default
+
+\begin_inset Newline newline
+\end_inset
+
+
+\emph default
+
+\begin_inset space \hspace*{}
+\length -5em
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "l"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength
+\backslash
+itemsep{-0.50em}
+\end_layout
+
+\end_inset
+
+Conceptualized, designed, and characterized 2 novel neutron detector systems
+ that were released to market
+\end_layout
+
+\begin_layout Itemize
+Upgraded neutron detection systems per customer requirements for homeland
+ security applications
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\emph on
+\color blue
+Jan.
+\begin_inset space ~
+\end_inset
+
+2009
+\begin_inset space ~
+\end_inset
+
+-
+\begin_inset space ~
+\end_inset
+
+Jan.
+\begin_inset space ~
+\end_inset
+
+2011
+\emph default
+\noun on
+\color inherit
+ Industrial Design Assistant - Steiner Enterprises
+\emph on
+\noun default
+
+\begin_inset Newline newline
+\end_inset
+
+
+\emph default
+
+\begin_inset space \hspace*{}
+\length -5em
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "l"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength
+\backslash
+itemsep{-0.50em}
+\end_layout
+
+\end_inset
+
+Designed, drafted, and prototyped products as part of a small team for the
+ education industry
+\end_layout
+
+\begin_layout Itemize
+Developed 6 products from concept to production for the marketplace
+\end_layout
+
+\begin_layout Itemize
+Sourced, revised, or formalized the machine drawings and designs of over
+ 30 other products
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family sans
+\series bold
+\size small
+\color blue
+ACADEMIC POSITIONS
+\family default
+\series default
+
+\begin_inset VSpace -10pt
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100line%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size small
+\color blue
+\begin_inset VSpace -30pt
+\end_inset
+
+
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\shape slanted
+\color blue
+June
+\begin_inset space ~
+\end_inset
+
+2017
+\begin_inset space ~
+\end_inset
+
+-
+\begin_inset space ~
+\end_inset
+
+Present
+\shape default
+\color inherit
+ Mentor for Jefferson High School Student
+\begin_inset Newline newline
+\end_inset
+
+Mentored and taught Jefferson High School student to complete project involving
+ acoustic tensioned metastable fluid detectors to compete at the Purdue
+ Regional Science Fair (a fair that leads into the Intel International Science
+ and Engineering Fair).
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\shape slanted
+\color blue
+June
+\begin_inset space ~
+\end_inset
+
+2015
+\begin_inset space ~
+\end_inset
+
+-
+\begin_inset space ~
+\end_inset
+
+Mar.
+\begin_inset space ~
+\end_inset
+
+2016
+\shape default
+\color inherit
+ Mentor for Jefferson High School Student
+\begin_inset Newline newline
+\end_inset
+
+Mentored and taught Jefferson High School student to complete projects involving
+ simulation of energy threshold for cavitation in a tensioned metastable
+ fluid detector to compete at the Purdue Regional Science Fair.
+
+\series bold
+ Student won Best in Show award at Purdue Regional Science Fair and was
+ chosen to compete at Hoosier State Science Fair.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\shape slanted
+\color blue
+June
+\begin_inset space ~
+\end_inset
+
+2014
+\begin_inset space ~
+\end_inset
+
+-
+\begin_inset space ~
+\end_inset
+
+Mar.
+\begin_inset space ~
+\end_inset
+
+2015
+\shape default
+\noun on
+\color inherit
+ Mentor for Two Jefferson High School Students
+\emph on
+\noun default
+
+\begin_inset Newline newline
+\end_inset
+
+
+\emph default
+Mentored and taught Jefferson High School students to complete projects
+ involving acoustic cavitation detection and alternative centrifugal metastable
+ fluid detector manufacturing to compete at the Purdue Regional Science
+ Fair.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\shape slanted
+\color blue
+Aug.
+\begin_inset space ~
+\end_inset
+
+2014
+\begin_inset space ~
+\end_inset
+
+-
+\begin_inset space ~
+\end_inset
+
+Dec.
+\begin_inset space ~
+\end_inset
+
+2014
+\shape default
+\noun on
+\color inherit
+ Grader - NUCL 402 - Nuclear Power Systems
+\emph on
+\noun default
+
+\begin_inset Newline newline
+\end_inset
+
+
+\emph default
+Graded homeworks and tests, held weekly office hours, taught class several
+ times, held exam review sessions.
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+Nominated and received most votes for Magoon Teaching Assistant Award.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\shape slanted
+\color blue
+Aug.
+\begin_inset space ~
+\end_inset
+
+2014
+\begin_inset space ~
+\end_inset
+
+-
+\begin_inset space ~
+\end_inset
+
+Dec.
+\begin_inset space ~
+\end_inset
+
+2014
+\shape default
+\noun on
+\color inherit
+ Tutor - NUCL 510 - Reactor Physics
+\emph on
+\noun default
+
+\begin_inset Newline newline
+\end_inset
+
+
+\emph default
+Helped prepare student who was struggling for first and second exam in Reactor
+ Physics Course.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\shape slanted
+\color blue
+May
+\begin_inset space ~
+\end_inset
+
+2014
+\begin_inset space ~
+\end_inset
+
+-
+\begin_inset space ~
+\end_inset
+
+Aug.
+\begin_inset space ~
+\end_inset
+
+2014
+\shape default
+\color inherit
+ 
+\noun on
+Graduate Assistant - Summer Undergraduate Research Fellowship
+\emph on
+\noun default
+
+\begin_inset Newline newline
+\end_inset
+
+
+\emph default
+Administrated and supervised 43 students completing research projects in
+ computer science, chemical engineering, nuclear engineering, and aerospace
+ engineering.
+ Developed and delivered 5 seminars on research skills.
+ Administrated research symposium for student projects.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\shape slanted
+\color blue
+Jan.
+\begin_inset space ~
+\end_inset
+
+2014
+\begin_inset space ~
+\end_inset
+
+-
+\begin_inset space ~
+\end_inset
+
+May
+\begin_inset space ~
+\end_inset
+
+2014
+\shape default
+\color inherit
+ 
+\noun on
+Teaching Assistant - NUCL 310 - Introduction to Nuclear Reactor Theory
+\noun default
+
+\begin_inset Newline newline
+\end_inset
+
+Graded homeworks and tests, held twice weekly office hours to help students,
+ taught class.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\shape slanted
+\color blue
+Aug
+\begin_inset space ~
+\end_inset
+
+2013
+\begin_inset space ~
+\end_inset
+
+-
+\begin_inset space ~
+\end_inset
+
+Mar.
+\begin_inset space ~
+\end_inset
+
+2014
+\shape default
+\noun on
+\color inherit
+ Mentor for Jefferson High School Student
+\emph on
+\noun default
+
+\begin_inset Newline newline
+\end_inset
+
+
+\emph default
+Coordinated with and mentored a Jefferson High School student to complete
+ a project involving laser induced cavitation and pressure profilimetry
+ to compete at the Purdue Regional Science Fair.
+ 
+\series bold
+Student won a gold medal for the engineering division at the fair.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\shape slanted
+\color blue
+Aug.
+\begin_inset space ~
+\end_inset
+
+2013
+\begin_inset space ~
+\end_inset
+
+-
+\begin_inset space ~
+\end_inset
+
+Dec.
+\begin_inset space ~
+\end_inset
+
+2013
+\shape default
+\color inherit
+ 
+\noun on
+Teaching Assistant - NUCL 300 - Nuclear Structure and Radiation Interactions
+\noun default
+
+\begin_inset Newline newline
+\end_inset
+
+Graded homeworks and tests, held weekly office hours to help students, taught
+ class.
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+Nominated for Magoon Teaching Assistant Award.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\shape slanted
+\color blue
+Aug.
+\begin_inset space ~
+\end_inset
+
+2012
+\begin_inset space ~
+\end_inset
+
+-
+\begin_inset space ~
+\end_inset
+
+Dec.
+\begin_inset space ~
+\end_inset
+
+2012
+\shape default
+\color inherit
+ 
+\noun on
+Grader - NUCL 300 - Nuclear Structure and Radiation Interactions
+\noun default
+
+\begin_inset Newline newline
+\end_inset
+
+Graded homeworks and tests, held weekly office hours to help students, taught
+ class.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\shape slanted
+\color blue
+Aug.
+\begin_inset space ~
+\end_inset
+
+2012
+\begin_inset space ~
+\end_inset
+
+-
+\begin_inset space ~
+\end_inset
+
+Dec.
+\begin_inset space ~
+\end_inset
+
+2012
+\shape default
+\noun on
+\color inherit
+ Grader - NUCL 200 - Introduction to Nuclear Engineering
+\noun default
+
+\begin_inset Newline newline
+\end_inset
+
+Graded homeworks and tests, held weekly office hours to help students, taught
+ class.
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\shape slanted
+\color blue
+Aug.
+\begin_inset space ~
+\end_inset
+
+2011
+\begin_inset space ~
+\end_inset
+
+-
+\begin_inset space ~
+\end_inset
+
+Mar.
+\begin_inset space ~
+\end_inset
+
+2012
+\shape default
+\noun on
+\color inherit
+ Mentor for Jefferson High School Student
+\emph on
+\noun default
+
+\begin_inset Newline newline
+\end_inset
+
+
+\emph default
+Coordinated with and mentored a Jefferson High School student to complete
+ a project involving 
+\begin_inset Formula $\left(\gamma,n\right)$
+\end_inset
+
+ production and detection to compete at the Purdue Regional Science Fair.
+
+\series bold
+ Student won a gold medal for the engineering division at the fair.
+\end_layout
+
+\begin_layout Standard
+
+\family sans
+\series bold
+\size small
+\color blue
+SELECTED PUBLICATIONS AND CONFERENCE PRESENTATIONS
+\family default
+\series default
+
+\begin_inset VSpace -10pt
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100line%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size small
+\color blue
+\begin_inset VSpace -30pt
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength
+\backslash
+itemsep{-0.50em}
+\end_layout
+
+\end_inset
+
+Hagen, et al.
+ 
+\begin_inset Quotes sld
+\end_inset
+
+Detection of Special Nuclear Material in Cargo using Continuous Neutron
+ Interrogation and Tension Metastable Fluid Detector.
+\begin_inset Quotes srd
+\end_inset
+
+ 
+\emph on
+Transactions of the American Nuclear Society
+\emph default
+, 2016.
+\end_layout
+
+\begin_layout Itemize
+Archambault, Hagen, et al.
+ 
+\begin_inset Quotes sld
+\end_inset
+
+Threshold Rejection Mode Active Interrogation of SNMs...
+ ...with Centrifugal and Acoustic Tensioned Metastable Fluid Detectors.
+\begin_inset Quotes srd
+\end_inset
+
+ 
+\emph on
+Transactions of Nuclear Science
+\emph default
+, 2016.
+\end_layout
+
+\begin_layout Itemize
+Taleyarkhan, Hagen, et al.
+ 
+\begin_inset Quotes sld
+\end_inset
+
+Femto- to Macro- Scale Interdisciplinary Sensing with Tensioned Metastable
+ Fluid Detectors.
+\begin_inset Quotes srd
+\end_inset
+
+ 
+\emph on
+IEEE Sensors Demonstrations
+\emph default
+, 2016.
+\end_layout
+
+\begin_layout Itemize
+Hagen.
+ 
+\begin_inset Quotes sld
+\end_inset
+
+Multiphysics Modeling in Optimization of Acoustically Tensioned Metastable
+ Fluid Neutron Detectors.
+\begin_inset Quotes srd
+\end_inset
+
+ 
+\emph on
+Masters Thesis, Purdue University,
+\emph default
+ 2014.
+\end_layout
+
+\begin_layout Itemize
+Taleyarkhan, Hagen, et al.
+ 
+\begin_inset Quotes sld
+\end_inset
+
+Real time monitoring of actinides in chemical nuclear fuel reprocessing
+ plants.
+\begin_inset Quotes srd
+\end_inset
+
+ 
+\emph on
+Chemical Engineering Research and Design
+\emph default
+, 2013.
+\end_layout
+
+\begin_layout Itemize
+Webster, Hagen, et al.
+ 
+\begin_inset Quotes sld
+\end_inset
+
+High Efficiency Gamma Beta Blind Alpha Spectrometry for Nuclear Energy Applicati
+ons.
+\begin_inset Quotes srd
+\end_inset
+
+ 
+\emph on
+Proceedings of the International Conference on Nuclear Engineering
+\emph default
+, 2014.
+\end_layout
+
+\begin_layout Itemize
+Hagen, et al.
+ 
+\begin_inset Quotes sld
+\end_inset
+
+Characterization and Optimization of a Tensioned Metastable Fluid Nuclear
+ Particle Sensor Using Laser Based Profilometry.
+\begin_inset Quotes srd
+\end_inset
+
+ 
+\emph on
+Journal of Nuclear Engineering and Radiation Science
+\emph default
+, 2015.
+\end_layout
+
+\begin_layout Itemize
+Over 10 more publications available upon request
+\end_layout
+
+\begin_layout Standard
+
+\family sans
+\series bold
+\size small
+\color blue
+PATENTS
+\family default
+\series default
+
+\begin_inset VSpace -10pt
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100line%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size small
+\color blue
+\begin_inset VSpace -30pt
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength
+\backslash
+itemsep{-0.50em}
+\end_layout
+
+\end_inset
+
+Taleyarkhan, Bakken, Fisher, Hagen, Kostry.
+ Polylactic acid adhesive compositions and methods for their preparation
+ and use.
+ 
+\emph on
+World Patent # WO2014078720A1
+\emph default
+, 2014
+\end_layout
+
+\begin_layout Standard
+
+\family sans
+\series bold
+\size small
+\color blue
+LEADERSHIP AND COMMUNITY ROLES
+\family default
+\series default
+
+\begin_inset VSpace -10pt
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100line%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size small
+\color blue
+\begin_inset VSpace -30pt
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength
+\backslash
+itemsep{-0.50em}
+\end_layout
+
+\end_inset
+
+
+\emph on
+\color blue
+Aug.
+\begin_inset space \space{}
+\end_inset
+
+2012
+\begin_inset space \space{}
+\end_inset
+
+-
+\begin_inset space \space{}
+\end_inset
+
+May
+\begin_inset space ~
+\end_inset
+
+2017
+\emph default
+\color inherit
+ President of NEGO (Nuclear Engineering Graduate Organization)
+\end_layout
+
+\begin_layout Itemize
+\noindent
+
+\emph on
+\color blue
+Aug.
+\begin_inset space \space{}
+\end_inset
+
+2014
+\begin_inset space \space{}
+\end_inset
+
+-
+\begin_inset space \space{}
+\end_inset
+
+May
+\begin_inset space ~
+\end_inset
+
+2016
+\emph default
+\color inherit
+ Chair of Purdue Graduate Student Government (PGSG) Advancment Committee
+\end_layout
+
+\begin_layout Itemize
+
+\shape slanted
+\color blue
+Aug.
+\begin_inset space ~
+\end_inset
+
+2015
+\begin_inset space ~
+\end_inset
+
+-
+\begin_inset space ~
+\end_inset
+
+May
+\begin_inset space ~
+\end_inset
+
+2016
+\shape default
+\color inherit
+ Clerk of Purdue Graduate Student Government
+\end_layout
+
+\begin_layout Itemize
+\noindent
+
+\emph on
+\color blue
+Aug.
+\begin_inset space \space{}
+\end_inset
+
+2013
+\begin_inset space \space{}
+\end_inset
+
+-
+\begin_inset space \space{}
+\end_inset
+
+May
+\begin_inset space ~
+\end_inset
+
+2016
+\emph default
+\color inherit
+ Senator representing Nuclear Engineering to Purdue Graduate Senate
+\end_layout
+
+\begin_layout Itemize
+
+\shape slanted
+\color blue
+Feb.
+\begin_inset space ~
+\end_inset
+
+2014
+\begin_inset space ~
+\end_inset
+
+-
+\begin_inset space ~
+\end_inset
+
+June
+\begin_inset space ~
+\end_inset
+
+2015
+\shape default
+\color inherit
+ Assistant Coach - Tippco U14 Girls Soccer Team
+\end_layout
+
+\begin_layout Itemize
+
+\shape slanted
+\color blue
+Aug.
+\begin_inset space ~
+\end_inset
+
+2013
+\begin_inset space ~
+\end_inset
+
+-
+\begin_inset space ~
+\end_inset
+
+Oct.
+\begin_inset space ~
+\end_inset
+
+2013
+\shape default
+\color inherit
+ Commentator for High School Soccer Games for Walton Webcasting
+\end_layout
+
+\begin_layout Itemize
+\noindent
+
+\emph on
+\color blue
+May.
+\begin_inset space \space{}
+\end_inset
+
+2011
+\begin_inset space \space{}
+\end_inset
+
+-
+\begin_inset space \space{}
+\end_inset
+
+May
+\begin_inset space ~
+\end_inset
+
+2012
+\emph default
+\color inherit
+ President and Captain of Purdue Men's Club Soccer
+\end_layout
+
+\begin_layout Standard
+
+\family sans
+\series bold
+\size small
+\color blue
+HONORS AND AWARDS
+\family default
+\series default
+
+\begin_inset VSpace -10pt
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100line%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size small
+\color blue
+\begin_inset VSpace -30pt
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength
+\backslash
+itemsep{-0.50em}
+\end_layout
+
+\end_inset
+
+
+\emph on
+\color blue
+May
+\begin_inset space ~
+\end_inset
+
+2017
+\emph default
+\color inherit
+ Department of Energy Innovation in Nuclear Technology R&D Award
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+\color blue
+Nov.
+\begin_inset space ~
+\end_inset
+
+2016
+\emph default
+\noun on
+\color inherit
+ 
+\noun default
+ANS Young Member's Group Best Paper Award
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+\color blue
+Oct.
+\begin_inset space ~
+\end_inset
+
+2016
+\emph default
+\noun on
+\color inherit
+ 
+\noun default
+IEEE Sensors Conference Demonstration 1st Prize
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+\color blue
+Apr.
+\begin_inset space ~
+\end_inset
+
+2016
+\emph default
+\color inherit
+ Purdue Engineering Outstanding Service Award
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+\color blue
+July
+\begin_inset space ~
+\end_inset
+
+2014
+\emph default
+\color inherit
+ Received Best Poster Award and Best Paper Award at Intl.
+ Conference on Nuclear Engineering 22
+\end_layout
+
+\begin_layout Itemize
+
+\shape slanted
+\color blue
+Dec.
+\begin_inset space ~
+\end_inset
+
+2014
+\shape default
+\color inherit
+ Nominated and received most votes for Magoon Teaching Excellence Teaching
+ Assistant Award
+\end_layout
+
+\begin_layout Itemize
+
+\shape slanted
+\color blue
+Dec.
+\begin_inset space ~
+\end_inset
+
+2013
+\shape default
+\color inherit
+ Nominated for Magoon Teaching Excellence Teaching Assistant Award
+\end_layout
+
+\begin_layout Itemize
+
+\shape slanted
+\color blue
+May
+\begin_inset space ~
+\end_inset
+
+2007
+\shape default
+\color inherit
+ National Merit Scholar
+\end_layout
+
+\begin_layout Itemize
+
+\shape slanted
+\color blue
+May
+\begin_inset space ~
+\end_inset
+
+2006,
+\begin_inset space ~
+\end_inset
+
+May
+\begin_inset space ~
+\end_inset
+
+2007
+\shape default
+\color inherit
+ Indiana Delegate for International Science and Engineering Fair
+\end_layout
+
+\begin_layout Standard
+
+\family sans
+\series bold
+\size small
+\color blue
+AFILIATIONS
+\family default
+\series default
+
+\begin_inset VSpace -10pt
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100line%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size small
+\color blue
+\begin_inset VSpace -30pt
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength
+\backslash
+itemsep{-0.50em}
+\end_layout
+
+\end_inset
+
+American Nuclear Society
+\end_layout
+
+\begin_layout Itemize
+Health Physics Society
+\end_layout
+
+\begin_layout Itemize
+American Society of Mechanical Engineers
+\end_layout
+
+\begin_layout Standard
+
+\family sans
+\series bold
+\size small
+\color blue
+REFERENCES
+\family default
+\series default
+
+\begin_inset VSpace -10pt
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100line%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size small
+\color blue
+\begin_inset VSpace -30pt
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength
+\backslash
+itemsep{-0.50em}
+\end_layout
+
+\end_inset
+
+
+\shape slanted
+\color blue
+Rusi Taleyarkhan, PhD - (765)-313-1876.
+
+\shape default
+\color inherit
+ Full Professor at Purdue University Nuclear Engineering.
+ Principle Investigator of DNDO Grant Supporting my work, Chair of Thesis
+ Committee, and Academic Advisor for past 8 years.
+\end_layout
+
+\begin_layout Itemize
+
+\shape slanted
+\color blue
+Brian Archambault, PhD - (765)-313-1876.
+
+\shape default
+\color inherit
+ Manager of Technology at Sagamore Adams Laboratory, LLC.
+ Direct Research Advisor, Co-investigator on active interrogation for past
+ 6 years.
+\end_layout
+
+\begin_layout Itemize
+
+\shape slanted
+\color blue
+Kevin Fischer - (630)-589-4927.
+
+\shape default
+\color inherit
+ Data Analysis and Test Reporting Engineer at Bechtel Corporation.
+ Co-investigator on acoustically tensioned detector systems during Masters
+ study from 2012 - 2014.
+\end_layout
+
+\begin_layout Standard
+
+\family sans
+\series bold
+\size small
+\color blue
+SKILLS
+\family default
+\series default
+
+\begin_inset VSpace -10pt
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100line%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size small
+\color blue
+\begin_inset VSpace -30pt
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering 
+\backslash
+resizebox{1.0
+\backslash
+columnwidth}{!}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+dialthree{Scientific 
+\backslash
+
+\backslash
+ Programming}{MATLAB}{10}{Fortran}{5}{Python}{5}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+dialtwo{3d CAD}{Solidworks}{8}{Blender}{3}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+dialthree{Physical 
+\backslash
+
+\backslash
+ Simulation}{COMSOL}{6}{MCNP}{3}{LTSpice}{1}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+dialthree{Software 
+\backslash
+
+\backslash
+ Development}{C++}{4}{Git}{4}{Java}{3}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+dialthree{Electronic 
+\backslash
+
+\backslash
+ and 
+\backslash
+
+\backslash
+ Firmware 
+\backslash
+
+\backslash
+ Development}{Arduino}{3}{Eagle}{2}{KiCAD}{2}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[remember picture,overlay]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[line width=25pt,color=blue] (current page.north east) -- (current page.north
+ west);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
