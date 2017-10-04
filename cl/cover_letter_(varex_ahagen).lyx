@@ -1,0 +1,382 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass letter
+\begin_preamble
+\frenchspacing
+\usepackage{amsmath}
+\newcommand{\ø}{\raisebox{.3ex}{\tiny$\; \bullet \;$}}
+\renewcommand{\arraystretch}{1.25}
+\usepackage{fancyheadings}
+\pagestyle{fancy}
+\chead{\textit{\today}}
+
+\usepackage[backend=biber,defernumbers=true,%
+            firstinits=true, language=english,%
+            isbn=false, url=false, doi=false,%
+            eprint=false, maxnames=99]{biblatex}
+\AtBeginDocument{\thispagestyle{empty}}
+\addbibresource{/home/ahagen/bibs/authored.bib}
+
+\def\makenamesetup{%
+  \def\bibnamedelima{~}%
+  \def\bibnamedelimb{ }%
+  \def\bibnamedelimc{ }%
+  \def\bibnamedelimd{ }%
+  \def\bibnamedelimi{ }%
+  \def\bibinitperiod{.}%
+  \def\bibinitdelim{~}%
+  \def\bibinithyphendelim{.-}}    
+\newcommand*{\makename}[2]{\begingroup\makenamesetup\xdef#1{#2}\endgroup}
+
+\newcommand*{\boldname}[3]{%
+  \def\lastname{#1}%
+  \def\firstname{#2}%
+  \def\firstinit{#3}}
+\boldname{}{}{}
+
+% Patch new definitions
+\renewcommand{\mkbibnamegiven}[1]{%
+  \ifboolexpr{ ( test {\ifdefequal{\firstname}{\namepartgiven}} or test {\ifdefequal{\firstinit}{\namepartgiven}} ) and test {\ifdefequal{\lastname}{\namepartfamily}} }
+  {\mkbibbold{#1}}{#1}%
+}
+
+\renewcommand{\mkbibnamefamily}[1]{%
+  \ifboolexpr{ ( test {\ifdefequal{\firstname}{\namepartgiven}} or test {\ifdefequal{\firstinit}{\namepartgiven}} ) and test {\ifdefequal{\lastname}{\namepartfamily}} }
+  {\mkbibbold{#1}}{#1}%
+}
+
+\boldname{Hagen}{Alexander}{A.}
+\usepackage{xcolor}
+\definecolor{black}{HTML}{142735}
+\definecolor{blue}{HTML}{285668}
+\definecolor{grey}{HTML}{999999}
+\definecolor{darkgrey}{HTML}{285668}
+\makeatletter
+\newcommand{\globalcolor}[1]{%
+  \color{#1}\global\let\default@color\current@color
+}
+\makeatother
+
+\AtBeginDocument{\globalcolor{black}}
+\usepackage{lipsum}
+\usepackage{tikz}
+\end_preamble
+\use_default_options false
+\begin_modules
+biblatex
+\end_modules
+\maintain_unincluded_children false
+\language american
+\language_package babel
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "Crimson Text [PfEd]"
+\font_sans "default" "Source Sans Pro"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command biber
+\index_command default
+\paperfontsize 10
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize letterpaper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style 
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 0.5in
+\rightmargin 1in
+\bottommargin 0.3in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language swedish
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\bullet 0 0 34 -1
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout My Address
+Alex Hagen
+\begin_inset Newline newline
+\end_inset
+
+225 N.
+ 2nd St., 3C
+\begin_inset Newline newline
+\end_inset
+
+Lafayette, IN, 47901
+\end_layout
+
+\begin_layout Send To Address
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Opening
+Sir/Madam,
+\end_layout
+
+\begin_layout Standard
+I am writing to apply to the R&D Engineer position for Varex Imaging.
+ I'm actually very excited to apply to Varex for this job because I know
+ how impactful medicine and medical imaging can be.
+ While my degrees are in Nuclear Engineering, I come from a family with
+ a focus of medicine - my father is a surgeon and my sister a biomedical
+ engineer - and know how fulfilling they find their careers.
+ I've also done several projects throughout my research that intersected
+ with medical imaging: my senior design project used orthovoltage x-rays
+ and x-ray screens to similarity scale direct energy transfer from a spent
+ nuclear fuel pool, and part of my dissertation is a (as of yet unpublished)
+ study into the neutron emission from a Varian Clinac 6Ex environment and
+ further applications of that machine to homeland security.
+ I hope that I will get a chance to discuss the R&D Engineer opportunity
+ with you, as I 
+\begin_inset Quotes sld
+\end_inset
+
+work with a borad range of technical backgrounds, ...and work through the rigors
+ of R&D work,
+\begin_inset Quotes srd
+\end_inset
+
+ as you describe.
+ The remainder of this letter will describe my skills and achievements as
+ they pertain to the R&D engineer listing.
+\end_layout
+
+\begin_layout Standard
+The dissertation that I will defend in December 2017 is the culmination
+ of more than 3 years of work since my MS, focused on particle accelerators
+ in homeland security applications.
+ For this work, I've improved and innovated on a novel neutron detector
+ design - one that uses the thermodynamic oddity of negative pressure to
+ detect nuclear particles.
+ I've had the chance to be involved with all stages of this work: I personally
+ do the CAD design of all parts of the detector in Solidworks and interface
+ with the manufacturing of the detectors (in fact, I do some of the manufacturin
+g myself); a colleague and I create the electronics and firmware that run
+ the electro-mechanical systems; I use finite element software (COMSOL)
+ to simulate aspects of the system including rotordynamics; and I use nuclear
+ particle simulation to validate and verify against our data.
+ The system itself has recently garnered attention, including the IEEE Sensors
+ best demo award in 2016.
+ In fact, I have been contracting on design with a commerical entity, Sagamore
+ Adams Laboratory, that has driven this detector to market.
+\end_layout
+
+\begin_layout Standard
+But my research has not been limited to design and manufacturing of our
+ own detectors.
+ I have also used (and in some cases repaired) a 
+\begin_inset Formula $d+d$
+\end_inset
+
+ neutron generator, a 
+\begin_inset Formula $d+t$
+\end_inset
+
+ neutron generator, and a Varian Clinac 6Ex bremsstrahlung accelerator for
+ applications in homeland security.
+ Comparisons between our methods and conventional detectors has required
+ the use and development of electronic trains of high voltage supplies,
+ nuclear grade test equipment, and typical bench electronics.
+ One methodology of mine, using a 
+\begin_inset Formula $d+d$
+\end_inset
+
+ neutron generator and a panel of our detectors, won me both the ANS Young
+ Members' Group best paper award in 2016 and the Department of Energy's
+ Innovation in Nuclear Technology R&D award in 2017.
+ 
+\end_layout
+
+\begin_layout Standard
+Finally, a third facet of my research career has been my desire to simulate
+ the experimental conditions in order to validate and verify continuously.
+ I interned at Argonne National Laboratory on a project focused on bringing
+ fast fission based nuclear reactors to market.
+ My masters program included a concentration in computational science and
+ involved simulation of an acoustic version of our neutron detector.
+ The verification of this model won me the 2014 International Conference
+ on Nuclear Engineering best poster award.
+ As many computational scientists, I am active in software development and
+ have skills in a broad array of languages.
+ I maintain a data analysis library that I call 
+\emph on
+PyM
+\emph default
+ and a visualization module I call 
+\emph on
+PyG
+\emph default
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+PyM: 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://alexhagen.github.io/alexhagen/pym"
+
+\end_inset
+
+, PyG: 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://alexhagen.github.io/alexhagen/pyg"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+, among others.
+\end_layout
+
+\begin_layout Standard
+I believe that with my diversified engineering skillset I would be a valuable
+ addition to the great team at Varex and hope to get an opportunity to discuss
+ the R&D Engineer opportunity.
+\end_layout
+
+\begin_layout Closing
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+Looking forward to your response,
+\backslash
+
+\backslash
+%
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+fromsig{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename ../signature.svg
+	width 5cm
+
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+} 
+\backslash
+
+\backslash
+%
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+fromname{Alex Hagen}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[remember picture,overlay]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[line width=25pt,color=blue] (current page.north east) -- (current page.north
+ west);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
