@@ -12,44 +12,13 @@
 \renewcommand{\arraystretch}{1.25}
 \usepackage{fancyheadings}
 \pagestyle{fancy}
-\chead{\textit{Alex Hagen · Resume · \today}}
+\chead{\textit{Alex Hagen · \today}}
+\rhead{}
+\lhead{}
 
-\usepackage[backend=biber,defernumbers=true,%
-            firstinits=true, language=english,%
-            isbn=false, url=false, doi=false,%
-            eprint=false, maxnames=99]{biblatex}
+
 \AtBeginDocument{\thispagestyle{empty}}
-\addbibresource{/Users/ahagen/bibs/authored.bib}
 
-\def\makenamesetup{%
-  \def\bibnamedelima{~}%
-  \def\bibnamedelimb{ }%
-  \def\bibnamedelimc{ }%
-  \def\bibnamedelimd{ }%
-  \def\bibnamedelimi{ }%
-  \def\bibinitperiod{.}%
-  \def\bibinitdelim{~}%
-  \def\bibinithyphendelim{.-}}    
-\newcommand*{\makename}[2]{\begingroup\makenamesetup\xdef#1{#2}\endgroup}
-
-\newcommand*{\boldname}[3]{%
-  \def\lastname{#1}%
-  \def\firstname{#2}%
-  \def\firstinit{#3}}
-\boldname{}{}{}
-
-% Patch new definitions
-\renewcommand{\mkbibnamegiven}[1]{%
-  \ifboolexpr{ ( test {\ifdefequal{\firstname}{\namepartgiven}} or test {\ifdefequal{\firstinit}{\namepartgiven}} ) and test {\ifdefequal{\lastname}{\namepartfamily}} }
-  {\mkbibbold{#1}}{#1}%
-}
-
-\renewcommand{\mkbibnamefamily}[1]{%
-  \ifboolexpr{ ( test {\ifdefequal{\firstname}{\namepartgiven}} or test {\ifdefequal{\firstinit}{\namepartgiven}} ) and test {\ifdefequal{\lastname}{\namepartfamily}} }
-  {\mkbibbold{#1}}{#1}%
-}
-
-\boldname{Hagen}{Alexander}{A.}
 \usepackage{xcolor}
 \definecolor{black}{HTML}{142735}
 \definecolor{blue}{HTML}{285668}
@@ -244,11 +213,7 @@
   }
 }
 
-\AtBeginDocument{
-\begin{tikzpicture}[remember picture,overlay]
-\draw[line width=25pt,color=blue] (current page.north east) -- (current page.north west);
-\end{tikzpicture}
-}
+\date{}
 \end_preamble
 \use_default_options false
 \begin_modules
@@ -272,7 +237,7 @@ biblatex
 \graphics default
 \default_output_format default
 \output_sync 0
-\bibtex_command biber
+\bibtex_command default
 \index_command default
 \paperfontsize 11
 \spacing single
@@ -281,11 +246,11 @@ biblatex
 \use_geometry true
 \use_package amsmath 1
 \use_package amssymb 2
-\use_package cancel 0
+\use_package cancel 2
 \use_package esint 0
 \use_package mathdots 1
 \use_package mathtools 0
-\use_package mhchem 0
+\use_package mhchem 2
 \use_package stackrel 0
 \use_package stmaryrd 0
 \use_package undertilde 0
@@ -303,11 +268,12 @@ biblatex
 \color #008000
 \end_index
 \leftmargin 0.75in
-\topmargin 0.6in
+\topmargin 0.5in
 \rightmargin 0.75in
-\bottommargin 0.6in
+\bottommargin 0.2in
 \headheight 0.25cm
-\headsep 0.25in
+\headsep 0.15in
+\footskip 0.05cm
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation skip
@@ -326,222 +292,141 @@ biblatex
 
 \begin_body
 
-\begin_layout Standard
+\begin_layout Title
 \noindent
-\align center
-
-\shape slanted
-\size small
-\emph on
-\color blue
-\begin_inset Tabular
-<lyxtabular version="3" rows="1" columns="2">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "70col%"
-special "none"
-height "1in"
-height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
-status open
-
-\begin_layout Plain Layout
-\noindent
-\align center
-
-\shape slanted
-\size large
-\emph on
-\color blue
-\begin_inset Tabular
-<lyxtabular version="3" rows="1" columns="2">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "c"
-use_parbox 0
-use_makebox 0
-width "35col%"
-special "none"
-height "1in"
-height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
-status open
-
-\begin_layout Plain Layout
-\noindent
-\align right
-\begin_inset Graphics
-	filename logo_concept.pdf
-	height 4em
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "c"
-use_parbox 0
-use_makebox 0
-width "35col%"
-special "none"
-height "1in"
-height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
-status open
-
-\begin_layout Plain Layout
-\noindent
-\align left
 
 \family sans
 \series bold
-\size largest
-\noun on
-\color black
-ALEX HAGEN
-\family default
-\series default
-\size large
-\noun default
+\size normal
+\color blue
+A Proposal for Scientific and Application Based Inquiry into Negative Pressure
+ States in Engineered Fluids
 \color inherit
 
-\begin_inset Newline newline
+\begin_inset VSpace -2em*
 \end_inset
 
 
-\shape slanted
+\end_layout
+
+\begin_layout Author
+\noindent
+
+\size normal
 \emph on
-\color blue
-(765)-418-4155
-\begin_inset Newline newline
-\end_inset
+Alex Hagen
+\family sans
+\series bold
+\emph default
 
-ahagen@purdue.edu
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
+\begin_inset VSpace -3em*
 \end_inset
 
 
 \end_layout
 
+\begin_layout Standard
+\noindent
+Negative pressure.
+ This thermodynamic concept often conjures incorrect conceptions even among
+ engineers, but it can be a powerful tool when applied correctly.
+ The most elegant proof of existance of negative pressure, is a monument
+ to clever experimental design, performed by Scholander in 1965 and utilizing
+ a tree, a rifle, and high speed footage 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Scholander1965"
+
 \end_inset
 
-
+.
+ I have been fascinated by negative pressure in fluids and their fracture
+ under certain conditions - cavitation - since I began my research career.
+ The following proposal pertains to an application based study, but with
+ a minor focus on some of the open scientific questions regarding negative
+ pressure in fluids.
+ I will first describe the open scientific questions, and then move on to
+ the most interesting applications of negative pressure fluids and cavitation
+ physics.
 \end_layout
 
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
+\begin_layout Standard
+From a pure science standpoint, a theory for the negative pressure of fluids
+ is still elusive.
+ The attempts at definition of a theory have been attempted in fields ranging
+ from low temperature physics 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Xiong1989"
 
-\begin_layout Plain Layout
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "25col%"
-special "none"
-height "1in"
-height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
+\end_inset
+
+, chemical physics 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Davitt2010"
+
+\end_inset
+
+, acoustics 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Neppiras1980"
+
+\end_inset
+
+, and even nuclear physics 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "West1998"
+
+\end_inset
+
+.
+ There are open scientific questions that need answering even absent a unifying
+ theory of negative pressure, including the cavitation energy requirements
+ under negative pressure and the rigorous and accurate description of negative
+ pressure field induction by both the acoustic and centrifugal methods.
+ My current research has intersected with these questions regularly: my
+ paper in Journal of Nuclear Engineering and Radiation Science focusing
+ on using laser energy deposition to estimate cavitation energy requirements
+ and profile the negative pressure in an acoustic context 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hagen2015a"
+
+\end_inset
+
+ won an ASME award in 2014, and a (as of yet unpublished) study recently
+ used accelerator generated neutrons to probe cavitation energy requirements.
+ An exploration into these questions would reveal information important
+ to applications of negative pressure, and also help patch some of the holes
+ in the current theory of negative pressure.
+\end_layout
+
+\begin_layout Standard
+However, it is the applications of negative pressure that are most interesting
+ to engineering at large.
+ Currently, physicians and medical physicists use cavitation to ablate tumors
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Melodelima2009,Babgi2016"
+
+\end_inset
+
+, weakly interacting massive particle physicists use an analogously metastable
+ fluid state
+\begin_inset Foot
 status open
 
 \begin_layout Plain Layout
-\noindent
-
-\size footnotesize
-\emph on
-\color blue
-\begin_inset Graphics
-	filename linkedin_icon.svg
-	height 0.75em
-
-\end_inset
-
- linkedin.com/in/alexander-hagen
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset Graphics
-	filename github_icon.svg
-	height 0.75em
-
-\end_inset
-
- github.com/alexhagen
-\begin_inset Newline newline
-\end_inset
-
-Portfolio - alexhagen.github.io
-\end_layout
+superheated fluids and negatively pressured fluids are termed metastable
+ fluids, and are both used for nuclear particle detection - in fact, Glaser
+ won the Nobel Prize for this application 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Glaser1953a"
 
 \end_inset
 
@@ -549,9 +434,136 @@ Portfolio - alexhagen.github.io
 \end_layout
 
 \end_inset
-</cell>
-</row>
-</lyxtabular>
+
+ to detect 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ radiation contamination in their detectors 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Behnke2012"
+
+\end_inset
+
+, and my group utilizes negative pressure fluids to detect smuggled nuclear
+ material to prevent nuclear terrorism 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Archambault2016b"
+
+\end_inset
+
+.
+ I propose to further this investigation into nuclear particle interaction
+ in negative pressure metastable fluid detectors.
+ The systems are either created using the aforementioned acoustic or centrifugal
+ means, requiring design of an electro-mechanical system to induce acoustic
+ pressures into a resonant chamber, or the application of rotordynamic principle
+s to make a highly controlled fluid rotor for induction of negative pressure.
+ The application to homeland security is especially pertinent: the National
+ Academy of Engineering has rated counter-nuclear-terrorism a grand challenge
+ of the 21st century 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Engineering2012"
+
+\end_inset
+
+ and policy institutes estimate nuclear terrorism a larger threat than either
+ Chinese or Russian armament 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bunn2016"
+
+\end_inset
+
+.
+ Our detectors have made big waves in this context, with the detectors winning
+ the IEEE Sensors best demo award in 2016, and me personally winning the
+ ANS Young Members' Group best paper award in 2016 and the Department of
+ Energy Nuclear Technology Innovations R&D Award in 2017.
+\end_layout
+
+\begin_layout Standard
+I propose to begin a lab group focusing on negative pressure in practical
+ fluids for scientific study and use in detection of smuggled special nuclear
+ material.
+ Future funding could come from several entities, including the Department
+ of Homeland Security's Domestic Nuclear Detection Office, the Department
+ of Energy's National Nuclear Security Agency, and the Department of Defense's
+ Defense Threat Reduction Agency.
+ A laboratory for studying these fluids would require a modest amount of
+ electrical bench test equipment, a modestly sized laser - previously a
+ Class IIIB nitrogen laser with 
+\begin_inset Formula $\sim30\mathrm{\;\nicefrac{\mu J}{pulse}}$
+\end_inset
+
+ has been used, alternative neutron detectors such as a liquid scintillation
+ detector or 
+\begin_inset Formula $\ce{^{3}He}$
+\end_inset
+
+ detector, a budget for manufacturing of the tensioned metastable fluid
+ detector
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+approximately $1000-$5000 in parts per detector
+\end_layout
+
+\end_inset
+
+, and - crucially - neutron sources.
+ Possible neutron sources are 
+\begin_inset Formula $d+d$
+\end_inset
+
+ neutron generators, available without an NRC license from vendors such
+ as Starfire in Illinois, and combinations of exempt quantities of alpha
+ emitters such as 
+\begin_inset Formula $\ce{^{210}Po}$
+\end_inset
+
+ and 
+\begin_inset Formula $\left(\alpha,n\right)$
+\end_inset
+
+ materials, such as beryllium.
+\end_layout
+
+\begin_layout Standard
+In all, I believe this extremely important field of study would be a great
+ addition to the research proposal at University of Colorado, especially
+ with the stated interest in fluid-thermal system and mechatronics.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[remember picture,overlay]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[line width=25pt,color=blue] (current page.north east) -- (current page.north
+ west);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
 
 \end_inset
 
@@ -559,35 +571,17 @@ Portfolio - alexhagen.github.io
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace 10pt
+\begin_inset Newpage pagebreak
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-
-\family sans
-\series bold
-\size small
-\color blue
-REFERENCES
-\family default
-\series default
-
-\begin_inset VSpace -10pt
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset CommandInset line
-LatexCommand rule
-offset "0.5ex"
-width "100line%"
-height "1pt"
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "/home/ahagen/bibs/dissertation"
+options "plain"
 
 \end_inset
 
@@ -595,80 +589,6 @@ height "1pt"
 \end_layout
 
 \begin_layout Standard
-
-\size small
-\color blue
-\begin_inset VSpace -30pt
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-
-\shape slanted
-\color blue
-Rusi Taleyarkhan, PhD - rusi@purdue.edu - (765)-313-1876 - 3601 Sagamore
- Parkway, Suite H, Lafayette, IN.
-\shape default
-\color inherit
-
-\begin_inset Newline newline
-\end_inset
-
-Full Professor at Purdue University Nuclear Engineering.
- Principle Investigator of DNDO Grant Supporting my work, Chair of Thesis
- Committee, and Academic Advisor for past 8 years.
-\end_layout
-
-\begin_layout Itemize
-
-\shape slanted
-\color blue
-Brian Archambault, PhD - barchambault@salabsllc.com - (765)-313-1876 - 3601
- Sagamore Parkway, Suite L, Lafayette, IN.
-\shape default
-\color inherit
-
-\begin_inset Newline newline
-\end_inset
-
-Manager of Technology at Sagamore Adams Laboratory, LLC.
- Direct Research Advisor, Co-investigator on active interrogation for past
- 6 years.
-\end_layout
-
-\begin_layout Itemize
-
-\shape slanted
-\color blue
-Kevin Fischer - kffische@gmail.com - (630)-589-4927.
-\shape default
-\color inherit
-
-\begin_inset Newline newline
-\end_inset
-
-Data Analysis and Test Reporting Engineer at Bechtel Corporation.
- Co-investigator on acoustically tensioned detector systems during masters
- study from 2012 - 2014.
-\end_layout
-
-\begin_layout Standard
-\noindent
-\align center
-
-\family sans
-\series bold
-\size scriptsize
-\color blue
-REFERENCES SPECIFIC TO LEADERSHIP QUALITIES, COMMUNITY ENGAGEMENT, OR PRODUCT
- DESIGN AVAILABLE UPON REQUEST
-\family default
-\series default
-\size default
-\color inherit
-
 \begin_inset ERT
 status open
 
