@@ -1,0 +1,633 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\frenchspacing
+\usepackage{amsmath}
+\newcommand{\ø}{\raisebox{.3ex}{\tiny$\; \bullet \;$}}
+\renewcommand{\arraystretch}{1.25}
+\usepackage{fancyheadings}
+\pagestyle{fancy}
+\chead{\textit{Alex Hagen · \today}}
+\rhead{}
+\lhead{}
+
+
+\AtBeginDocument{\thispagestyle{empty}}
+
+\usepackage{xcolor}
+\definecolor{black}{HTML}{142735}
+\definecolor{blue}{HTML}{285668}
+\definecolor{grey}{HTML}{999999}
+\definecolor{darkgrey}{HTML}{285668}
+\makeatletter
+\newcommand{\globalcolor}[1]{%
+  \color{#1}\global\let\default@color\current@color
+}
+\makeatother
+
+\AtBeginDocument{\globalcolor{black}}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{adjustbox}
+\usepackage{varwidth}
+\usepackage{ifthen}
+\pagenumbering{gobble}
+\usetikzlibrary{positioning}
+\usepackage[scale=0.95]{opensans}
+\DeclareRobustCommand\ltseries{\fontseries{l}\selectfont}
+
+\DeclareTextFontCommand{\textlt}{\ltseries}
+
+\tikzset{
+  pics/carc/.style args={#1:#2:#3}{
+    code={
+      \draw[pic actions] (#1:#3) arc(#1:#2:#3);
+    }
+  }
+}
+
+
+\newcommand{\setangles}[3]{
+\ifthenelse{\equal{#1}{NA}}{
+        \pgfmathsetmacro{\startangle}{225.0}
+        \pgfmathsetmacro{\endangle}{-45}
+      }{
+      	\ifthenelse{\equal{#1}{#2}}{
+        \pgfmathsetmacro{\startangle}{230.0 - (270.0 * #1 / #3)}
+        \pgfmathsetmacro{\endangle}{220.0 - (270.0 * #2 / #3)}
+      	}{
+      	\pgfmathsetmacro{\startangle}{225.0 - (270.0 * #1 / #3)}
+        \pgfmathsetmacro{\endangle}{225.0 - (270.0 * #2 / #3)}
+      	}
+      }
+}
+
+\newcommand{\setanglestwo}[3]{
+\ifthenelse{\equal{#1}{NA}}{
+        \pgfmathsetmacro{\startangletwo}{225.0}
+        \pgfmathsetmacro{\endangletwo}{-45}
+      }{
+      	\ifthenelse{\equal{#1}{#2}}{
+        \pgfmathsetmacro{\startangletwo}{230.0 - (270.0 * #1 / #3)}
+        \pgfmathsetmacro{\endangletwo}{220.0 - (270.0 * #2 / #3)}
+      	}{
+      	\pgfmathsetmacro{\startangletwo}{225.0 - (270.0 * #1 / #3)}
+        \pgfmathsetmacro{\endangletwo}{225.0 - (270.0 * #2 / #3)}
+      	}
+      }
+}
+
+\newcommand{\setanglesthree}[3]{
+\ifthenelse{\equal{#1}{NA}}{
+        \pgfmathsetmacro{\startanglethree}{225.0}
+        \pgfmathsetmacro{\endanglethree}{-45}
+      }{
+      	\ifthenelse{\equal{#1}{#2}}{
+        \pgfmathsetmacro{\startanglethree}{230.0 - (270.0 * #1 / #3)}
+        \pgfmathsetmacro{\endanglethree}{220.0 - (270.0 * #2 / #3)}
+      	}{
+      	\pgfmathsetmacro{\startanglethree}{225.0 - (270.0 * #1 / #3)}
+        \pgfmathsetmacro{\endanglethree}{225.0 - (270.0 * #2 / #3)}
+      	}
+      }
+}
+
+\newcommand{\skillstext}[2]{\color{blue} #1 \\ \color{blue} \scriptsize #2 Years}
+\newcommand{\titletext}[1]{\color{blue} #1 }
+
+\newcommand{\dial}[3]{
+  \raisebox{-0.5\height}{
+    \begin{tikzpicture}
+      % Set some constants for the dial size and the width of the dial
+      \pgfmathsetmacro{\dialsize}{1.25}
+      \pgfmathsetmacro{\leaderlength}{1.375}
+      % Adjust the text spacing (line spacing)
+      \setlength{\baselineskip}{2pt}
+      % Calculate the angle based on the rating provided in arguments
+      \setangles{0}{#3}{12.0}
+
+      % Draw the arc and the background arc
+      \pic[line width=0.1in, grey] {carc=225:-45:\dialsize};
+      \pic[line width=0.1in, blue]{carc=\startangle:\endangle:\dialsize};
+      % Put the average value in the center
+      \node[align=center]{\titletext{#1}};
+      % Draw the lines to put the low and high values on
+      \draw[line width=0.5pt, blue] (\endangle:\dialsize - 0.15) -- (\endangle:\dialsize + 0.25) arc (\endangle:-45:\dialsize+0.25) -- ++(0:\leaderlength);
+      \pgfgetlastxy{\XCoord}{\YCoord};
+      \node[align=right, anchor=south east] (high) at (\XCoord, \YCoord) {\skillstext{#2}{#3}};
+    \end{tikzpicture}
+  }
+}
+
+\newcommand{\dialtwo}[5]{
+  \raisebox{-0.5\height}{
+    \begin{tikzpicture}
+      % Set some constants for the dial size and the width of the dial
+      \pgfmathsetmacro{\dialsize}{1.25}
+      \pgfmathsetmacro{\leaderlength}{2.0}
+      % Adjust the text spacing (line spacing)
+      \setlength{\baselineskip}{2pt}
+      % Calculate the angle based on the rating provided in arguments
+      \setangles{0}{#3}{10.0}
+
+      % Draw the arc and the background arc
+      \pic[line width=0.1in, grey] {carc=225:-45:\dialsize};
+      \pic[line width=0.1in, blue]{carc=\startangle:\endangle:\dialsize};
+      \pgfmathsetmacro{\dialsizetwo}{1.50}
+      \pgfmathsetmacro{\leaderlengthtwo}{1.5}
+
+      % Calculate the angle based on the rating provided in arguments
+      \setanglestwo{0}{#5}{10.0}
+      \pic[line width=0.1in, grey] {carc=225:-45:\dialsizetwo};
+      \pic[line width=0.1in, blue]{carc=\startangletwo:\endangletwo:\dialsizetwo};
+      % Put the average value in the center
+      \node[align=center]{\titletext{#1}};
+      % Draw the lines to put the low and high values on
+      \draw[line width=0.5pt, blue] (\endangle:\dialsize - 0.15) -- (\endangle:\dialsize + 0.25) arc (\endangle:-45:\dialsize+0.25) -- ++(0:\leaderlength);
+      \pgfgetlastxy{\XCoord}{\YCoord};
+      \node[align=right, anchor=south east] (high) at (\XCoord, \YCoord) {\skillstext{#2}{#3}};
+      
+      % Put the average value in the center
+      % Draw the lines to put the low and high values on
+      \draw[line width=0.5pt, blue] (\endangletwo:\dialsizetwo - 0.15) -- (\endangletwo:\dialsizetwo + 0.25) arc (\endangletwo:0:\dialsizetwo+0.25) -- ++(0:\leaderlengthtwo);
+      \pgfgetlastxy{\XCoord}{\YCoord};
+      \node[align=right, anchor=south east] (high) at (\XCoord, \YCoord) {\skillstext{#4}{#5}};
+    \end{tikzpicture}
+  }
+}
+
+\newcommand{\dialthree}[7]{
+  \raisebox{-0.5\height}{
+    \begin{tikzpicture}
+      % Set some constants for the dial size and the width of the dial
+      \pgfmathsetmacro{\dialsize}{1.25}
+      \pgfmathsetmacro{\leaderlength}{2.0}
+      % Adjust the text spacing (line spacing)
+      \setlength{\baselineskip}{2pt}
+      % Calculate the angle based on the rating provided in arguments
+      \setangles{0}{#3}{10.0}
+
+      % Draw the arc and the background arc
+      \pic[line width=0.1in, grey] {carc=225:-45:\dialsize};
+      \pic[line width=0.1in, blue]{carc=\startangle:\endangle:\dialsize};
+      \pgfmathsetmacro{\dialsizetwo}{1.50}
+      \pgfmathsetmacro{\leaderlengthtwo}{1.5}
+
+      % Calculate the angle based on the rating provided in arguments
+      \setanglestwo{0}{#5}{10.0}
+      \pic[line width=0.1in, grey] {carc=225:-45:\dialsizetwo};
+      \pic[line width=0.1in, blue]{carc=\startangletwo:\endangletwo:\dialsizetwo};
+      \pgfmathsetmacro{\dialsizethree}{1.75}
+      \pgfmathsetmacro{\leaderlengththree}{1.5}
+      % Calculate the angle based on the rating provided in arguments
+      \setanglesthree{0}{#7}{10.0}
+      \pic[line width=0.1in, grey] {carc=225:-45:\dialsizethree};
+      \pic[line width=0.1in, blue]{carc=\startanglethree:\endanglethree:\dialsizethree};
+      % Put the average value in the center
+      \node[align=center]{\titletext{#1}};
+      % Draw the lines to put the low and high values on
+      \draw[line width=0.5pt, blue] (\endangle:\dialsize - 0.15) -- (\endangle:\dialsize + 0.25) arc (\endangle:-45:\dialsize+0.25) -- ++(0:\leaderlength);
+      \pgfgetlastxy{\XCoord}{\YCoord};
+      \node[align=right, anchor=south east] (high) at (\XCoord, \YCoord) {\skillstext{#2}{#3}};
+      
+      % Put the average value in the center
+      % Draw the lines to put the low and high values on
+      \draw[line width=0.5pt, blue] (\endangletwo:\dialsizetwo - 0.15) -- (\endangletwo:\dialsizetwo + 0.25) arc (\endangletwo:0:\dialsizetwo+0.25) -- ++(0:\leaderlengthtwo);
+      \pgfgetlastxy{\XCoord}{\YCoord};
+      \node[align=right, anchor=south east] (high) at (\XCoord, \YCoord) {\skillstext{#4}{#5}};
+      
+
+      
+      % Put the average value in the center
+      % Draw the lines to put the low and high values on
+      \draw[line width=0.5pt, blue] (\endanglethree:\dialsizethree - 0.15) -- (\endanglethree:\dialsizethree + 0.25) arc (\endanglethree:45:\dialsizethree+0.25) -- ++(0:\leaderlengththree);
+      \pgfgetlastxy{\XCoord}{\YCoord};
+      \node[align=right, anchor=south east] (high) at (\XCoord, \YCoord) {\skillstext{#6}{#7}};
+      
+    \end{tikzpicture}
+  }
+}
+
+\date{}
+\end_preamble
+\use_default_options false
+\begin_modules
+biblatex
+\end_modules
+\maintain_unincluded_children false
+\language american
+\language_package babel
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "Crimson Text [PfEd]"
+\font_sans "default" "Source Sans Pro"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize letterpaper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 2
+\use_package cancel 2
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 0
+\use_package mhchem 2
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style 
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 0.75in
+\topmargin 0.5in
+\rightmargin 0.75in
+\bottommargin 0.2in
+\headheight 0.25cm
+\headsep 0.15in
+\footskip 0.05cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language swedish
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\bullet 0 0 34 -1
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+\noindent
+
+\family sans
+\series bold
+\size normal
+\color blue
+Teaching Statement
+\color inherit
+
+\begin_inset VSpace -2em*
+\end_inset
+
+
+\end_layout
+
+\begin_layout Author
+\noindent
+
+\size normal
+\emph on
+Alex Hagen
+\family sans
+\series bold
+\emph default
+
+\begin_inset VSpace -3em*
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+I try to teach towards disruptive innovation because of its powerful motivation
+ in ambitious students.
+ With that concept as the backbone of my philosophy, I employ three notable
+ methods to achieve it.
+ These methods are student development of a toolkit for the material, the
+ concepts of immediate feedback, and three types of learning.
+ I will now describe each of these three methods, followed by a short overview
+ of teaching towards disruptive innovation.
+\end_layout
+
+\begin_layout Standard
+During my graduate work, I took a time-intensive course in nuclear reactor
+ kinetics.
+ The material was difficult, and built upon itself.
+ The material half-way into the class required the solution of concepts
+ from a quarter way through the course to be solved before even beginning.
+ The professor's suggestion was golden: he asked us why we hadn't created
+ a tool to do the previous analyses.
+ He showed us his repository of FORTRAN code, built over30 years, that helped
+ him quickly perform analyses that previously he had toiled over.
+ I believe this concept is almost universally applicable, and more profound
+ than he intended.
+ Students internalize a concept better through creation of a tool, students
+ will resent less the requirement to repeat analyses if they can use their
+ tool, and each time they find an edge case that breaks their tool they
+ will become reacquainted with the material while fixing it.
+ This also draws the added benefit that students will generate skills through
+ the creation of these tools (programmatic or otherwise) that will make
+ them more desireable to employers, and more ambitious students may even
+ make tools that can be used more broadly.
+ I plan to integrate the creation of a toolkit by each student in every
+ class I teach.
+\end_layout
+
+\begin_layout Standard
+Immediate feedback, or at least proximate feedback, is a requirement for
+ the nebulous 
+\begin_inset Quotes sld
+\end_inset
+
+state of flow
+\begin_inset Quotes srd
+\end_inset
+
+.
+ This 
+\begin_inset Quotes sld
+\end_inset
+
+flow state
+\begin_inset Quotes srd
+\end_inset
+
+ is currently being touted by productivity authors and scientists alike
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Kotler2014,Csikszentmihalyi2000"
+
+\end_inset
+
+.
+ The concept of requirement of proximate feedback is one that resonates
+ widely.
+ All students have complained about the time required to recieve graded
+ papers, programmers expended countless hours decreasing compile times,
+ and industrial designers have even invented 3d printing partly as a way
+ to prototype more quickly.
+ It is clear that decreasing in time to feedback is important for students
+ learning and enjoyment of learning.
+ With current technological methods, there is no excuse for not having quick
+ turnaround times.
+ I believe that technology could be extended in classes past the level of
+ multiple choice electronic quizzes: natural language processing can follow
+ students problem solving strategies, visualization tools can compare student
+ answers with test cases, and object oriented methodologies can allow students
+ to place their solutions in a 
+\begin_inset Quotes sld
+\end_inset
+
+black-box
+\begin_inset Quotes srd
+\end_inset
+
+ and see how it solves a more integral problem.
+ A setup integrating these concepts would be time-intesive to setup and
+ to tune, but could have vast implications student assignments.
+\end_layout
+
+\begin_layout Standard
+The final method crucial to my teaching methodology is more general.
+ I am not alone in the belief that there are (at least) three types of learning.
+ For me, material can be presented in three forms: descriptively, mathematically
+, and visually.
+ These are used organically in many instances already.
+ Gaps in students' understanding occurs when one or more of these forms
+ are absent.
+ An interesting example of these three forms comes from nuclear engineering,
+ and Karl Ott's description of the idea of neutron lethargy.
+ Mathematically, the concept is straightforward; however, many are unable
+ to understand lethargy until they read Ott's apt description of the idea
+ through a golf description (that energy is distance from the pin, lethargy
+ is distance from the tee box) and accompanying visualization 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Ott1989a"
+
+\end_inset
+
+.
+ I strive to do this with all of my material.
+ I am particularly interested in the use of visualization for teaching purposes,
+ and besides graduate work in visualization, I have also created and maintained
+ two visualization open source codes
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "PyG"
+target "http://alexhagen.github.io/pyg"
+
+\end_inset
+
+- Python Graphics, and 
+\begin_inset CommandInset href
+LatexCommand href
+name "wig"
+target "http://alexhagen.github.io/wig"
+
+\end_inset
+
+ - an MCNP visualization code
+\end_layout
+
+\end_inset
+
+.
+ I am also confident in my ability for verbal description, as I am a practiced
+ public speaker.
+ I have experience through lectures and conference presentations, and additional
+ly as a commentator for a TV broadcast of local soccer games.
+ With an appropriate three-pronged description of all concepts, I believe
+ students will have a much easier time latching on to something and learning
+ the underlying material.
+\end_layout
+
+\begin_layout Standard
+With the aforementioned three concepts, and other conventional teaching
+ methods, I hope to develop classes that center around imbuing students
+ with the desire to create disruptive innovations.
+ The students will organically find that, to create those innovations, they
+ require a deep understanding of the basic and advanced concepts that underlie
+ the field.
+ I believe another example may be best to describe this concept.
+ Early in my schooling, I had a particularly engaging mathematics teacher,
+ and it was clear why.
+ Instead of starting a lecture with a title like 
+\begin_inset Quotes sld
+\end_inset
+
+imaginary numbers
+\begin_inset Quotes srd
+\end_inset
+
+, she started with a statement like 
+\begin_inset Quotes sld
+\end_inset
+
+I'm going to teach you why cruise control works
+\begin_inset Quotes srd
+\end_inset
+
+.
+ While she may have been taking slight liberties, her approach was powerful.
+ A student will more likely cling on to 
+\begin_inset Quotes sld
+\end_inset
+
+let's design a bridge
+\begin_inset Quotes srd
+\end_inset
+
+ than 
+\begin_inset Quotes sld
+\end_inset
+
+let's learn truss structures
+\begin_inset Quotes srd
+\end_inset
+
+, and the same concept applies to 
+\begin_inset Quotes sld
+\end_inset
+
+let's develop a better bridge than has ever been conceived
+\begin_inset Quotes srd
+\end_inset
+
+ than 
+\begin_inset Quotes sld
+\end_inset
+
+let's design a typical causeway
+\begin_inset Quotes srd
+\end_inset
+
+.
+ Paraphrasing from Nietzsche, a good why can motivate almost any how: a
+ student will find almost any way to learn a concept if it is required for
+ a passion project.
+ While I'm not proposing a project based cirriculum, I do strive to motivate
+ towards disruptive innovation in all of my material.
+\end_layout
+
+\begin_layout Standard
+It is with this overarching goal, and subfocus on the three methods involving
+ creation of toolkits, use of proximate feedback, and three-pronged material
+ descriptions, that I hope to teach students deeply and prepare them to
+ become community, field, and even world changers.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[remember picture,overlay]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[line width=25pt,color=blue] (current page.north east) -- (current page.north
+ west);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "/home/ahagen/bibs/teaching"
+options "plain"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[remember picture,overlay]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[line width=25pt,color=blue] (current page.north east) -- (current page.north
+ west);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
