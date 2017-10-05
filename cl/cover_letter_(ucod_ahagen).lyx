@@ -1,0 +1,357 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass letter
+\begin_preamble
+\frenchspacing
+\usepackage{amsmath}
+\newcommand{\ø}{\raisebox{.3ex}{\tiny$\; \bullet \;$}}
+\renewcommand{\arraystretch}{1.25}
+\usepackage{fancyheadings}
+\pagestyle{fancy}
+\chead{\textit{\today}}
+
+\usepackage[backend=biber,defernumbers=true,%
+            firstinits=true, language=english,%
+            isbn=false, url=false, doi=false,%
+            eprint=false, maxnames=99]{biblatex}
+\AtBeginDocument{\thispagestyle{empty}}
+\addbibresource{/home/ahagen/bibs/authored.bib}
+
+\def\makenamesetup{%
+  \def\bibnamedelima{~}%
+  \def\bibnamedelimb{ }%
+  \def\bibnamedelimc{ }%
+  \def\bibnamedelimd{ }%
+  \def\bibnamedelimi{ }%
+  \def\bibinitperiod{.}%
+  \def\bibinitdelim{~}%
+  \def\bibinithyphendelim{.-}}    
+\newcommand*{\makename}[2]{\begingroup\makenamesetup\xdef#1{#2}\endgroup}
+
+\newcommand*{\boldname}[3]{%
+  \def\lastname{#1}%
+  \def\firstname{#2}%
+  \def\firstinit{#3}}
+\boldname{}{}{}
+
+% Patch new definitions
+\renewcommand{\mkbibnamegiven}[1]{%
+  \ifboolexpr{ ( test {\ifdefequal{\firstname}{\namepartgiven}} or test {\ifdefequal{\firstinit}{\namepartgiven}} ) and test {\ifdefequal{\lastname}{\namepartfamily}} }
+  {\mkbibbold{#1}}{#1}%
+}
+
+\renewcommand{\mkbibnamefamily}[1]{%
+  \ifboolexpr{ ( test {\ifdefequal{\firstname}{\namepartgiven}} or test {\ifdefequal{\firstinit}{\namepartgiven}} ) and test {\ifdefequal{\lastname}{\namepartfamily}} }
+  {\mkbibbold{#1}}{#1}%
+}
+
+\boldname{Hagen}{Alexander}{A.}
+\usepackage{xcolor}
+\definecolor{black}{HTML}{142735}
+\definecolor{blue}{HTML}{285668}
+\definecolor{grey}{HTML}{999999}
+\definecolor{darkgrey}{HTML}{285668}
+\makeatletter
+\newcommand{\globalcolor}[1]{%
+  \color{#1}\global\let\default@color\current@color
+}
+\makeatother
+
+\AtBeginDocument{\globalcolor{black}}
+\usepackage{lipsum}
+\usepackage{tikz}
+\end_preamble
+\use_default_options false
+\begin_modules
+biblatex
+\end_modules
+\maintain_unincluded_children false
+\language american
+\language_package babel
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "Crimson Text [PfEd]"
+\font_sans "default" "Source Sans Pro"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command biber
+\index_command default
+\paperfontsize 10
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize letterpaper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style 
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 0.75in
+\topmargin 0.5in
+\rightmargin 0.75in
+\bottommargin 0.2in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language swedish
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\bullet 0 0 34 -1
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout My Address
+Alex Hagen
+\begin_inset Newline newline
+\end_inset
+
+225 N.
+ 2nd St., 3C
+\begin_inset Newline newline
+\end_inset
+
+Lafayette, IN, 47901
+\end_layout
+
+\begin_layout Send To Address
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Opening
+Sir/Madam,
+\end_layout
+
+\begin_layout Standard
+I am writing to apply to University of Colorado Denver for a position as
+ an Assistant Professor in Mechanical Engineering.
+ I am very interested in CU because of the department's prestige, my research's
+ relation to the stated desire for additional fluids research projects,
+ and location.
+ I hope to describe my research and background in relation to mechanical
+ engineering in this letter, and to have a chance to discuss my application
+ packet verbally with the selection committee.
+\end_layout
+
+\begin_layout Standard
+My previous research has all ostensibly been nuclear engineering projects
+ - focused around the detection of special nuclear material for counter
+ terrorism measures.
+ While I go into more detail in my research statement, I want to stress
+ that while the application of the research is nuclear (and extremely important)
+, the core tenets of the research are decidedly mechanical.
+ The crux of our research basis is the thermodynamic oddity of negative
+ pressure metastability and the ability of neutrons to create cavitations
+ in these metastable fluids.
+ The research sees as much inquiry into fluid mechanics and thermodynamics
+ - not to mention rotordynamics, acoustics, and mechatronics - as it does
+ into nuclear particle transport and nuclear interactions.
+ The mechanical side of this research has always fascinated me, in fact
+ the system - for which I designed from glassblowing to safety enclosure,
+ simulated for rotordynamic stability, and created control electronics,
+ firmware, and software - recently won the best demo award at the 2016 IEEE
+ Sensors conference.
+ The majority of my success, however, has come in the applications of these
+ detectors.
+ I've successfully implemented three different active interrogation methods
+ with the detectors - differential die away analysis, interrogation of cargo
+ for photofission, and threshold energy neutron analysis; I won the best
+ paper at the 2016 American Nuclear Society Winter Meeting for my paper
+ analyzing threshold energy neutron analysis for highly enriched uranium
+ and the 2017 Innovations in Nuclear Technology R&D Award for the same methodolo
+gy.
+\end_layout
+
+\begin_layout Standard
+Before my current research, I performed simulation and computational science
+ work.
+ I earned a 
+\begin_inset Quotes sld
+\end_inset
+
+Computational Science in Engineering
+\begin_inset Quotes srd
+\end_inset
+
+ concentration on my MSNE by developing a finite element model of our acoustical
+ly run neutron detector.
+ The work won me an award at the 2015 International Conference on Nuclear
+ Engineering in Prague for my validation and verification technique of our
+ detectors.
+ Before that, I worked in a high performance computing environment at Argonne
+ National Laboratory for a summer internship, using MC2 and VARIANT to validate
+ fast reactor simulations.
+\end_layout
+
+\begin_layout Standard
+However, I do not apply to CU as a research zealot.
+ I often lament those faculty members that neglect their teaching duties,
+ and am committed to teaching as an equal share of my role as a faculty
+ member.
+ I personally enjoy teaching, and while my methods may not be altogether
+ conventional, they have gotten me some recognition within our department
+ - I recieved the majority of votes for our teaching award for my work in
+ a class on particle interactions.
+ It is part of my personal mission to provide the best quality education
+ to students that I would have wanted to receive as a student - a close
+ friend always needles me to write down what I don't like, so that I can
+ change it when I'm in that positions.
+ I have written about these concerns and my teaching philosophy separately
+ in my research statement.
+\end_layout
+
+\begin_layout Standard
+In addition to my research and teaching interests, I'm particularly interested
+ in Denver because of the greater community and the engagment opportunities
+ it affords.
+ I've always felt an interest in volunteering and community service - culminatin
+g in me representing Nuclear Engineering to the Purdue Graduate Senate and
+ running the official Purdue Graduate School volunteerism committee, amongst
+ other smaller projects.
+ I've been involved in soccer since I was 3 years old, and remain so.
+ I was the president of Purdue's Club soccer team (Purdue does not have
+ varsity men's soccer) and would look to be engaged in any soccer activity
+ at CU or in Denver itself.
+ I'm also a dedicated trail runner - as much as one can be in Indiana -
+ and have heard great things about the vibrant trail-running community in
+ Colorado.
+\end_layout
+
+\begin_layout Standard
+In all, I believe through my research and teaching, I could be an asset
+ to CU; and I'm interested in getting involved in the CU and greater Denver
+ communities with a view of making all of these better by my presence.
+\end_layout
+
+\begin_layout Closing
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+Looking forward to your response,
+\backslash
+
+\backslash
+%
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+fromsig{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename ../signature.svg
+	width 5cm
+
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+} 
+\backslash
+
+\backslash
+%
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+fromname{Alex Hagen}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[remember picture,overlay]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[line width=25pt,color=blue] (current page.north east) -- (current page.north
+ west);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

@@ -299,8 +299,8 @@ biblatex
 \series bold
 \size normal
 \color blue
-A Proposal for Scientific and Application Based Inquiry into Negative Pressure
- States in Engineered Fluids
+A Proposal for Scientific Inquiry and Nuclear Security Applications of Negative
+ Pressure in Engineered Fluids
 \color inherit
 
 \begin_inset VSpace -2em*
@@ -406,17 +406,9 @@ key "Hagen2015a"
 
 \begin_layout Standard
 However, it is the applications of negative pressure that are most interesting
- to engineering at large.
- Currently, physicians and medical physicists use cavitation to ablate tumors
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Melodelima2009,Babgi2016"
-
-\end_inset
-
-, weakly interacting massive particle physicists use an analogously metastable
- fluid state
+ to nuclear engineers.
+ Currently, weakly interacting massive particle physicists use an analogously
+ metastable fluid state
 \begin_inset Foot
 status open
 
@@ -461,9 +453,16 @@ key "Archambault2016b"
  means, requiring design of an electro-mechanical system to induce acoustic
  pressures into a resonant chamber, or the application of rotordynamic principle
 s to make a highly controlled fluid rotor for induction of negative pressure.
- The application to homeland security is especially pertinent: the National
- Academy of Engineering has rated counter-nuclear-terrorism a grand challenge
- of the 21st century 
+ The systems are incredibly efficient: tested up to 
+\begin_inset Formula $54\mathrm{\;\%}$
+\end_inset
+
+ for fast neutrons.
+ They are also insensitive to photons - there has never been a detection
+ of a photon in a tensioned metastable fluid detector.
+ The application of these detectors to homeland security is especially pertinent
+: the National Academy of Engineering has rated counter-nuclear-terrorism
+ a grand challenge of the 21st century 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Engineering2012"
@@ -535,8 +534,7 @@ approximately $1000-$5000 in parts per detector
 
 \begin_layout Standard
 In all, I believe this extremely important field of study would be a great
- addition to the research proposal at University of Colorado, especially
- with the stated interest in fluid-thermal system and mechatronics.
+ addition to the research portfolio at the University of Utah.
 \end_layout
 
 \begin_layout Standard

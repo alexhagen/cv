@@ -19,7 +19,7 @@
             isbn=false, url=false, doi=false,%
             eprint=false, maxnames=99]{biblatex}
 \AtBeginDocument{\thispagestyle{empty}}
-\addbibresource{/Users/ahagen/bibs/authored.bib}
+\addbibresource{/home/ahagen/bibs/authored.bib}
 
 \def\makenamesetup{%
   \def\bibnamedelima{~}%
@@ -1764,133 +1764,324 @@ itemsep{-0.50em}
 
 \end_inset
 
-Hagen, et al.
- 
-\begin_inset Quotes sld
+
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Archambault2016d"
+
 \end_inset
 
-Detection of Special Nuclear Material in Cargo using Continuous Neutron
- Interrogation and Tension Metastable Fluid Detector.
-\begin_inset Quotes srd
+
+\end_layout
+
 \end_inset
 
- 
-\emph on
-Transactions of the American Nuclear Society
-\emph default
-, 2016.
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+fullcite{Archambault2016d}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
-Archambault, Hagen, et al.
- 
-\begin_inset Quotes sld
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hagen2015b"
+
 \end_inset
 
-Threshold Rejection Mode Active Interrogation of SNMs...
- ...with Centrifugal and Acoustic Tensioned Metastable Fluid Detectors.
-\begin_inset Quotes srd
+
+\end_layout
+
 \end_inset
 
- 
-\emph on
-Transactions of Nuclear Science
-\emph default
-, 2016.
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+fullcite{Hagen2015b}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
-Taleyarkhan, Hagen, et al.
- 
-\begin_inset Quotes sld
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hagen2014a"
+
 \end_inset
 
-Femto- to Macro- Scale Interdisciplinary Sensing with Tensioned Metastable
- Fluid Detectors.
-\begin_inset Quotes srd
+
+\end_layout
+
 \end_inset
 
- 
-\emph on
-IEEE Sensors Demonstrations
-\emph default
-, 2016.
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+fullcite{Hagen2014a}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
-Hagen.
- 
-\begin_inset Quotes sld
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Taleyarkhan2013"
+
 \end_inset
 
-Multiphysics Modeling in Optimization of Acoustically Tensioned Metastable
- Fluid Neutron Detectors.
-\begin_inset Quotes srd
+
+\end_layout
+
 \end_inset
 
- 
-\emph on
-Masters Thesis, Purdue University,
-\emph default
- 2014.
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+fullcite{Taleyarkhan2013}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
-Taleyarkhan, Hagen, et al.
- 
-\begin_inset Quotes sld
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Taleyarkhan2016"
+
 \end_inset
 
-Real time monitoring of actinides in chemical nuclear fuel reprocessing
- plants.
-\begin_inset Quotes srd
+
+\end_layout
+
 \end_inset
 
- 
-\emph on
-Chemical Engineering Research and Design
-\emph default
-, 2013.
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+fullcite{Taleyarkhan2016}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
-Webster, Hagen, et al.
- 
-\begin_inset Quotes sld
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Archambault2014"
+
 \end_inset
 
-High Efficiency Gamma Beta Blind Alpha Spectrometry for Nuclear Energy Applicati
-ons.
-\begin_inset Quotes srd
+
+\end_layout
+
 \end_inset
 
- 
-\emph on
-Proceedings of the International Conference on Nuclear Engineering
-\emph default
-, 2014.
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+fullcite{Archambault2014}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
-Hagen, et al.
- 
-\begin_inset Quotes sld
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Archambault2012d"
+
 \end_inset
 
-Characterization and Optimization of a Tensioned Metastable Fluid Nuclear
- Particle Sensor Using Laser Based Profilometry.
-\begin_inset Quotes srd
+
+\end_layout
+
 \end_inset
 
- 
-\emph on
-Journal of Nuclear Engineering and Radiation Science
-\emph default
-, 2015.
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+fullcite{Archambault2012d}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
-Over 10 more publications available upon request
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hume2013a"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+fullcite{Hume2013a}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Webster2014"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+fullcite{Webster2014}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bakken2016a"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+fullcite{Bakken2016a}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2764,6 +2955,23 @@ status open
 \begin_layout Plain Layout
 
 }
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "/home/ahagen/bibs/authored"
+options "plain"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset

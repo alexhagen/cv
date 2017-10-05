@@ -239,7 +239,7 @@ biblatex
 \output_sync 0
 \bibtex_command default
 \index_command default
-\paperfontsize 11
+\paperfontsize 10
 \spacing single
 \use_hyperref false
 \papersize letterpaper
@@ -299,7 +299,8 @@ biblatex
 \series bold
 \size normal
 \color blue
-Teaching Statement
+A Proposal for Motivation towards Disruptive Innovation and Supporting Methods
+ as a Teaching Philosophy
 \color inherit
 
 \begin_inset VSpace -2em*
@@ -344,8 +345,8 @@ During my graduate work, I took a time-intensive course in nuclear reactor
  from a quarter way through the course to be solved before even beginning.
  The professor's suggestion was golden: he asked us why we hadn't created
  a tool to do the previous analyses.
- He showed us his repository of FORTRAN code, built over30 years, that helped
- him quickly perform analyses that previously he had toiled over.
+ He showed us his repository of FORTRAN code, built over 30 years, that
+ helped him quickly perform analyses that previously he had toiled over.
  I believe this concept is almost universally applicable, and more profound
  than he intended.
  Students internalize a concept better through creation of a tool, students
@@ -371,16 +372,8 @@ state of flow
 \end_inset
 
 .
- This 
-\begin_inset Quotes sld
-\end_inset
-
-flow state
-\begin_inset Quotes srd
-\end_inset
-
- is currently being touted by productivity authors and scientists alike
- 
+ Proximate feedback's importance is currently being touted by productivity
+ authors and scientists alike 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Kotler2014,Csikszentmihalyi2000"
@@ -388,8 +381,6 @@ key "Kotler2014,Csikszentmihalyi2000"
 \end_inset
 
 .
- The concept of requirement of proximate feedback is one that resonates
- widely.
  All students have complained about the time required to recieve graded
  papers, programmers expended countless hours decreasing compile times,
  and industrial designers have even invented 3d printing partly as a way
@@ -501,7 +492,6 @@ I'm going to teach you why cruise control works
 \end_inset
 
 .
- While she may have been taking slight liberties, her approach was powerful.
  A student will more likely cling on to 
 \begin_inset Quotes sld
 \end_inset
@@ -538,12 +528,7 @@ let's design a typical causeway
  Paraphrasing from Nietzsche, a good why can motivate almost any how: a
  student will find almost any way to learn a concept if it is required for
  a passion project.
- While I'm not proposing a project based cirriculum, I do strive to motivate
- towards disruptive innovation in all of my material.
-\end_layout
-
-\begin_layout Standard
-It is with this overarching goal, and subfocus on the three methods involving
+ It is with this overarching goal, and subfocus on the three methods involving
  creation of toolkits, use of proximate feedback, and three-pronged material
  descriptions, that I hope to teach students deeply and prepare them to
  become community, field, and even world changers.
