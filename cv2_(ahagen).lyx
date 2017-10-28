@@ -19,7 +19,7 @@
             isbn=false, url=false, doi=false,%
             eprint=false, maxnames=99]{biblatex}
 \AtBeginDocument{\thispagestyle{empty}}
-\addbibresource{/home/ahagen/bibs/authored.bib}
+\addbibresource{/Users/ahagen/bibs/authored.bib}
 
 \def\makenamesetup{%
   \def\bibnamedelima{~}%
@@ -2966,7 +2966,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
-bibfiles "/home/ahagen/bibs/authored"
+bibfiles "/home/ahagen/bibs/authored,/Users/ahagen/bibs/authored"
 options "plain"
 
 \end_inset
