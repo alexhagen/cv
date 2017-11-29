@@ -1,0 +1,341 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass letter
+\begin_preamble
+\frenchspacing
+\usepackage{amsmath}
+\newcommand{\ø}{\raisebox{.3ex}{\tiny$\; \bullet \;$}}
+\renewcommand{\arraystretch}{1.25}
+\usepackage{fancyheadings}
+\pagestyle{fancy}
+\chead{\textit{\today}}
+
+\usepackage[backend=biber,defernumbers=true,%
+            firstinits=true, language=english,%
+            isbn=false, url=false, doi=false,%
+            eprint=false, maxnames=99]{biblatex}
+\AtBeginDocument{\thispagestyle{empty}}
+\addbibresource{/home/ahagen/bibs/authored.bib}
+
+\def\makenamesetup{%
+  \def\bibnamedelima{~}%
+  \def\bibnamedelimb{ }%
+  \def\bibnamedelimc{ }%
+  \def\bibnamedelimd{ }%
+  \def\bibnamedelimi{ }%
+  \def\bibinitperiod{.}%
+  \def\bibinitdelim{~}%
+  \def\bibinithyphendelim{.-}}    
+\newcommand*{\makename}[2]{\begingroup\makenamesetup\xdef#1{#2}\endgroup}
+
+\newcommand*{\boldname}[3]{%
+  \def\lastname{#1}%
+  \def\firstname{#2}%
+  \def\firstinit{#3}}
+\boldname{}{}{}
+
+% Patch new definitions
+\renewcommand{\mkbibnamegiven}[1]{%
+  \ifboolexpr{ ( test {\ifdefequal{\firstname}{\namepartgiven}} or test {\ifdefequal{\firstinit}{\namepartgiven}} ) and test {\ifdefequal{\lastname}{\namepartfamily}} }
+  {\mkbibbold{#1}}{#1}%
+}
+
+\renewcommand{\mkbibnamefamily}[1]{%
+  \ifboolexpr{ ( test {\ifdefequal{\firstname}{\namepartgiven}} or test {\ifdefequal{\firstinit}{\namepartgiven}} ) and test {\ifdefequal{\lastname}{\namepartfamily}} }
+  {\mkbibbold{#1}}{#1}%
+}
+
+\boldname{Hagen}{Alexander}{A.}
+\usepackage{xcolor}
+\definecolor{black}{HTML}{142735}
+\definecolor{blue}{HTML}{285668}
+\definecolor{grey}{HTML}{999999}
+\definecolor{darkgrey}{HTML}{285668}
+\makeatletter
+\newcommand{\globalcolor}[1]{%
+  \color{#1}\global\let\default@color\current@color
+}
+\makeatother
+
+\AtBeginDocument{\globalcolor{black}}
+\usepackage{lipsum}
+\usepackage{tikz}
+\end_preamble
+\use_default_options false
+\begin_modules
+biblatex
+\end_modules
+\maintain_unincluded_children false
+\language american
+\language_package babel
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "Crimson Text [PfEd]"
+\font_sans "default" "Source Sans Pro"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command biber
+\index_command default
+\paperfontsize 10
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize letterpaper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style 
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 0.5in
+\rightmargin 1in
+\bottommargin 0.3in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language swedish
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\bullet 0 0 34 -1
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout My Address
+Alex Hagen
+\begin_inset Newline newline
+\end_inset
+
+225 N.
+ 2nd St., 3C
+\begin_inset Newline newline
+\end_inset
+
+Lafayette, IN, 47901
+\end_layout
+
+\begin_layout Send To Address
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Opening
+Sir/Madam,
+\end_layout
+
+\begin_layout Standard
+I'll be honest in this cover letter: I am trying to pivot from my current
+ field to work towards more impactful ventures.
+ I currently am finishing a PhD in Nuclear Engineering, with a focus on
+ the interdiction of special nuclear materials.
+ But, I've always thought that I'd spend my life making good things, instead
+ of spend it stopping bad things.
+ That is why I'm applying for the Power Systems Modeling and Control position.
+ It seems to me that energy and energy availability is a source of human
+ prosperity, and I am passionate about getting involved in it.
+\end_layout
+
+\begin_layout Standard
+The job description calls for an innovative and adaptable engineer, and
+ I will attempt to highlight how I can be both of those things.
+ The job description then also describes modeling methodologies and capabilities
+ needed by the engineer, and I will touch on how I can fulfill those requirement
+s.
+ I hope I can show how I would be an asset to NREL in this capacity.
+\end_layout
+
+\begin_layout Standard
+My entire career thus far has been about adaptability as an engineer.
+ I have moved from working as an industrial designer during my undergraduate
+ education, to performing simulations in a high performance computing environmen
+t at Argonne National Laboratory.
+ I then received a masters (with a computational science concentration)
+ on performing a multiphysics acoustic-piezoelectric simulation, before
+ focusing on DHS funded experimental work for my dissertation.
+ And that says nothing of the breadth of fields this work has been in.
+ My work at Argonne National Laboratory focused on reactor physics for a
+ power reactor, whereas my thesis and dissertation focus on a detector that
+ uses thermodynamic fluid processes to detect neutrons.
+ I would count myself quite competent at mechanical design, particle transport
+ simulation, acoustics, finite element simulation, electrical design; however
+ I have required many other skills during my career.
+ I also consider myself a proficient software engineer - I have developed
+ many data analysis code packages and maintain these currently.
+ I find myself in discussions with other engineers quite often where my
+ breadth of experience and skills is helpful to them.
+\end_layout
+
+\begin_layout Standard
+I also have shown innovation throughout my career.
+ The problem of interdiction of special nuclear material is a difficult
+ one, and current detectors do a bad job of solving the problem.
+ I have been working on developing methodologies that might be able to circumven
+t the problems with conventional detectors.
+ This is a research topic that requires considerations ranging from the
+ highly technical, such as the directionally dependent flux of a deuteron-deuter
+on fusion reaction, to the mundane, such as the noise level of a detector
+ system put in a shipping portal.
+ The problem has challenged me to come up with and prove the concept of
+ four methodologies for interdiction, a real practice in innovation and
+ brainstorming.
+ One methodology of mine, using a 
+\begin_inset Formula $d+d$
+\end_inset
+
+ neutron generator and a panel of our detectors, won me both the ANS Young
+ Members' Group best paper award in 2016 and the Department of Energy's
+ Innovation in Nuclear Technology R&D award in 2017.
+\end_layout
+
+\begin_layout Standard
+I also find myself well suited to the listed requirements for new modeling
+ capabilities for power systems and for conducting simulation and laboratory
+ testing.
+ My nuclear engineering background has given me a strong base knowledge
+ in the energy sector, in fact I've taken additional classes focusing on
+ fuel cells, direct energy transfer technologies, and simulation for fusion
+ energy.
+ My experimental and simulation background has also given me a background
+ in hardware-in-the-loop simulations, as well as energy transmission and
+ system control experience.
+\end_layout
+
+\begin_layout Standard
+I know that my experience will take some real consideration to fit into
+ the job description for a Power Systems Modeling and Control engineer,
+ but I believe that I could be a great asset to NREL in this regard.
+ I hope I will get the chance to meet with the team and figure out how I
+ can best help work towards the great mission of NREL.
+\end_layout
+
+\begin_layout Closing
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+Looking forward to your response,
+\backslash
+
+\backslash
+%
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+fromsig{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename ../signature.svg
+	width 5cm
+
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+} 
+\backslash
+
+\backslash
+%
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+fromname{Alex Hagen}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[remember picture,overlay]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[line width=25pt,color=blue] (current page.north east) -- (current page.north
+ west);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
