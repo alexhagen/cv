@@ -1771,6 +1771,38 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset citation
 LatexCommand cite
+key "Grimes2017"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+fullcite{Grimes2017}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
 key "Archambault2016d"
 
 \end_inset
@@ -2444,6 +2476,21 @@ itemsep{-0.50em}
 
 \emph on
 \color blue
+July
+\begin_inset space ~
+\end_inset
+
+2017
+\emph default
+\color inherit
+ Received Best Paper Award at Intl.
+ Conference on Nuclear Engineering 25
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+\color blue
 May
 \begin_inset space ~
 \end_inset
@@ -2966,7 +3013,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
-bibfiles "/home/ahagen/bibs/authored,/Users/ahagen/bibs/authored"
+bibfiles "/Users/ahagen/bibs/authored"
 options "plain"
 
 \end_inset
