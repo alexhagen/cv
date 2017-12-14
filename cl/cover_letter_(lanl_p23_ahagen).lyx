@@ -1,0 +1,350 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass letter
+\begin_preamble
+\frenchspacing
+\usepackage{amsmath}
+\newcommand{\ø}{\raisebox{.3ex}{\tiny$\; \bullet \;$}}
+\renewcommand{\arraystretch}{1.25}
+\usepackage{fancyheadings}
+\pagestyle{fancy}
+\chead{\textit{\today}}
+
+\usepackage[backend=biber,defernumbers=true,%
+            firstinits=true, language=english,%
+            isbn=false, url=false, doi=false,%
+            eprint=false, maxnames=99]{biblatex}
+\AtBeginDocument{\thispagestyle{empty}}
+\addbibresource{/home/ahagen/bibs/authored.bib}
+
+\def\makenamesetup{%
+  \def\bibnamedelima{~}%
+  \def\bibnamedelimb{ }%
+  \def\bibnamedelimc{ }%
+  \def\bibnamedelimd{ }%
+  \def\bibnamedelimi{ }%
+  \def\bibinitperiod{.}%
+  \def\bibinitdelim{~}%
+  \def\bibinithyphendelim{.-}}    
+\newcommand*{\makename}[2]{\begingroup\makenamesetup\xdef#1{#2}\endgroup}
+
+\newcommand*{\boldname}[3]{%
+  \def\lastname{#1}%
+  \def\firstname{#2}%
+  \def\firstinit{#3}}
+\boldname{}{}{}
+
+% Patch new definitions
+\renewcommand{\mkbibnamegiven}[1]{%
+  \ifboolexpr{ ( test {\ifdefequal{\firstname}{\namepartgiven}} or test {\ifdefequal{\firstinit}{\namepartgiven}} ) and test {\ifdefequal{\lastname}{\namepartfamily}} }
+  {\mkbibbold{#1}}{#1}%
+}
+
+\renewcommand{\mkbibnamefamily}[1]{%
+  \ifboolexpr{ ( test {\ifdefequal{\firstname}{\namepartgiven}} or test {\ifdefequal{\firstinit}{\namepartgiven}} ) and test {\ifdefequal{\lastname}{\namepartfamily}} }
+  {\mkbibbold{#1}}{#1}%
+}
+
+\boldname{Hagen}{Alexander}{A.}
+\usepackage{xcolor}
+\definecolor{black}{HTML}{142735}
+\definecolor{blue}{HTML}{285668}
+\definecolor{grey}{HTML}{999999}
+\definecolor{darkgrey}{HTML}{285668}
+\makeatletter
+\newcommand{\globalcolor}[1]{%
+  \color{#1}\global\let\default@color\current@color
+}
+\makeatother
+
+\AtBeginDocument{\globalcolor{black}}
+\usepackage{lipsum}
+\usepackage{tikz}
+\end_preamble
+\use_default_options false
+\begin_modules
+biblatex
+\end_modules
+\maintain_unincluded_children false
+\language american
+\language_package babel
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "Crimson Text [PfEd]"
+\font_sans "default" "Source Sans Pro"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command biber
+\index_command default
+\paperfontsize 10
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize letterpaper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style 
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 0.6in
+\rightmargin 1in
+\bottommargin 0.6in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language swedish
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\bullet 0 0 34 -1
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout My Address
+Alex Hagen
+\begin_inset Newline newline
+\end_inset
+
+225 N.
+ 2nd St., 3C
+\begin_inset Newline newline
+\end_inset
+
+Lafayette, IN, 47901
+\end_layout
+
+\begin_layout Send To Address
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Opening
+Drs.
+ Gehring and Haines,
+\end_layout
+
+\begin_layout Standard
+I am writing to apply to the 
+\begin_inset Quotes sld
+\end_inset
+
+Particle Detector Development Postdoc
+\begin_inset Quotes srd
+\end_inset
+
+ at Los Alamost National Laboratory.
+ I will try to highlight how my skills match those published in the job
+ posting.
+\end_layout
+
+\begin_layout Standard
+My graduate career has been focused on neutron detection - specifically
+ on designing, developing, and applying the Tensioned Metastable Fluid Detector
+ (TMFD).
+ The dissertation I will be defending within the next two months has focused
+ on the application of these detectors to active interrogation of cargo
+ for interdiction of special nuclear materials.
+ The detectors are highly sensitive to neutrons, and able to operate in
+ high fields of dose (tested above 
+\begin_inset Formula $1000\;\mathrm{{\nicefrac{R}{hr}}}$
+\end_inset
+
+).
+ My design of the system won our lab the Best Demo Award at the IEEE Sensors
+ conference in 2016, and my application of these detectors to active interrogati
+on won me both the ANS Winter Meeting Young Members' Group Best Paper Award
+ in 2016 and the DoE's Innovations in Nuclear Technology R&D award in 2017.
+\end_layout
+
+\begin_layout Standard
+However, the TMFD is not the detector for every application, particularly
+ those requiring fast temporal response, or those at high temperature.
+ Fortunately, through the course of my PhD, I've gained experience with
+ many other methods of detection.
+ I've designed and performed experiments with liquid scintillators, ion
+ chambers, germanium detectors, lanthanum bromide detectors, sodium iodide
+ detectors; and modern electronics and data acquisition systems associated
+ with these detectors.
+ I've also designed and built data acquisition systems for our detectors
+ - I built a (somewhat) fast data acquisistion system that lived onboard
+ our spinning Centrifugally Tensioned Metastable Fluid Detector to detect
+ the acoustic traces from neutron interactions.
+ This had lead into a new capability that may allow us to help weakly interactin
+g massive particle detection efforts by discriminating alpha events from
+ WIMP events.
+\end_layout
+
+\begin_layout Standard
+I've also gained a lot of experience with monte carlo modeling of particle
+ transport.
+ The bulk of my work has used MCNP based codes, including MCNP6.1, MCNPX,
+ MCNPX-PoLiMi, and a light ion source routine called MCUNED.
+ I also have a broader physical simulation experience base: I interned at
+ Argonne National Laboratory working on deterministic transport codes for
+ fast reactors, and my Masters had a concentration in Computational Science
+ and Engineering by performing multiphysics simulations on the piezoelectrics,
+ structural mechanics, and acoustics of an Acoustically Tensioned Metastable
+ Fluid Detector.
+ In fact, I use simulation so broadly in my work that I wrote and maintain
+ a Python library for building, variance reduction, analysis, and visualization
+ of MCNP jobs
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "https://github.com/alexhagen/wig"
+target "https://github.com/alexhagen/wig"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+I hope the previous paragraphs have demonstrated my skills in relation to
+ the Post-Doc position at P-23.
+ I'm sure that the extreme conditions cited in the job description would
+ be a challenge for me in engineering, and that's something that I am looking
+ for.
+ I hope that we can discuss my fit to this position.
+\end_layout
+
+\begin_layout Closing
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+Looking forward to your response,
+\backslash
+
+\backslash
+%
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+fromsig{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename ../signature.svg
+	width 5cm
+
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+} 
+\backslash
+
+\backslash
+%
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+fromname{Alex Hagen}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[remember picture,overlay]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[line width=25pt,color=blue] (current page.north east) -- (current page.north
+ west);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
