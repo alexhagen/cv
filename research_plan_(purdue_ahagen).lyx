@@ -1,0 +1,626 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\frenchspacing
+\usepackage{amsmath}
+\newcommand{\ø}{\raisebox{.3ex}{\tiny$\; \bullet \;$}}
+\renewcommand{\arraystretch}{1.25}
+\usepackage{fancyheadings}
+\pagestyle{fancy}
+\chead{\textit{Alex Hagen · \today}}
+\rhead{}
+\lhead{}
+
+
+\AtBeginDocument{\thispagestyle{empty}}
+
+\usepackage{xcolor}
+\definecolor{black}{HTML}{142735}
+\definecolor{blue}{HTML}{285668}
+\definecolor{grey}{HTML}{999999}
+\definecolor{darkgrey}{HTML}{285668}
+\makeatletter
+\newcommand{\globalcolor}[1]{%
+  \color{#1}\global\let\default@color\current@color
+}
+\makeatother
+
+\AtBeginDocument{\globalcolor{black}}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{adjustbox}
+\usepackage{varwidth}
+\usepackage{ifthen}
+\pagenumbering{gobble}
+\usetikzlibrary{positioning}
+\usepackage[scale=0.95]{opensans}
+\DeclareRobustCommand\ltseries{\fontseries{l}\selectfont}
+
+\DeclareTextFontCommand{\textlt}{\ltseries}
+
+\tikzset{
+  pics/carc/.style args={#1:#2:#3}{
+    code={
+      \draw[pic actions] (#1:#3) arc(#1:#2:#3);
+    }
+  }
+}
+
+
+\newcommand{\setangles}[3]{
+\ifthenelse{\equal{#1}{NA}}{
+        \pgfmathsetmacro{\startangle}{225.0}
+        \pgfmathsetmacro{\endangle}{-45}
+      }{
+      	\ifthenelse{\equal{#1}{#2}}{
+        \pgfmathsetmacro{\startangle}{230.0 - (270.0 * #1 / #3)}
+        \pgfmathsetmacro{\endangle}{220.0 - (270.0 * #2 / #3)}
+      	}{
+      	\pgfmathsetmacro{\startangle}{225.0 - (270.0 * #1 / #3)}
+        \pgfmathsetmacro{\endangle}{225.0 - (270.0 * #2 / #3)}
+      	}
+      }
+}
+
+\newcommand{\setanglestwo}[3]{
+\ifthenelse{\equal{#1}{NA}}{
+        \pgfmathsetmacro{\startangletwo}{225.0}
+        \pgfmathsetmacro{\endangletwo}{-45}
+      }{
+      	\ifthenelse{\equal{#1}{#2}}{
+        \pgfmathsetmacro{\startangletwo}{230.0 - (270.0 * #1 / #3)}
+        \pgfmathsetmacro{\endangletwo}{220.0 - (270.0 * #2 / #3)}
+      	}{
+      	\pgfmathsetmacro{\startangletwo}{225.0 - (270.0 * #1 / #3)}
+        \pgfmathsetmacro{\endangletwo}{225.0 - (270.0 * #2 / #3)}
+      	}
+      }
+}
+
+\newcommand{\setanglesthree}[3]{
+\ifthenelse{\equal{#1}{NA}}{
+        \pgfmathsetmacro{\startanglethree}{225.0}
+        \pgfmathsetmacro{\endanglethree}{-45}
+      }{
+      	\ifthenelse{\equal{#1}{#2}}{
+        \pgfmathsetmacro{\startanglethree}{230.0 - (270.0 * #1 / #3)}
+        \pgfmathsetmacro{\endanglethree}{220.0 - (270.0 * #2 / #3)}
+      	}{
+      	\pgfmathsetmacro{\startanglethree}{225.0 - (270.0 * #1 / #3)}
+        \pgfmathsetmacro{\endanglethree}{225.0 - (270.0 * #2 / #3)}
+      	}
+      }
+}
+
+\newcommand{\skillstext}[2]{\color{blue} #1 \\ \color{blue} \scriptsize #2 Years}
+\newcommand{\titletext}[1]{\color{blue} #1 }
+
+\newcommand{\dial}[3]{
+  \raisebox{-0.5\height}{
+    \begin{tikzpicture}
+      % Set some constants for the dial size and the width of the dial
+      \pgfmathsetmacro{\dialsize}{1.25}
+      \pgfmathsetmacro{\leaderlength}{1.375}
+      % Adjust the text spacing (line spacing)
+      \setlength{\baselineskip}{2pt}
+      % Calculate the angle based on the rating provided in arguments
+      \setangles{0}{#3}{12.0}
+
+      % Draw the arc and the background arc
+      \pic[line width=0.1in, grey] {carc=225:-45:\dialsize};
+      \pic[line width=0.1in, blue]{carc=\startangle:\endangle:\dialsize};
+      % Put the average value in the center
+      \node[align=center]{\titletext{#1}};
+      % Draw the lines to put the low and high values on
+      \draw[line width=0.5pt, blue] (\endangle:\dialsize - 0.15) -- (\endangle:\dialsize + 0.25) arc (\endangle:-45:\dialsize+0.25) -- ++(0:\leaderlength);
+      \pgfgetlastxy{\XCoord}{\YCoord};
+      \node[align=right, anchor=south east] (high) at (\XCoord, \YCoord) {\skillstext{#2}{#3}};
+    \end{tikzpicture}
+  }
+}
+
+\newcommand{\dialtwo}[5]{
+  \raisebox{-0.5\height}{
+    \begin{tikzpicture}
+      % Set some constants for the dial size and the width of the dial
+      \pgfmathsetmacro{\dialsize}{1.25}
+      \pgfmathsetmacro{\leaderlength}{2.0}
+      % Adjust the text spacing (line spacing)
+      \setlength{\baselineskip}{2pt}
+      % Calculate the angle based on the rating provided in arguments
+      \setangles{0}{#3}{10.0}
+
+      % Draw the arc and the background arc
+      \pic[line width=0.1in, grey] {carc=225:-45:\dialsize};
+      \pic[line width=0.1in, blue]{carc=\startangle:\endangle:\dialsize};
+      \pgfmathsetmacro{\dialsizetwo}{1.50}
+      \pgfmathsetmacro{\leaderlengthtwo}{1.5}
+
+      % Calculate the angle based on the rating provided in arguments
+      \setanglestwo{0}{#5}{10.0}
+      \pic[line width=0.1in, grey] {carc=225:-45:\dialsizetwo};
+      \pic[line width=0.1in, blue]{carc=\startangletwo:\endangletwo:\dialsizetwo};
+      % Put the average value in the center
+      \node[align=center]{\titletext{#1}};
+      % Draw the lines to put the low and high values on
+      \draw[line width=0.5pt, blue] (\endangle:\dialsize - 0.15) -- (\endangle:\dialsize + 0.25) arc (\endangle:-45:\dialsize+0.25) -- ++(0:\leaderlength);
+      \pgfgetlastxy{\XCoord}{\YCoord};
+      \node[align=right, anchor=south east] (high) at (\XCoord, \YCoord) {\skillstext{#2}{#3}};
+      
+      % Put the average value in the center
+      % Draw the lines to put the low and high values on
+      \draw[line width=0.5pt, blue] (\endangletwo:\dialsizetwo - 0.15) -- (\endangletwo:\dialsizetwo + 0.25) arc (\endangletwo:0:\dialsizetwo+0.25) -- ++(0:\leaderlengthtwo);
+      \pgfgetlastxy{\XCoord}{\YCoord};
+      \node[align=right, anchor=south east] (high) at (\XCoord, \YCoord) {\skillstext{#4}{#5}};
+    \end{tikzpicture}
+  }
+}
+
+\newcommand{\dialthree}[7]{
+  \raisebox{-0.5\height}{
+    \begin{tikzpicture}
+      % Set some constants for the dial size and the width of the dial
+      \pgfmathsetmacro{\dialsize}{1.25}
+      \pgfmathsetmacro{\leaderlength}{2.0}
+      % Adjust the text spacing (line spacing)
+      \setlength{\baselineskip}{2pt}
+      % Calculate the angle based on the rating provided in arguments
+      \setangles{0}{#3}{10.0}
+
+      % Draw the arc and the background arc
+      \pic[line width=0.1in, grey] {carc=225:-45:\dialsize};
+      \pic[line width=0.1in, blue]{carc=\startangle:\endangle:\dialsize};
+      \pgfmathsetmacro{\dialsizetwo}{1.50}
+      \pgfmathsetmacro{\leaderlengthtwo}{1.5}
+
+      % Calculate the angle based on the rating provided in arguments
+      \setanglestwo{0}{#5}{10.0}
+      \pic[line width=0.1in, grey] {carc=225:-45:\dialsizetwo};
+      \pic[line width=0.1in, blue]{carc=\startangletwo:\endangletwo:\dialsizetwo};
+      \pgfmathsetmacro{\dialsizethree}{1.75}
+      \pgfmathsetmacro{\leaderlengththree}{1.5}
+      % Calculate the angle based on the rating provided in arguments
+      \setanglesthree{0}{#7}{10.0}
+      \pic[line width=0.1in, grey] {carc=225:-45:\dialsizethree};
+      \pic[line width=0.1in, blue]{carc=\startanglethree:\endanglethree:\dialsizethree};
+      % Put the average value in the center
+      \node[align=center]{\titletext{#1}};
+      % Draw the lines to put the low and high values on
+      \draw[line width=0.5pt, blue] (\endangle:\dialsize - 0.15) -- (\endangle:\dialsize + 0.25) arc (\endangle:-45:\dialsize+0.25) -- ++(0:\leaderlength);
+      \pgfgetlastxy{\XCoord}{\YCoord};
+      \node[align=right, anchor=south east] (high) at (\XCoord, \YCoord) {\skillstext{#2}{#3}};
+      
+      % Put the average value in the center
+      % Draw the lines to put the low and high values on
+      \draw[line width=0.5pt, blue] (\endangletwo:\dialsizetwo - 0.15) -- (\endangletwo:\dialsizetwo + 0.25) arc (\endangletwo:0:\dialsizetwo+0.25) -- ++(0:\leaderlengthtwo);
+      \pgfgetlastxy{\XCoord}{\YCoord};
+      \node[align=right, anchor=south east] (high) at (\XCoord, \YCoord) {\skillstext{#4}{#5}};
+      
+
+      
+      % Put the average value in the center
+      % Draw the lines to put the low and high values on
+      \draw[line width=0.5pt, blue] (\endanglethree:\dialsizethree - 0.15) -- (\endanglethree:\dialsizethree + 0.25) arc (\endanglethree:45:\dialsizethree+0.25) -- ++(0:\leaderlengththree);
+      \pgfgetlastxy{\XCoord}{\YCoord};
+      \node[align=right, anchor=south east] (high) at (\XCoord, \YCoord) {\skillstext{#6}{#7}};
+      
+    \end{tikzpicture}
+  }
+}
+
+\date{}
+\end_preamble
+\use_default_options false
+\begin_modules
+biblatex
+\end_modules
+\maintain_unincluded_children false
+\language american
+\language_package babel
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "Crimson Text [PfEd]"
+\font_sans "default" "Source Sans Pro"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 10
+\spacing single
+\use_hyperref false
+\papersize letterpaper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 2
+\use_package cancel 2
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 0
+\use_package mhchem 2
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style 
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 0.75in
+\topmargin 0.5in
+\rightmargin 0.75in
+\bottommargin 0.2in
+\headheight 0.25cm
+\headsep 0.15in
+\footskip 0.05cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language swedish
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\bullet 0 0 34 -1
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+\noindent
+
+\family sans
+\series bold
+\size normal
+\color blue
+A Proposal for Scientific Inquiry and Nuclear Security Applications of Negative
+ Pressure in Engineered Fluids
+\color inherit
+
+\begin_inset VSpace -2em*
+\end_inset
+
+
+\end_layout
+
+\begin_layout Author
+\noindent
+
+\size normal
+\emph on
+Alex Hagen
+\family sans
+\series bold
+\emph default
+
+\begin_inset VSpace -3em*
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+...
+\end_layout
+
+\begin_layout Standard
+\noindent
+Negative pressure.
+ This thermodynamic concept often conjures incorrect conceptions even among
+ engineers, but it can be a powerful tool when applied correctly.
+ The most elegant proof of existance of negative pressure, is a monument
+ to clever experimental design, performed by Scholander in 1965 and utilizing
+ a tree, a rifle, and high speed footage 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Scholander1965"
+
+\end_inset
+
+.
+ I have been fascinated by negative pressure in fluids and their fracture
+ under certain conditions - cavitation - since I began my research career.
+ The following proposal pertains to an application based study, but with
+ a minor focus on some of the open scientific questions regarding negative
+ pressure in fluids.
+ I will first describe the open scientific questions, and then move on to
+ the most interesting applications of negative pressure fluids and cavitation
+ physics.
+\end_layout
+
+\begin_layout Standard
+From a pure science standpoint, a theory for the negative pressure of fluids
+ is still elusive.
+ The attempts at definition of a theory have been attempted in fields ranging
+ from low temperature physics 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Xiong1989"
+
+\end_inset
+
+, chemical physics 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Davitt2010"
+
+\end_inset
+
+, acoustics 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Neppiras1980"
+
+\end_inset
+
+, and even nuclear physics 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "West1998"
+
+\end_inset
+
+.
+ There are open scientific questions that need answering even absent a unifying
+ theory of negative pressure, including the cavitation energy requirements
+ under negative pressure and the rigorous and accurate description of negative
+ pressure field induction by both the acoustic and centrifugal methods.
+ My current research has intersected with these questions regularly: my
+ paper in Journal of Nuclear Engineering and Radiation Science focusing
+ on using laser energy deposition to estimate cavitation energy requirements
+ and profile the negative pressure in an acoustic context 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hagen2015a"
+
+\end_inset
+
+ won an ASME award in 2014, and a (as of yet unpublished) study recently
+ used accelerator generated neutrons to probe cavitation energy requirements.
+ An exploration into these questions would reveal information important
+ to applications of negative pressure, and also help patch some of the holes
+ in the current theory of negative pressure.
+\end_layout
+
+\begin_layout Standard
+However, it is the applications of negative pressure that are most interesting
+ to nuclear engineers.
+ Currently, weakly interacting massive particle physicists use an analogously
+ metastable fluid state
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+superheated fluids and negatively pressured fluids are termed metastable
+ fluids, and are both used for nuclear particle detection - in fact, Glaser
+ won the Nobel Prize for this application 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Glaser1953a"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ to detect 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ radiation contamination in their detectors 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Behnke2012"
+
+\end_inset
+
+, and my group utilizes negative pressure fluids to detect smuggled nuclear
+ material to prevent nuclear terrorism 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Archambault2016b"
+
+\end_inset
+
+.
+ I propose to further this investigation into nuclear particle interaction
+ in negative pressure metastable fluid detectors.
+ The systems are either created using the aforementioned acoustic or centrifugal
+ means, requiring design of an electro-mechanical system to induce acoustic
+ pressures into a resonant chamber, or the application of rotordynamic principle
+s to make a highly controlled fluid rotor for induction of negative pressure.
+ The systems are incredibly efficient: tested up to 
+\begin_inset Formula $54\mathrm{\;\%}$
+\end_inset
+
+ for fast neutrons.
+ They are also insensitive to photons - there has never been a detection
+ of a photon in a tensioned metastable fluid detector.
+ The application of these detectors to homeland security is especially pertinent
+: the National Academy of Engineering has rated counter-nuclear-terrorism
+ a grand challenge of the 21st century 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Engineering2012"
+
+\end_inset
+
+ and policy institutes estimate nuclear terrorism a larger threat than either
+ Chinese or Russian armament 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bunn2016"
+
+\end_inset
+
+.
+ Our detectors have made big waves in this context, with the detectors winning
+ the IEEE Sensors best demo award in 2016, and me personally winning the
+ ANS Young Members' Group best paper award in 2016 and the Department of
+ Energy Nuclear Technology Innovations R&D Award in 2017.
+\end_layout
+
+\begin_layout Standard
+I propose to begin a lab group focusing on negative pressure in practical
+ fluids for scientific study and use in detection of smuggled special nuclear
+ material.
+ Future funding could come from several entities, including the Department
+ of Homeland Security's Domestic Nuclear Detection Office, the Department
+ of Energy's National Nuclear Security Agency, and the Department of Defense's
+ Defense Threat Reduction Agency.
+ A laboratory for studying these fluids would require a modest amount of
+ electrical bench test equipment, a modestly sized laser - previously a
+ Class IIIB nitrogen laser with 
+\begin_inset Formula $\sim30\mathrm{\;\nicefrac{\mu J}{pulse}}$
+\end_inset
+
+ has been used, alternative neutron detectors such as a liquid scintillation
+ detector or 
+\begin_inset Formula $\ce{^{3}He}$
+\end_inset
+
+ detector, a budget for manufacturing of the tensioned metastable fluid
+ detector
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+approximately $1000-$5000 in parts per detector
+\end_layout
+
+\end_inset
+
+, and - crucially - neutron sources.
+ Possible neutron sources are 
+\begin_inset Formula $d+d$
+\end_inset
+
+ neutron generators, available without an NRC license from vendors such
+ as Starfire in Illinois, and combinations of exempt quantities of alpha
+ emitters such as 
+\begin_inset Formula $\ce{^{210}Po}$
+\end_inset
+
+ and 
+\begin_inset Formula $\left(\alpha,n\right)$
+\end_inset
+
+ materials, such as beryllium.
+\end_layout
+
+\begin_layout Standard
+In all, I believe this extremely important field of study would be a great
+ addition to the nuclear engineering research portfolio at the University
+ of Florida.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[remember picture,overlay]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[line width=25pt,color=blue] (current page.north east) -- (current page.north
+ west);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "/home/ahagen/bibs/dissertation"
+options "plain"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[remember picture,overlay]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[line width=25pt,color=blue] (current page.north east) -- (current page.north
+ west);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

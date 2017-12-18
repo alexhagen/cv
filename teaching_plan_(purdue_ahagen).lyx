@@ -1,0 +1,466 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\frenchspacing
+\usepackage{amsmath}
+\newcommand{\ø}{\raisebox{.3ex}{\tiny$\; \bullet \;$}}
+\renewcommand{\arraystretch}{1.25}
+\usepackage{fancyheadings}
+\pagestyle{fancy}
+\chead{\textit{Alex Hagen · \today}}
+\rhead{}
+\lhead{}
+
+
+\AtBeginDocument{\thispagestyle{empty}}
+
+\usepackage{xcolor}
+\definecolor{black}{HTML}{142735}
+\definecolor{blue}{HTML}{285668}
+\definecolor{grey}{HTML}{999999}
+\definecolor{darkgrey}{HTML}{285668}
+\makeatletter
+\newcommand{\globalcolor}[1]{%
+  \color{#1}\global\let\default@color\current@color
+}
+\makeatother
+
+\AtBeginDocument{\globalcolor{black}}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{adjustbox}
+\usepackage{varwidth}
+\usepackage{ifthen}
+\pagenumbering{gobble}
+\usetikzlibrary{positioning}
+\usepackage[scale=0.95]{opensans}
+\DeclareRobustCommand\ltseries{\fontseries{l}\selectfont}
+
+\DeclareTextFontCommand{\textlt}{\ltseries}
+
+\tikzset{
+  pics/carc/.style args={#1:#2:#3}{
+    code={
+      \draw[pic actions] (#1:#3) arc(#1:#2:#3);
+    }
+  }
+}
+
+
+\newcommand{\setangles}[3]{
+\ifthenelse{\equal{#1}{NA}}{
+        \pgfmathsetmacro{\startangle}{225.0}
+        \pgfmathsetmacro{\endangle}{-45}
+      }{
+      	\ifthenelse{\equal{#1}{#2}}{
+        \pgfmathsetmacro{\startangle}{230.0 - (270.0 * #1 / #3)}
+        \pgfmathsetmacro{\endangle}{220.0 - (270.0 * #2 / #3)}
+      	}{
+      	\pgfmathsetmacro{\startangle}{225.0 - (270.0 * #1 / #3)}
+        \pgfmathsetmacro{\endangle}{225.0 - (270.0 * #2 / #3)}
+      	}
+      }
+}
+
+\newcommand{\setanglestwo}[3]{
+\ifthenelse{\equal{#1}{NA}}{
+        \pgfmathsetmacro{\startangletwo}{225.0}
+        \pgfmathsetmacro{\endangletwo}{-45}
+      }{
+      	\ifthenelse{\equal{#1}{#2}}{
+        \pgfmathsetmacro{\startangletwo}{230.0 - (270.0 * #1 / #3)}
+        \pgfmathsetmacro{\endangletwo}{220.0 - (270.0 * #2 / #3)}
+      	}{
+      	\pgfmathsetmacro{\startangletwo}{225.0 - (270.0 * #1 / #3)}
+        \pgfmathsetmacro{\endangletwo}{225.0 - (270.0 * #2 / #3)}
+      	}
+      }
+}
+
+\newcommand{\setanglesthree}[3]{
+\ifthenelse{\equal{#1}{NA}}{
+        \pgfmathsetmacro{\startanglethree}{225.0}
+        \pgfmathsetmacro{\endanglethree}{-45}
+      }{
+      	\ifthenelse{\equal{#1}{#2}}{
+        \pgfmathsetmacro{\startanglethree}{230.0 - (270.0 * #1 / #3)}
+        \pgfmathsetmacro{\endanglethree}{220.0 - (270.0 * #2 / #3)}
+      	}{
+      	\pgfmathsetmacro{\startanglethree}{225.0 - (270.0 * #1 / #3)}
+        \pgfmathsetmacro{\endanglethree}{225.0 - (270.0 * #2 / #3)}
+      	}
+      }
+}
+
+\newcommand{\skillstext}[2]{\color{blue} #1 \\ \color{blue} \scriptsize #2 Years}
+\newcommand{\titletext}[1]{\color{blue} #1 }
+
+\newcommand{\dial}[3]{
+  \raisebox{-0.5\height}{
+    \begin{tikzpicture}
+      % Set some constants for the dial size and the width of the dial
+      \pgfmathsetmacro{\dialsize}{1.25}
+      \pgfmathsetmacro{\leaderlength}{1.375}
+      % Adjust the text spacing (line spacing)
+      \setlength{\baselineskip}{2pt}
+      % Calculate the angle based on the rating provided in arguments
+      \setangles{0}{#3}{12.0}
+
+      % Draw the arc and the background arc
+      \pic[line width=0.1in, grey] {carc=225:-45:\dialsize};
+      \pic[line width=0.1in, blue]{carc=\startangle:\endangle:\dialsize};
+      % Put the average value in the center
+      \node[align=center]{\titletext{#1}};
+      % Draw the lines to put the low and high values on
+      \draw[line width=0.5pt, blue] (\endangle:\dialsize - 0.15) -- (\endangle:\dialsize + 0.25) arc (\endangle:-45:\dialsize+0.25) -- ++(0:\leaderlength);
+      \pgfgetlastxy{\XCoord}{\YCoord};
+      \node[align=right, anchor=south east] (high) at (\XCoord, \YCoord) {\skillstext{#2}{#3}};
+    \end{tikzpicture}
+  }
+}
+
+\newcommand{\dialtwo}[5]{
+  \raisebox{-0.5\height}{
+    \begin{tikzpicture}
+      % Set some constants for the dial size and the width of the dial
+      \pgfmathsetmacro{\dialsize}{1.25}
+      \pgfmathsetmacro{\leaderlength}{2.0}
+      % Adjust the text spacing (line spacing)
+      \setlength{\baselineskip}{2pt}
+      % Calculate the angle based on the rating provided in arguments
+      \setangles{0}{#3}{10.0}
+
+      % Draw the arc and the background arc
+      \pic[line width=0.1in, grey] {carc=225:-45:\dialsize};
+      \pic[line width=0.1in, blue]{carc=\startangle:\endangle:\dialsize};
+      \pgfmathsetmacro{\dialsizetwo}{1.50}
+      \pgfmathsetmacro{\leaderlengthtwo}{1.5}
+
+      % Calculate the angle based on the rating provided in arguments
+      \setanglestwo{0}{#5}{10.0}
+      \pic[line width=0.1in, grey] {carc=225:-45:\dialsizetwo};
+      \pic[line width=0.1in, blue]{carc=\startangletwo:\endangletwo:\dialsizetwo};
+      % Put the average value in the center
+      \node[align=center]{\titletext{#1}};
+      % Draw the lines to put the low and high values on
+      \draw[line width=0.5pt, blue] (\endangle:\dialsize - 0.15) -- (\endangle:\dialsize + 0.25) arc (\endangle:-45:\dialsize+0.25) -- ++(0:\leaderlength);
+      \pgfgetlastxy{\XCoord}{\YCoord};
+      \node[align=right, anchor=south east] (high) at (\XCoord, \YCoord) {\skillstext{#2}{#3}};
+      
+      % Put the average value in the center
+      % Draw the lines to put the low and high values on
+      \draw[line width=0.5pt, blue] (\endangletwo:\dialsizetwo - 0.15) -- (\endangletwo:\dialsizetwo + 0.25) arc (\endangletwo:0:\dialsizetwo+0.25) -- ++(0:\leaderlengthtwo);
+      \pgfgetlastxy{\XCoord}{\YCoord};
+      \node[align=right, anchor=south east] (high) at (\XCoord, \YCoord) {\skillstext{#4}{#5}};
+    \end{tikzpicture}
+  }
+}
+
+\newcommand{\dialthree}[7]{
+  \raisebox{-0.5\height}{
+    \begin{tikzpicture}
+      % Set some constants for the dial size and the width of the dial
+      \pgfmathsetmacro{\dialsize}{1.25}
+      \pgfmathsetmacro{\leaderlength}{2.0}
+      % Adjust the text spacing (line spacing)
+      \setlength{\baselineskip}{2pt}
+      % Calculate the angle based on the rating provided in arguments
+      \setangles{0}{#3}{10.0}
+
+      % Draw the arc and the background arc
+      \pic[line width=0.1in, grey] {carc=225:-45:\dialsize};
+      \pic[line width=0.1in, blue]{carc=\startangle:\endangle:\dialsize};
+      \pgfmathsetmacro{\dialsizetwo}{1.50}
+      \pgfmathsetmacro{\leaderlengthtwo}{1.5}
+
+      % Calculate the angle based on the rating provided in arguments
+      \setanglestwo{0}{#5}{10.0}
+      \pic[line width=0.1in, grey] {carc=225:-45:\dialsizetwo};
+      \pic[line width=0.1in, blue]{carc=\startangletwo:\endangletwo:\dialsizetwo};
+      \pgfmathsetmacro{\dialsizethree}{1.75}
+      \pgfmathsetmacro{\leaderlengththree}{1.5}
+      % Calculate the angle based on the rating provided in arguments
+      \setanglesthree{0}{#7}{10.0}
+      \pic[line width=0.1in, grey] {carc=225:-45:\dialsizethree};
+      \pic[line width=0.1in, blue]{carc=\startanglethree:\endanglethree:\dialsizethree};
+      % Put the average value in the center
+      \node[align=center]{\titletext{#1}};
+      % Draw the lines to put the low and high values on
+      \draw[line width=0.5pt, blue] (\endangle:\dialsize - 0.15) -- (\endangle:\dialsize + 0.25) arc (\endangle:-45:\dialsize+0.25) -- ++(0:\leaderlength);
+      \pgfgetlastxy{\XCoord}{\YCoord};
+      \node[align=right, anchor=south east] (high) at (\XCoord, \YCoord) {\skillstext{#2}{#3}};
+      
+      % Put the average value in the center
+      % Draw the lines to put the low and high values on
+      \draw[line width=0.5pt, blue] (\endangletwo:\dialsizetwo - 0.15) -- (\endangletwo:\dialsizetwo + 0.25) arc (\endangletwo:0:\dialsizetwo+0.25) -- ++(0:\leaderlengthtwo);
+      \pgfgetlastxy{\XCoord}{\YCoord};
+      \node[align=right, anchor=south east] (high) at (\XCoord, \YCoord) {\skillstext{#4}{#5}};
+      
+
+      
+      % Put the average value in the center
+      % Draw the lines to put the low and high values on
+      \draw[line width=0.5pt, blue] (\endanglethree:\dialsizethree - 0.15) -- (\endanglethree:\dialsizethree + 0.25) arc (\endanglethree:45:\dialsizethree+0.25) -- ++(0:\leaderlengththree);
+      \pgfgetlastxy{\XCoord}{\YCoord};
+      \node[align=right, anchor=south east] (high) at (\XCoord, \YCoord) {\skillstext{#6}{#7}};
+      
+    \end{tikzpicture}
+  }
+}
+
+\date{}
+\end_preamble
+\use_default_options false
+\begin_modules
+biblatex
+\end_modules
+\maintain_unincluded_children false
+\language american
+\language_package babel
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "Crimson Text [PfEd]"
+\font_sans "default" "Source Sans Pro"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 10
+\spacing single
+\use_hyperref false
+\papersize letterpaper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 2
+\use_package cancel 2
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 0
+\use_package mhchem 2
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style 
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 0.75in
+\topmargin 0.5in
+\rightmargin 0.75in
+\bottommargin 0.2in
+\headheight 0.25cm
+\headsep 0.15in
+\footskip 0.05cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language swedish
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\bullet 0 0 34 -1
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+\noindent
+
+\family sans
+\series bold
+\size normal
+\color blue
+Teaching Plan
+\color inherit
+
+\begin_inset VSpace -2em*
+\end_inset
+
+
+\end_layout
+
+\begin_layout Author
+\noindent
+
+\size normal
+\emph on
+Alex Hagen
+\family sans
+\series bold
+\emph default
+
+\begin_inset VSpace -3em*
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Teaching has always been a pleasure to me.
+ I have benefitted from the skills of many good teachers throughout my education
+al career and have picked up many of their tricks.
+ I find it very satisfying to work directly with a student who overcomes
+ a barrier in understanding and suddenly 
+\begin_inset Quotes sld
+\end_inset
+
+gets it
+\begin_inset Quotes srd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+My teaching experience has been gathered during my time as a graduate student.
+ I have TA'ed or graded for five different courses, including Introductory
+ Nuclear Engineering, Nuclear Particle Interactions, Introduction to Reactor
+ Physics, and Nuclear Engineering Systems.
+ I also mentor a high school student almost every year to help them learn
+ our trade, prepare and execute a research plan, and to work on their communicat
+ion skills as they present the plan to a science fair.
+ My success with those students has been very rewarding - every single student
+ I've mentored attained a Gold Medal at the Purdue Science fair, and my
+ most recent student advanced to the State Science Fair because of his projects
+ Best in Show placement.
+\end_layout
+
+\begin_layout Standard
+I am familiar with the content to teach the entire gamut of undergraduate
+ nuclear engineering courses, but I feel particularly comfortable when teaching
+ courses pertaining to detection and neutronics.
+ As far as graduate courses and survey courses, I would love to provide
+ a course on metastable fluids, particularly the specifics of cavitation,
+ and how it is used in many other fields, besides nuclear engineering.
+ I also could provide a full suite of computational science courses, and
+ think that, if well designed, those may even draw students from outside
+ of the nuclear engineering department.
+\end_layout
+
+\begin_layout Standard
+My teaching style consists of highly visual presentations with exacting
+ verbal accompaniment.
+ I believe that students learn either verbally, visually, or mathematically,
+ and believe that too many topics are covered in only one or two of those
+ three ways.
+ My past experience in visualization has made it possible for me to create
+ visualizations for teaching that supplement the verbal and mathematical
+ descriptions that are so inherent to nuclear engineering.
+\end_layout
+
+\begin_layout Standard
+In all, I would strive to enhance the teaching of and help the students
+ of Purdue Nuclear Engineering through teaching their courses.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[remember picture,overlay]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[line width=25pt,color=blue] (current page.north east) -- (current page.north
+ west);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "/home/ahagen/bibs/teaching"
+options "plain"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[remember picture,overlay]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[line width=25pt,color=blue] (current page.north east) -- (current page.north
+ west);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
