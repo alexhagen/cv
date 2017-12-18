@@ -326,32 +326,24 @@ Alex Hagen
 \end_layout
 
 \begin_layout Standard
-...
-\end_layout
-
-\begin_layout Standard
-\noindent
-Negative pressure.
- This thermodynamic concept often conjures incorrect conceptions even among
- engineers, but it can be a powerful tool when applied correctly.
- The most elegant proof of existance of negative pressure, is a monument
- to clever experimental design, performed by Scholander in 1965 and utilizing
- a tree, a rifle, and high speed footage 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Scholander1965"
-
-\end_inset
-
-.
- I have been fascinated by negative pressure in fluids and their fracture
- under certain conditions - cavitation - since I began my research career.
- The following proposal pertains to an application based study, but with
- a minor focus on some of the open scientific questions regarding negative
- pressure in fluids.
- I will first describe the open scientific questions, and then move on to
- the most interesting applications of negative pressure fluids and cavitation
- physics.
+My graduate research has been focused completely on tensioned metastable
+ fluid detectors and their applications - mainly towards national security
+ through active interrogation.
+ I was afforded the opportunity to work on almost every aspect of these
+ detectors.
+ This included simulations of the acoustic fields in the acoustically tensioned
+ metastable fluid detector (ATMFD) and design and simulation of the rotordynamic
+s in our centrifugally tensioned metastable fluid detector; mechatronic
+ and vacuum design of the system itself and development of firmware and
+ software to operate the system; secondary instrumentation for cavitation
+ detection through acoustic or infrared means, and for temperature; software
+ to control, log, and analyze data from the detectors; applications using
+ neutron generators and isotope sources; and even the base physics of the
+ cavitation event seeding.
+ This broad knowledge has lead to many implementable ideas that thus far
+ have not been done.
+ Because Purdue hosts the premier research group for TMFDs, it would be
+ an ideal place to start this work and further this field.
 \end_layout
 
 \begin_layout Standard
@@ -412,26 +404,7 @@ key "Hagen2015a"
 However, it is the applications of negative pressure that are most interesting
  to nuclear engineers.
  Currently, weakly interacting massive particle physicists use an analogously
- metastable fluid state
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-superheated fluids and negatively pressured fluids are termed metastable
- fluids, and are both used for nuclear particle detection - in fact, Glaser
- won the Nobel Prize for this application 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Glaser1953a"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
- to detect 
+ metastable fluid state to detect 
 \begin_inset Formula $\alpha$
 \end_inset
 
@@ -442,8 +415,8 @@ key "Behnke2012"
 
 \end_inset
 
-, and my group utilizes negative pressure fluids to detect smuggled nuclear
- material to prevent nuclear terrorism 
+, and my graduate research utilized negative pressure fluids to detect smuggled
+ nuclear material to prevent nuclear terrorism 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Archambault2016b"
@@ -489,57 +462,25 @@ key "Bunn2016"
 \end_layout
 
 \begin_layout Standard
-I propose to begin a lab group focusing on negative pressure in practical
- fluids for scientific study and use in detection of smuggled special nuclear
- material.
- Future funding could come from several entities, including the Department
- of Homeland Security's Domestic Nuclear Detection Office, the Department
- of Energy's National Nuclear Security Agency, and the Department of Defense's
- Defense Threat Reduction Agency.
- A laboratory for studying these fluids would require a modest amount of
- electrical bench test equipment, a modestly sized laser - previously a
- Class IIIB nitrogen laser with 
-\begin_inset Formula $\sim30\mathrm{\;\nicefrac{\mu J}{pulse}}$
-\end_inset
-
- has been used, alternative neutron detectors such as a liquid scintillation
- detector or 
-\begin_inset Formula $\ce{^{3}He}$
-\end_inset
-
- detector, a budget for manufacturing of the tensioned metastable fluid
- detector
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-approximately $1000-$5000 in parts per detector
-\end_layout
-
-\end_inset
-
-, and - crucially - neutron sources.
- Possible neutron sources are 
-\begin_inset Formula $d+d$
-\end_inset
-
- neutron generators, available without an NRC license from vendors such
- as Starfire in Illinois, and combinations of exempt quantities of alpha
- emitters such as 
-\begin_inset Formula $\ce{^{210}Po}$
-\end_inset
-
- and 
-\begin_inset Formula $\left(\alpha,n\right)$
-\end_inset
-
- materials, such as beryllium.
+Because of the existing center for TMFD research and through my conversations
+ with Professor Rusi Taleyarkhan of Purdue's Metastable Fluids Research
+ Laboratory (MFRL), I believe that that would be an excellent place for
+ me to extend the capabilities and research group.
+ With the neutron sources such as Cf, PuBe, LEU, and neutron generators
+ in place, and many of the bench electronics and conventional detectors
+ already available at the MFRL - along with Professor Taleyarkhan's blessing
+ to work along side him - there would be a low barrier to start a related
+ lab group based around TMFD scientific and applications based inquiry.
 \end_layout
 
 \begin_layout Standard
-In all, I believe this extremely important field of study would be a great
- addition to the nuclear engineering research portfolio at the University
- of Florida.
+I believe that starting a lab group to be conjoined with the MFRL would
+ be triply beneficial - it would further the science of TMFDs, which are
+ exceedingly important as better neutron detection is needed across disciplines,
+ it would further improve Purdue as the world's premier center for TMFD
+ research and applications, and it would create a synergistic relationship
+ between lab groups that would help Purdue NE in its stated attempt to re-obtain
+ its place in the top five of nuclear engineering departments in the nation.
 \end_layout
 
 \begin_layout Standard
