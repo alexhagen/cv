@@ -19,7 +19,7 @@
             isbn=false, url=false, doi=false,%
             eprint=false, maxnames=99]{biblatex}
 \AtBeginDocument{\thispagestyle{empty}}
-\addbibresource{/Users/ahagen/bibs/authored.bib}
+\addbibresource{/home/ahagen/bibs/authored.bib}
 
 \def\makenamesetup{%
   \def\bibnamedelima{~}%
@@ -670,7 +670,7 @@ itemsep{-0.50em}
 
 Doctorate of Philosophy in Nuclear Engineering, GPA 3.60, 
 \emph on
-Final Defense in December 2017
+Final Defense in early 2018
 \end_layout
 
 \begin_layout Itemize
@@ -1210,6 +1210,105 @@ Sourced, revised, or formalized the machine drawings and designs of over
 \series bold
 \size small
 \color blue
+REFERENCES
+\family default
+\series default
+
+\begin_inset VSpace -10pt
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100line%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size small
+\color blue
+\begin_inset VSpace -30pt
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength
+\backslash
+itemsep{-0.50em}
+\end_layout
+
+\end_inset
+
+
+\shape slanted
+\color blue
+Rusi Taleyarkhan, PhD - (765)-313-1876.
+
+\shape default
+\color inherit
+ Full Professor at Purdue University Nuclear Engineering.
+ Principle Investigator of DNDO Grant Supporting my work, Chair of Thesis
+ Committee, and Academic Advisor for past 8 years.
+\end_layout
+
+\begin_layout Itemize
+
+\shape slanted
+\color blue
+Brian Archambault, PhD - (765)-313-1876.
+
+\shape default
+\color inherit
+ Manager of Technology at Sagamore Adams Laboratory, LLC.
+ Direct Research Advisor, Co-investigator on active interrogation for past
+ 6 years.
+\end_layout
+
+\begin_layout Itemize
+
+\shape slanted
+\color blue
+Kevin Fischer - (630)-589-4927.
+
+\shape default
+\color inherit
+ Data Analysis and Test Reporting Engineer at Bechtel Corporation.
+ Co-investigator on acoustically tensioned detector systems during Masters
+ study from 2012 - 2014.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family sans
+\series bold
+\size small
+\color blue
 ACADEMIC POSITIONS
 \family default
 \series default
@@ -1708,6 +1807,44 @@ Coordinated with and mentored a Jefferson High School student to complete
 
 \series bold
  Student won a gold medal for the engineering division at the fair.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[remember picture,overlay]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[line width=25pt,color=blue] (current page.north east) -- (current page.north
+ west);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2420,6 +2557,44 @@ May
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[remember picture,overlay]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[line width=25pt,color=blue] (current page.north east) -- (current page.north
+ west);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \family sans
 \series bold
@@ -2692,98 +2867,6 @@ Health Physics Society
 
 \begin_layout Itemize
 American Society of Mechanical Engineers
-\end_layout
-
-\begin_layout Standard
-
-\family sans
-\series bold
-\size small
-\color blue
-REFERENCES
-\family default
-\series default
-
-\begin_inset VSpace -10pt
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset CommandInset line
-LatexCommand rule
-offset "0.5ex"
-width "100line%"
-height "1pt"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\size small
-\color blue
-\begin_inset VSpace -30pt
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-setlength
-\backslash
-itemsep{-0.50em}
-\end_layout
-
-\end_inset
-
-
-\shape slanted
-\color blue
-Rusi Taleyarkhan, PhD - (765)-313-1876.
-
-\shape default
-\color inherit
- Full Professor at Purdue University Nuclear Engineering.
- Principle Investigator of DNDO Grant Supporting my work, Chair of Thesis
- Committee, and Academic Advisor for past 8 years.
-\end_layout
-
-\begin_layout Itemize
-
-\shape slanted
-\color blue
-Brian Archambault, PhD - (765)-313-1876.
-
-\shape default
-\color inherit
- Manager of Technology at Sagamore Adams Laboratory, LLC.
- Direct Research Advisor, Co-investigator on active interrogation for past
- 6 years.
-\end_layout
-
-\begin_layout Itemize
-
-\shape slanted
-\color blue
-Kevin Fischer - (630)-589-4927.
-
-\shape default
-\color inherit
- Data Analysis and Test Reporting Engineer at Bechtel Corporation.
- Co-investigator on acoustically tensioned detector systems during Masters
- study from 2012 - 2014.
 \end_layout
 
 \begin_layout Standard

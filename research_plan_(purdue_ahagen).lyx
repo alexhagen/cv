@@ -327,10 +327,17 @@ Alex Hagen
 
 \begin_layout Standard
 My graduate research has been focused completely on tensioned metastable
- fluid detectors and their applications - mainly towards national security
- through active interrogation.
- I was afforded the opportunity to work on almost every aspect of these
- detectors.
+ fluid detectors (TMFDs) and their applications - mainly towards national
+ security through active interrogation.
+ TMFD systems are incredibly efficient neutron detectors: tested up to 
+\begin_inset Formula $54\mathrm{\;\%}$
+\end_inset
+
+ for fast neutrons.
+ They are also insensitive to photons - there has never been a detection
+ of a photon in a tensioned metastable fluid detector.
+ During my graduate career, I was afforded the opportunity to work on almost
+ every aspect of these detectors.
  This included simulations of the acoustic fields in the acoustically tensioned
  metastable fluid detector (ATMFD) and design and simulation of the rotordynamic
 s in our centrifugally tensioned metastable fluid detector; mechatronic
@@ -341,9 +348,9 @@ s in our centrifugally tensioned metastable fluid detector; mechatronic
  neutron generators and isotope sources; and even the base physics of the
  cavitation event seeding.
  This broad knowledge has lead to many implementable ideas that thus far
- have not been done.
+ have not been finished.
  Because Purdue hosts the premier research group for TMFDs, it would be
- an ideal place to start this work and further this field.
+ an ideal place to start a group to collaborate and further this field.
 \end_layout
 
 \begin_layout Standard
@@ -430,13 +437,6 @@ key "Archambault2016b"
  means, requiring design of an electro-mechanical system to induce acoustic
  pressures into a resonant chamber, or the application of rotordynamic principle
 s to make a highly controlled fluid rotor for induction of negative pressure.
- The systems are incredibly efficient: tested up to 
-\begin_inset Formula $54\mathrm{\;\%}$
-\end_inset
-
- for fast neutrons.
- They are also insensitive to photons - there has never been a detection
- of a photon in a tensioned metastable fluid detector.
  The application of these detectors to homeland security is especially pertinent
 : the National Academy of Engineering has rated counter-nuclear-terrorism
  a grand challenge of the 21st century 
@@ -455,10 +455,10 @@ key "Bunn2016"
 \end_inset
 
 .
- Our detectors have made big waves in this context, with the detectors winning
- the IEEE Sensors best demo award in 2016, and me personally winning the
- ANS Young Members' Group best paper award in 2016 and the Department of
- Energy Nuclear Technology Innovations R&D Award in 2017.
+ TMFDs have made big waves in this context, with the detectors winning the
+ IEEE Sensors best demo award in 2016, and me personally winning the ANS
+ Young Members' Group best paper award in 2016 and the Department of Energy
+ Nuclear Technology Innovations R&D Award in 2017.
 \end_layout
 
 \begin_layout Standard

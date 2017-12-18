@@ -299,7 +299,7 @@ biblatex
 \series bold
 \size normal
 \color blue
-Teaching Plan
+Teaching Plan for Purdue Nuclear Engineering
 \color inherit
 
 \begin_inset VSpace -2em*
@@ -342,93 +342,92 @@ gets it
 
 \begin_layout Standard
 My teaching experience has been gathered during my time as a graduate student.
- I have TA'ed or graded for five different courses, including Introductory
- Nuclear Engineering, Nuclear Particle Interactions, Introduction to Reactor
- Physics, and Nuclear Engineering Systems.
+ I have TA'ed or graded for five different courses, including introductory
+ nuclear engineering, nuclear particle interactions, introduction to reactor
+ physics, and nuclear reactor systems.
  I also mentor a high school student almost every year to help them learn
  our trade, prepare and execute a research plan, and to work on their communicat
 ion skills as they present the plan to a science fair.
  My success with those students has been very rewarding - every single student
  I've mentored attained a Gold Medal at the Purdue Science fair, and my
- most recent student advanced to the State Science Fair because of his projects
+ most recent student advanced to the State Science Fair because of his project's
  Best in Show placement.
+ I also served as a graduate assistant for Purdue's outstanding Summer Undergrad
+uate Research Fellow (SURF) program, and in that time mentored forty undergradua
+te researchers.
+ I developed a seminar series for them as an entry way to research skills
+ such as programming, data visualization, bench electronics, and rapid prototypi
+ng; as well as guided them in research and graded their midterm and final
+ updates.
 \end_layout
 
 \begin_layout Standard
 I am familiar with the content to teach the entire gamut of undergraduate
  nuclear engineering courses, but I feel particularly comfortable when teaching
  courses pertaining to detection and neutronics.
- As far as graduate courses and survey courses, I would love to provide
- a course on metastable fluids, particularly the specifics of cavitation,
- and how it is used in many other fields, besides nuclear engineering.
- I also could provide a full suite of computational science courses, and
- think that, if well designed, those may even draw students from outside
- of the nuclear engineering department.
+ My comfort with neutronics comes from taking 5 neutronics based coures
+ throughout my graduate career, my work for Argonne National Laboratory
+ on reactor physics codes, and my own transport calculations during my graduate
+ research.
+ My comfort in teaching detection comes from my experience in grading particle
+ interactions courses and from my research in the topic.
+ I would also be comfortable teaching nuclear materials and thermal hydraulics
+ based courses, if those are needed by the department.
 \end_layout
 
 \begin_layout Standard
-My teaching style consists of highly visual presentations with exacting
+As far as course development, I would love to provide a course on metastable
+ fluids, particularly the specifics of cavitation, and how it is used in
+ many other fields, besides nuclear engineering.
+ I've also long had the idea for a course similar to the seminar series
+ I provided for the SURF program.
+ Titled along the grandiose lines of MIT's 
+\begin_inset Quotes sld
+\end_inset
+
+How to Build Almost Anything
+\begin_inset Quotes srd
+\end_inset
+
+ - I believe a course entitled 
+\begin_inset Quotes sld
+\end_inset
+
+How to do things in research
+\begin_inset Quotes sld
+\end_inset
+
+ could prepare undergraduate students to be researchers with some skills
+ that are related to - but not inherent in - engineering degrees.
+ I would plan to provide a brief and pragmatic look at bench electronics,
+ circuitry, using computers to get things done for non-computational students,
+ experiment automation and design, and rapid prototyping.
+ All of these topics have courses associated with them, but providing them
+ in one semester at a cursory level may be more beneficial than having to
+ take an entire course on each one.
+ I believe the course, if properly designed, could garner interest from
+ other department's students, as well.
+\end_layout
+
+\begin_layout Standard
+I'd like to also speak to my teaching style.
+ My teaching style consists of highly visual presentations with exacting
  verbal accompaniment.
  I believe that students learn either verbally, visually, or mathematically,
  and believe that too many topics are covered in only one or two of those
  three ways.
- My past experience in visualization has made it possible for me to create
- visualizations for teaching that supplement the verbal and mathematical
- descriptions that are so inherent to nuclear engineering.
+ My past experience in visualization through my graduate courses and my
+ time at Argonne has made it possible for me to create powerful visualizations
+ for teaching that supplement the verbal and mathematical descriptions that
+ are so inherent to nuclear engineering.
+ I think this visual enhancement to a conventional teaching style would
+ help students immensely, but I also believe in the power of rigorous proofs
+ and verbal descriptions - I would use all three.
 \end_layout
 
 \begin_layout Standard
-In all, I would strive to enhance the teaching of and help the students
- of Purdue Nuclear Engineering through teaching their courses.
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{tikzpicture}[remember picture,overlay]
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-draw[line width=25pt,color=blue] (current page.north east) -- (current page.north
- west);
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{tikzpicture}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage pagebreak
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset bibtex
-LatexCommand bibtex
-bibfiles "/home/ahagen/bibs/teaching"
-options "plain"
-
-\end_inset
-
-
+I would strive to enhance the education of the students of Purdue Nuclear
+ Engineering in any way I can.
 \end_layout
 
 \begin_layout Standard
