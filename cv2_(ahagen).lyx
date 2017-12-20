@@ -1261,7 +1261,7 @@ itemsep{-0.50em}
 
 \shape slanted
 \color blue
-Rusi Taleyarkhan, PhD - (765)-313-1876.
+Rusi Taleyarkhan, PhD - rusi@purdue.edu - (765)-313-1876.
 
 \shape default
 \color inherit
@@ -1272,9 +1272,36 @@ Rusi Taleyarkhan, PhD - (765)-313-1876.
 
 \begin_layout Itemize
 
+\shape italic
+\color blue
+James Schweitzer, PhD - jfschweitzer@purdue.edu - (765)-494-2350
+\shape default
+\color inherit
+.
+ Director of Radiological and Environmental Management and Assistant Professor
+ of Health Physics at Purdue University.
+ Member of Thesis Committee for both PhDNE and MSNE.
+\end_layout
+
+\begin_layout Itemize
+
+\shape italic
+\color blue
+Thomas Atkinson, PhD - tatkinson@purdue.edu - (765)-494-2600
+\shape default
+\color inherit
+.
+ Associate Dean of the Graduate School at Purdue University.
+ Served as the advisor to Purdue Graduate Student government and worked
+ closely with me in outreach work while I chaired the Purdue Graduate Student
+ Government's Advancement Committee.
+\end_layout
+
+\begin_layout Itemize
+
 \shape slanted
 \color blue
-Brian Archambault, PhD - (765)-313-1876.
+Brian Archambault, PhD - barchambault@salabsllc.com - (765)-313-1876.
 
 \shape default
 \color inherit
@@ -1287,7 +1314,7 @@ Brian Archambault, PhD - (765)-313-1876.
 
 \shape slanted
 \color blue
-Kevin Fischer - (630)-589-4927.
+Kevin Fischer - kffische@gmail.com - (630)-589-4927.
 
 \shape default
 \color inherit
@@ -2307,7 +2334,11 @@ itemsep{-0.50em}
 
 \end_inset
 
-Taleyarkhan, Bakken, Fisher, Hagen, Kostry.
+Taleyarkhan, Bakken, Fisher, 
+\series bold
+Hagen
+\series default
+, Kostry.
  Polylactic acid adhesive compositions and methods for their preparation
  and use.
  
@@ -2810,7 +2841,7 @@ May
 \series bold
 \size small
 \color blue
-AFILIATIONS
+AFFILIATIONS
 \family default
 \series default
 
@@ -2902,7 +2933,7 @@ height "1pt"
 
 \size small
 \color blue
-\begin_inset VSpace -30pt
+\begin_inset VSpace -20pt
 \end_inset
 
 
