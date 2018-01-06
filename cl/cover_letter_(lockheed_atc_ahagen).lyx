@@ -1,0 +1,335 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass letter
+\begin_preamble
+\frenchspacing
+\usepackage{amsmath}
+\newcommand{\ø}{\raisebox{.3ex}{\tiny$\; \bullet \;$}}
+\renewcommand{\arraystretch}{1.25}
+\usepackage{fancyheadings}
+\pagestyle{fancy}
+\chead{\textit{\today}}
+
+\usepackage[backend=biber,defernumbers=true,%
+            firstinits=true, language=english,%
+            isbn=false, url=false, doi=false,%
+            eprint=false, maxnames=99]{biblatex}
+\AtBeginDocument{\thispagestyle{empty}}
+\addbibresource{/home/ahagen/bibs/authored.bib}
+
+\def\makenamesetup{%
+  \def\bibnamedelima{~}%
+  \def\bibnamedelimb{ }%
+  \def\bibnamedelimc{ }%
+  \def\bibnamedelimd{ }%
+  \def\bibnamedelimi{ }%
+  \def\bibinitperiod{.}%
+  \def\bibinitdelim{~}%
+  \def\bibinithyphendelim{.-}}    
+\newcommand*{\makename}[2]{\begingroup\makenamesetup\xdef#1{#2}\endgroup}
+
+\newcommand*{\boldname}[3]{%
+  \def\lastname{#1}%
+  \def\firstname{#2}%
+  \def\firstinit{#3}}
+\boldname{}{}{}
+
+% Patch new definitions
+\renewcommand{\mkbibnamegiven}[1]{%
+  \ifboolexpr{ ( test {\ifdefequal{\firstname}{\namepartgiven}} or test {\ifdefequal{\firstinit}{\namepartgiven}} ) and test {\ifdefequal{\lastname}{\namepartfamily}} }
+  {\mkbibbold{#1}}{#1}%
+}
+
+\renewcommand{\mkbibnamefamily}[1]{%
+  \ifboolexpr{ ( test {\ifdefequal{\firstname}{\namepartgiven}} or test {\ifdefequal{\firstinit}{\namepartgiven}} ) and test {\ifdefequal{\lastname}{\namepartfamily}} }
+  {\mkbibbold{#1}}{#1}%
+}
+
+\boldname{Hagen}{Alexander}{A.}
+\usepackage{xcolor}
+\definecolor{black}{HTML}{142735}
+\definecolor{blue}{HTML}{285668}
+\definecolor{grey}{HTML}{999999}
+\definecolor{darkgrey}{HTML}{285668}
+\makeatletter
+\newcommand{\globalcolor}[1]{%
+  \color{#1}\global\let\default@color\current@color
+}
+\makeatother
+
+\AtBeginDocument{\globalcolor{black}}
+\usepackage{lipsum}
+\usepackage{tikz}
+\end_preamble
+\use_default_options false
+\begin_modules
+biblatex
+\end_modules
+\maintain_unincluded_children false
+\language american
+\language_package babel
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "Crimson Text [PfEd]"
+\font_sans "default" "Source Sans Pro"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command biber
+\index_command default
+\paperfontsize 10
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize letterpaper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style 
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 0.6in
+\rightmargin 1in
+\bottommargin 0.6in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language swedish
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\bullet 0 0 34 -1
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout My Address
+Alex Hagen
+\begin_inset Newline newline
+\end_inset
+
+225 N.
+ 2nd St., 3C
+\begin_inset Newline newline
+\end_inset
+
+Lafayette, IN, 47901
+\end_layout
+
+\begin_layout Send To Address
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Opening
+Sir/Madam,
+\end_layout
+
+\begin_layout Standard
+I am writing to apply to the position of Research Engineer at Lockheed Martin's
+ Advanced Technology Center in Littleton Colorado.
+ I'm particularly interested in applying to Lockheed Martin's ATC because
+ its mission aligns very well with my skills: I feel particularly edified
+ when providing a robust, real world solution to complex scientific and
+ technical problems.
+ I also write to point out how I would be valuatble to teams working on
+ sensor fusion and filtering, firmware and real time controls, and to point
+ out my experience with modeling and simulation.
+\end_layout
+
+\begin_layout Standard
+The research I will be presenting for my upcoming PhD defense is on the
+ use of novel neutron detectors - Tensioned Metastable Fluid Detectors -
+ in passive and active interrogation for special nuclear material interdiction.
+ I've successfully implemented three different active interrogation methods
+ with the detectors - differential die away analysis, interrogation of cargo
+ for photofission, and threshold energy neutron analysis.
+ The detectors - which I had a had a majority hand in designing the mechanical
+ systems, electrical systems, writing of the firmware, and control software
+ - recently won the best demo award at the 2016 IEEE Sensors conference.
+ I have also received awards for the use of the data and filtering of the
+ data from these systems, particularly the best paper at the 2016 American
+ Nuclear Society Winter Meeting for my paper analyzing threshold energy
+ neutron analysis for highly enriched uranium and the 2017 Innovations in
+ Nuclear Technology R&D Award for the same methodology.
+\end_layout
+
+\begin_layout Standard
+Before my current research, I performed more simulation and computational
+ science work.
+ I earned a 
+\begin_inset Quotes sld
+\end_inset
+
+Computational Science in Engineering
+\begin_inset Quotes srd
+\end_inset
+
+ concentration on my MSNE by developing a finite element model of our acoustical
+ly run neutron detector.
+ I developed a multiphysics model using the PDE solver COMSOL and verified
+ the model using a laser based interrogation technique.
+ I also was able to verify the thermoacoustics of the system - the sensitivity
+ changes with temperature - and that has lead to much more robustness in
+ the entire system.
+ The work won me an award at the 2015 International Conference on Nuclear
+ Engineering in Prague for my validation and verification technique of our
+ detectors.
+ Before that, I worked in a high performance computing environment at Argonne
+ National Laboratory for a summer internship, using MC2 and VARIANT to validate
+ fast reactor simulations.
+ I was able to perform these computations on high performance computing
+ resources, ultimately on Blue Gene P.
+\end_layout
+
+\begin_layout Standard
+I also have experience working with real time controls in two regards.
+ Recently, I developed a new methodology for detection of our neutron events.
+ This method increased the timing resolution to the point that we could
+ start to take acoustic spectrograms of the events.
+ This capability so far has lead to the putative ability to discriminate
+ alpha type events from neutron type events - an ability that can help in
+ the detection of dark matter.
+ I've also been able to develop a system for controlling the microsecond
+ pulses of a DT neutron generator and sync this to our detector system,
+ allowing for the ability to discriminate dangerous special nuclear material
+ from inoccuous lowly enriched uranium.
+ These are just two of the real time control systems I was able to develop
+ during my graduate career.
+\end_layout
+
+\begin_layout Standard
+It is with these skills that I hope to contribute to Lockheed Martin's Advanced
+ Technology Center by helping a team working on sensor fusion and filtering,
+ firmware and realtime controls, or modeling and simulation.
+\end_layout
+
+\begin_layout Closing
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+Looking forward to your response,
+\backslash
+
+\backslash
+%
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+fromsig{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename ../signature.svg
+	width 5cm
+
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+} 
+\backslash
+
+\backslash
+%
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+fromname{Alex Hagen}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[remember picture,overlay]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[line width=25pt,color=blue] (current page.north east) -- (current page.north
+ west);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
