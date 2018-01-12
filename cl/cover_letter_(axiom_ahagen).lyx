@@ -1,0 +1,347 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass letter
+\begin_preamble
+\frenchspacing
+\usepackage{amsmath}
+\newcommand{\ø}{\raisebox{.3ex}{\tiny$\; \bullet \;$}}
+\renewcommand{\arraystretch}{1.25}
+\usepackage{fancyheadings}
+\pagestyle{fancy}
+\chead{\textit{\today}}
+
+\usepackage[backend=biber,defernumbers=true,%
+            firstinits=true, language=english,%
+            isbn=false, url=false, doi=false,%
+            eprint=false, maxnames=99]{biblatex}
+\AtBeginDocument{\thispagestyle{empty}}
+\addbibresource{/home/ahagen/bibs/authored.bib}
+
+\def\makenamesetup{%
+  \def\bibnamedelima{~}%
+  \def\bibnamedelimb{ }%
+  \def\bibnamedelimc{ }%
+  \def\bibnamedelimd{ }%
+  \def\bibnamedelimi{ }%
+  \def\bibinitperiod{.}%
+  \def\bibinitdelim{~}%
+  \def\bibinithyphendelim{.-}}    
+\newcommand*{\makename}[2]{\begingroup\makenamesetup\xdef#1{#2}\endgroup}
+
+\newcommand*{\boldname}[3]{%
+  \def\lastname{#1}%
+  \def\firstname{#2}%
+  \def\firstinit{#3}}
+\boldname{}{}{}
+
+% Patch new definitions
+\renewcommand{\mkbibnamegiven}[1]{%
+  \ifboolexpr{ ( test {\ifdefequal{\firstname}{\namepartgiven}} or test {\ifdefequal{\firstinit}{\namepartgiven}} ) and test {\ifdefequal{\lastname}{\namepartfamily}} }
+  {\mkbibbold{#1}}{#1}%
+}
+
+\renewcommand{\mkbibnamefamily}[1]{%
+  \ifboolexpr{ ( test {\ifdefequal{\firstname}{\namepartgiven}} or test {\ifdefequal{\firstinit}{\namepartgiven}} ) and test {\ifdefequal{\lastname}{\namepartfamily}} }
+  {\mkbibbold{#1}}{#1}%
+}
+
+\boldname{Hagen}{Alexander}{A.}
+\usepackage{xcolor}
+\definecolor{black}{HTML}{142735}
+\definecolor{blue}{HTML}{285668}
+\definecolor{grey}{HTML}{999999}
+\definecolor{darkgrey}{HTML}{285668}
+\makeatletter
+\newcommand{\globalcolor}[1]{%
+  \color{#1}\global\let\default@color\current@color
+}
+\makeatother
+
+\AtBeginDocument{\globalcolor{black}}
+\usepackage{lipsum}
+\usepackage{tikz}
+\end_preamble
+\use_default_options false
+\begin_modules
+biblatex
+\end_modules
+\maintain_unincluded_children false
+\language american
+\language_package babel
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "Crimson Text [PfEd]"
+\font_sans "default" "Source Sans Pro"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command biber
+\index_command default
+\paperfontsize 10
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize letterpaper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style 
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 0.6in
+\rightmargin 1in
+\bottommargin 0.6in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language swedish
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\bullet 0 0 34 -1
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout My Address
+Alex Hagen
+\begin_inset Newline newline
+\end_inset
+
+225 N.
+ 2nd St., 3C
+\begin_inset Newline newline
+\end_inset
+
+Lafayette, IN, 47901
+\end_layout
+
+\begin_layout Send To Address
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Opening
+Sir/Madam,
+\end_layout
+
+\begin_layout Standard
+I'm writing to apply to Axiom Energy as a software engineer in for data
+ applications.
+ A first glance at my resume might surprise some reviewers - a nuclear engineeri
+ng background is likely not that common for this position.
+ But, I'm a broadly educated nuclear engineer with a passion for solving
+ our energy mix.
+ I also fit all of the requirements listed in the job posting and think
+ I could immediately contribute to the team at Axiom.
+\end_layout
+
+\begin_layout Standard
+My formal education has given me a deep base in computation and numerical
+ methods, in fact I hold a Computational Science in Engineering concentration
+ on my Nuclear Engineering Master's degree.
+ I've coded through all possible scales during my education - writing firmware
+ on microprocessors, and even serving a summer internship in a high performance
+ computing environment at Argonne National Laboratory, eventually running
+ code on the Intrepid Blue Gene P computer (once #3 on the Top 500 list).
+\end_layout
+
+\begin_layout Standard
+My skills are very focused in the object oriented domain.
+ For my research, I design neutron detectors and then write firmware to
+ control these via microcontrollers.
+ I strive to make that code as dependency free and robust as possible.
+ I then write Python or Java code to interact with and analyze the data
+ from these detectors.
+ I've create data analysis libraries in an object oriented fashion that
+ I host open source on Github.
+ This research has seen me awarded by the IEEE for detector design and firmware/
+control software, by the ASME, the Department of Energy, and the American
+ Nuclear Society for my data analysis and application.
+\end_layout
+
+\begin_layout Standard
+I also maintain several open source codes and distribute these via Github.
+ Of particular interest to the reviewer may be my wrapper, analysis package
+ and visualizer for MCNP that I call wig.
+ I also maintain a data analysis library that I call PyM and a visualization
+ module I call PyG
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+wig: 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://alexhagen.github.io/alexhagen/wig"
+
+\end_inset
+
+, PyM: 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://alexhagen.github.io/alexhagen/pym"
+
+\end_inset
+
+, PyG: 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://alexhagen.github.io/alexhagen/pyg"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+, all written in Python, documented and published via Github.
+ I highlight these codes so that the reviewer could assess my abilities
+ for unit testing, version control, documentation, and the methods and programmi
+ng itself.
+\end_layout
+
+\begin_layout Standard
+I'm very interested in almost every listed in the job posting for Axiom.
+ I have Python and Java experience, particularly with Python Flask, some
+ Node.js, and AWS isntances.
+ I love to write object oriented code, and I have web development background
+ - in fact I'm currently creating a website for a nuclear security institute
+ as a freelancer.
+ I'm also a passionate visualizer, and sometimes even spend too much time
+ making my visualizations pixel perfect.
+ And, as stated earlier, my overarching passion is for fixing the current
+ global energy mix, and I'd love to be involved with a company working on
+ that mission as well.
+\end_layout
+
+\begin_layout Closing
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+Looking forward to your response,
+\backslash
+
+\backslash
+%
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+fromsig{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename ../signature.svg
+	width 5cm
+
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+} 
+\backslash
+
+\backslash
+%
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+fromname{Alex Hagen}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[remember picture,overlay]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[line width=25pt,color=blue] (current page.north east) -- (current page.north
+ west);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
