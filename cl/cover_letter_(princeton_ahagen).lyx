@@ -1,0 +1,316 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass letter
+\begin_preamble
+\frenchspacing
+\usepackage{amsmath}
+\newcommand{\ø}{\raisebox{.3ex}{\tiny$\; \bullet \;$}}
+\renewcommand{\arraystretch}{1.25}
+\usepackage{fancyheadings}
+\pagestyle{fancy}
+\chead{\textit{\today}}
+
+\usepackage[backend=biber,defernumbers=true,%
+            firstinits=true, language=english,%
+            isbn=false, url=false, doi=false,%
+            eprint=false, maxnames=99]{biblatex}
+\AtBeginDocument{\thispagestyle{empty}}
+\addbibresource{/home/ahagen/bibs/authored.bib}
+
+\def\makenamesetup{%
+  \def\bibnamedelima{~}%
+  \def\bibnamedelimb{ }%
+  \def\bibnamedelimc{ }%
+  \def\bibnamedelimd{ }%
+  \def\bibnamedelimi{ }%
+  \def\bibinitperiod{.}%
+  \def\bibinitdelim{~}%
+  \def\bibinithyphendelim{.-}}    
+\newcommand*{\makename}[2]{\begingroup\makenamesetup\xdef#1{#2}\endgroup}
+
+\newcommand*{\boldname}[3]{%
+  \def\lastname{#1}%
+  \def\firstname{#2}%
+  \def\firstinit{#3}}
+\boldname{}{}{}
+
+% Patch new definitions
+\renewcommand{\mkbibnamegiven}[1]{%
+  \ifboolexpr{ ( test {\ifdefequal{\firstname}{\namepartgiven}} or test {\ifdefequal{\firstinit}{\namepartgiven}} ) and test {\ifdefequal{\lastname}{\namepartfamily}} }
+  {\mkbibbold{#1}}{#1}%
+}
+
+\renewcommand{\mkbibnamefamily}[1]{%
+  \ifboolexpr{ ( test {\ifdefequal{\firstname}{\namepartgiven}} or test {\ifdefequal{\firstinit}{\namepartgiven}} ) and test {\ifdefequal{\lastname}{\namepartfamily}} }
+  {\mkbibbold{#1}}{#1}%
+}
+
+\boldname{Hagen}{Alexander}{A.}
+\usepackage{xcolor}
+\definecolor{black}{HTML}{142735}
+\definecolor{blue}{HTML}{285668}
+\definecolor{grey}{HTML}{999999}
+\definecolor{darkgrey}{HTML}{285668}
+\makeatletter
+\newcommand{\globalcolor}[1]{%
+  \color{#1}\global\let\default@color\current@color
+}
+\makeatother
+
+\AtBeginDocument{\globalcolor{black}}
+\usepackage{lipsum}
+\usepackage{tikz}
+\end_preamble
+\use_default_options false
+\begin_modules
+biblatex
+\end_modules
+\maintain_unincluded_children false
+\language american
+\language_package babel
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "Crimson Text [PfEd]"
+\font_sans "default" "Source Sans Pro"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command biber
+\index_command default
+\paperfontsize 10
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize letterpaper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style 
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 0.75in
+\topmargin 0.5in
+\rightmargin 0.75in
+\bottommargin 0.2in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language swedish
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\bullet 0 0 34 -1
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout My Address
+Alex Hagen
+\begin_inset Newline newline
+\end_inset
+
+225 N.
+ 2nd St., 3C
+\begin_inset Newline newline
+\end_inset
+
+Lafayette, IN, 47901
+\end_layout
+
+\begin_layout Send To Address
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Opening
+Sir/Madam,
+\end_layout
+
+\begin_layout Standard
+I am writing to apply to Purdue University for a position as an Assistant
+ Professor in Nuclear Engineering.
+ I'm especially excited to apply to Purdue Nuclear engineering because of
+ my past involvement with Purdue, the prestige of the university, the legacy
+ of the department, and the collegial atmosphere I've experienced there.
+\end_layout
+
+\begin_layout Standard
+My previous research has developed in me a passion for the detection and
+ interdiction of special nuclear material - counter-nuclear terrorism.
+ The crux of our research basis is the thermodynamic oddity of negative
+ pressure metastability and the ability of neutrons to create cavitations
+ in these metastable fluids.
+ Purdue is the premier location for this research, and I plan to become
+ involved in as much of that related research as I possibly can.
+ I've included specific details in my research plan on how I will implement
+ a metastable fluid detectors research program.
+\end_layout
+
+\begin_layout Standard
+But besides the counter-terrorism research, I'm excited when I think about
+ a faculty position at Purdue because of the 
+\begin_inset Quotes sld
+\end_inset
+
+meeting of the minds
+\begin_inset Quotes srd
+\end_inset
+
+ atmosphere that Purdue engenders.
+ It is an incredibly diverse and inclusive community, and is becoming increasing
+ly so.
+ My plan is to strive through my teaching to treat students as colleagues,
+ and to engender relationships, collaborations, and full inclusiveness.
+ I've included specific details in my teaching plan as to how I would try
+ to best teach to all students so that each student has the best chance
+ of success.
+ I believe that is the way to generate the best performing and most satisfying
+ community.
+\end_layout
+
+\begin_layout Standard
+I'm also passionate about improvement of Purdue's campus life and Greater
+ Lafayette as a community.
+ My experience with graduate student government and the student recreation
+ board as well as my work with community organizations such as the Association
+ de Futbol Lafayette (an adult soccer league) and Lafayette Transitional
+ Housing have shown my desire to improve the community for any and all community
+ members, activities I plan to continue if chosen for a faculty position
+ at Purdue.
+\end_layout
+
+\begin_layout Standard
+In all, I believe through my research, community involvement, and teaching,
+ I could be an asset to Purdue; and I'm interested in staying involved in
+ the Purdue and greater community with a view of making all of these better
+ by my continued presence.
+\end_layout
+
+\begin_layout Closing
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+Looking forward to your response,
+\backslash
+
+\backslash
+%
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+fromsig{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename ../signature.svg
+	width 5cm
+
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+} 
+\backslash
+
+\backslash
+%
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+fromname{Alex Hagen}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[remember picture,overlay]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[line width=25pt,color=blue] (current page.north east) -- (current page.north
+ west);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
