@@ -1,5 +1,5 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
-\lyxformat 508
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -269,6 +269,8 @@ biblatex
 \font_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -291,13 +293,14 @@ biblatex
 \use_package undertilde 0
 \cite_engine basic
 \cite_engine_type default
-\biblio_style 
+\biblio_style \use_bibtopic false
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
 \suppress_date false
 \justification true
 \use_refstyle 0
+\use_minted 0
 \index Index
 \shortcut idx
 \color #008000
@@ -312,7 +315,10 @@ biblatex
 \tocdepth 3
 \paragraph_separation skip
 \defskip medskip
-\quotes_language swedish
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style swedish
+\dynamic_quotes 0
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -618,7 +624,11 @@ Jan.
 \begin_inset space ~
 \end_inset
 
-Present
+May
+\begin_inset space ~
+\end_inset
+
+2018
 \emph default
 \color inherit
  
@@ -670,7 +680,7 @@ itemsep{-0.50em}
 
 Doctorate of Philosophy in Nuclear Engineering, 
 \emph on
-Final Defense in February 2018
+May 2018
 \end_layout
 
 \begin_layout Itemize
@@ -743,7 +753,7 @@ May
 \begin_inset space ~
 \end_inset
 
-2012
+2018
 \begin_inset space ~
 \end_inset
 
@@ -752,6 +762,97 @@ May
 \end_inset
 
 Present
+\emph default
+\noun on
+\color inherit
+ Data Scientist - Pacific Northwest National Laboratory
+\emph on
+\noun default
+
+\begin_inset Newline newline
+\end_inset
+
+
+\emph default
+
+\begin_inset space \hspace*{}
+\length -5em
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "l"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "95col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength
+\backslash
+itemsep{-0.50em}
+\end_layout
+
+\end_inset
+
+Investigated techniques spanning the gap between data science techniques
+ and nuclear detection
+\end_layout
+
+\begin_layout Itemize
+Analyzed decision techniques and uncertainty quantification in gamma spectroscop
+y
+\end_layout
+
+\begin_layout Itemize
+Developed custom software to guide design of detectors for treaty verification
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\emph on
+\color blue
+May
+\begin_inset space ~
+\end_inset
+
+2012
+\begin_inset space ~
+\end_inset
+
+-
+\begin_inset space ~
+\end_inset
+
+Apr.
+\begin_inset space ~
+\end_inset
+
+2018
 \emph default
 \noun on
 \color inherit
@@ -962,7 +1063,11 @@ Dec.
 \begin_inset space ~
 \end_inset
 
-Present
+Apr.
+\begin_inset space ~
+\end_inset
+
+2018
 \emph default
 \noun on
 \color inherit
