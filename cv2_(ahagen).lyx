@@ -12,7 +12,7 @@
 \renewcommand{\arraystretch}{1.25}
 \usepackage{fancyheadings}
 \pagestyle{fancy}
-\chead{\textit{Alex Hagen · Resume · \today}}
+\chead{\textit{Alex Hagen · Cirriculum Vitae · \today}}
 
 \usepackage[backend=biber,defernumbers=true,%
             firstinits=true, language=english,%
@@ -434,7 +434,7 @@ has_inner_box 1
 inner_pos "c"
 use_parbox 0
 use_makebox 0
-width "35col%"
+width "55col%"
 special "none"
 height "1in"
 height_special "totalheight"
@@ -468,11 +468,19 @@ ALEX HAGEN
 \shape slanted
 \emph on
 \color blue
+Data Scientist III
+\begin_inset Newline newline
+\end_inset
+
+Pacific Northwest National Laboratory
+\begin_inset Newline newline
+\end_inset
+
 (765)-418-4155
 \begin_inset Newline newline
 \end_inset
 
-ahagen@purdue.edu
+alexander.hagen@pnnl.gov
 \end_layout
 
 \end_inset
@@ -543,10 +551,6 @@ status open
 \end_inset
 
  github.com/alexhagen
-\begin_inset Newline newline
-\end_inset
-
-Portfolio - alexhagen.github.io
 \end_layout
 
 \end_inset
@@ -678,21 +682,50 @@ itemsep{-0.50em}
 
 \end_inset
 
-Doctorate of Philosophy in Nuclear Engineering, GPA 3.60, 
+Doctorate of Philosophy in Nuclear Engineering, 
 \emph on
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+GPA 3.60, 
+\end_layout
+
+\end_inset
+
 May 2018
 \end_layout
 
 \begin_layout Itemize
-Master of Science in Nuclear Engineering, GPA 3.73, Minor in Computational
- Science and Engineering, 
+Master of Science in Nuclear Engineering, 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+GPA 3.73, 
+\end_layout
+
+\end_inset
+
+Minor in Computational Science and Engineering, 
 \emph on
 August 2014
 \end_layout
 
 \begin_layout Itemize
-Bachelor of Science in Nuclear Engineering, GPA 3.48, 
+Bachelor of Science in Nuclear Engineering, 
 \emph on
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+GPA 3.48, 
+\end_layout
+
+\end_inset
+
 May 2012
 \end_layout
 
@@ -749,6 +782,111 @@ height "1pt"
 
 \emph on
 \color blue
+Nov
+\begin_inset space ~
+\end_inset
+
+2019
+\begin_inset space ~
+\end_inset
+
+-
+\begin_inset space ~
+\end_inset
+
+Present
+\emph default
+\noun on
+\color inherit
+ Data Scientist III - Pacific Northwest National Laboratory
+\emph on
+\noun default
+
+\begin_inset Newline newline
+\end_inset
+
+
+\emph default
+
+\begin_inset space \hspace*{}
+\length -5em
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "l"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "95col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength
+\backslash
+itemsep{-0.50em}
+\end_layout
+
+\end_inset
+
+Team leader for development and deployment of first live machine learning
+ analysis of Non Intrusive Inspection images for U.S.
+ Customs and Border Patrol
+\end_layout
+
+\begin_layout Itemize
+Developed techniques to optimize detection and detectors using machine learning
+ techniques across broad fields: high energy physics, nuclear forensics,
+ and nuclear nonproliferation
+\end_layout
+
+\begin_layout Itemize
+Interface for use of machine learning to National Nuclear Security Administratio
+n,Department of Defense, and other sponsors
+\end_layout
+
+\begin_layout Itemize
+Team leader for bespoke machine learning tools to assist in various national
+ security tasks
+\end_layout
+
+\begin_layout Itemize
+Principal Investigator for Purdue-PNNL collaborative R&D for novel personnel
+ instrumentation for DOE-NSRD
+\end_layout
+
+\begin_layout Itemize
+PNNL Principal Investigator for PNNL-LANL-LLNL-University of Utah collaborative
+ R&D for novel nuclear forensic techniques for NNSA-DNN
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+
+\emph on
+\color blue
 May
 \begin_inset space ~
 \end_inset
@@ -761,11 +899,15 @@ May
 \begin_inset space ~
 \end_inset
 
-Present
+Nov
+\begin_inset space ~
+\end_inset
+
+2019
 \emph default
 \noun on
 \color inherit
- Data Scientist - Pacific Northwest National Laboratory
+ Data Scientist II - Pacific Northwest National Laboratory
 \emph on
 \noun default
 
@@ -818,12 +960,18 @@ Investigated techniques spanning the gap between data science techniques
 \end_layout
 
 \begin_layout Itemize
-Analyzed decision techniques and uncertainty quantification in gamma spectroscop
-y
+Developed custom machine learning techniques to guide design of detectors
+ for treaty verification
 \end_layout
 
 \begin_layout Itemize
-Developed custom software to guide design of detectors for treaty verification
+Profiled and decreased computational cost of machine learning techniques
+ for high energy physics analysis (related to uBooNE and BelleII experiments)
+\end_layout
+
+\begin_layout Itemize
+Simulated and analyzed data from germanium detectors for low activity isotope
+ identification and quantification
 \end_layout
 
 \end_inset
@@ -836,11 +984,11 @@ Developed custom software to guide design of detectors for treaty verification
 
 \emph on
 \color blue
-May
+Oct
 \begin_inset space ~
 \end_inset
 
-2012
+2010
 \begin_inset space ~
 \end_inset
 
@@ -856,7 +1004,7 @@ Apr.
 \emph default
 \noun on
 \color inherit
- Graduate Researcher - Metastable Fluid Research Laboratory
+ Researcher - Metastable Fluid Research Laboratory
 \emph on
 \noun default
 
@@ -918,6 +1066,55 @@ Developed validation method and multiphysics simulation of Acoustically
  Tensioned detector systems
 \end_layout
 
+\begin_layout Itemize
+Extended previous work on acoustics simulation of Acoustically Tensioned
+ detector systems
+\end_layout
+
+\begin_layout Itemize
+Evaluated photon detection capabilities of Centrifugally Tensioned detector
+ system
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family sans
+\series bold
+\size small
+\color blue
+INDUSTRIAL EXPERIENCE
+\family default
+\series default
+
+\begin_inset VSpace -10pt
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100line%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size small
+\color blue
+\begin_inset VSpace -30pt
 \end_inset
 
 
@@ -926,13 +1123,13 @@ Developed validation method and multiphysics simulation of Acoustically
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
 
-\shape slanted
+\emph on
 \color blue
-Oct.
+Dec.
 \begin_inset space ~
 \end_inset
 
-2010
+2012
 \begin_inset space ~
 \end_inset
 
@@ -940,21 +1137,23 @@ Oct.
 \begin_inset space ~
 \end_inset
 
-May
+Apr.
 \begin_inset space ~
 \end_inset
 
-2012
-\shape default
-\color inherit
- 
+2018
+\emph default
 \noun on
-Undergraduate Researcher - Metastable Fluid Research Laboratory
+\color inherit
+ Engineering Consultant - Sagamore Adams Laboratories, LLC.
+\emph on
 \noun default
 
 \begin_inset Newline newline
 \end_inset
 
+
+\emph default
 
 \begin_inset space \hspace*{}
 \length -5em
@@ -968,7 +1167,7 @@ has_inner_box 1
 inner_pos "t"
 use_parbox 0
 use_makebox 0
-width "95col%"
+width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
@@ -994,13 +1193,13 @@ itemsep{-0.50em}
 
 \end_inset
 
-Extended previous work on acoustics simulation of Acoustically Tensioned
- detector systems
+Conceptualization, design, and characterization of 2 novel neutron detector
+ systems that were released to market
 \end_layout
 
 \begin_layout Itemize
-Evaluated photon detection capabilities of Centrifugally Tensioned detector
- system
+Upgraded neutron detection systems per customer requirements for homeland
+ security applications
 \end_layout
 
 \end_inset
@@ -1010,6 +1209,10 @@ Evaluated photon detection capabilities of Centrifugally Tensioned detector
 
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 
 \emph on
 \color blue
@@ -1090,123 +1293,6 @@ Validated multiphysics fission reactor simulation against legacy codes and
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-
-\family sans
-\series bold
-\size small
-\color blue
-INDUSTRIAL EXPERIENCE
-\family default
-\series default
-
-\begin_inset VSpace -10pt
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset CommandInset line
-LatexCommand rule
-offset "0.5ex"
-width "100line%"
-height "1pt"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\size small
-\color blue
-\begin_inset VSpace -30pt
-\end_inset
-
-
-\end_layout
-
-\begin_layout Labeling
-\labelwidthstring 00.00.0000
-
-\emph on
-\color blue
-Dec.
-\begin_inset space ~
-\end_inset
-
-2012
-\begin_inset space ~
-\end_inset
-
--
-\begin_inset space ~
-\end_inset
-
-Present
-\emph default
-\noun on
-\color inherit
- Engineering Consultant - Sagamore Adams Laboratories, LLC.
-\emph on
-\noun default
-
-\begin_inset Newline newline
-\end_inset
-
-
-\emph default
-
-\begin_inset space \hspace*{}
-\length -5em
-\end_inset
-
-
-\begin_inset Box Frameless
-position "t"
-hor_pos "l"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
-status open
-
-\begin_layout Itemize
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-setlength
-\backslash
-itemsep{-0.50em}
-\end_layout
-
-\end_inset
-
-Conceptualized, designed, and characterized 2 novel neutron detector systems
- that were released to market
-\end_layout
-
-\begin_layout Itemize
-Upgraded neutron detection systems per customer requirements for homeland
- security applications
 \end_layout
 
 \end_inset
@@ -1451,6 +1537,15 @@ Kevin Fischer - kffische@gmail.com - (630)-589-4927.
 \series bold
 \size small
 \color blue
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\family sans
+\series bold
+\size small
+\color blue
 ACADEMIC POSITIONS
 \family default
 \series default
@@ -1474,7 +1569,7 @@ height "1pt"
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \size small
 \color blue
@@ -1951,7 +2046,7 @@ Coordinated with and mentored a Jefferson High School student to complete
  Student won a gold medal for the engineering division at the fair.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset ERT
 status open
 
@@ -1982,8 +2077,13 @@ end{tikzpicture}
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \end_inset
 
 
@@ -2044,366 +2144,142 @@ itemsep{-0.50em}
 \end_inset
 
 
-\begin_inset Note Comment
-status open
-
-\begin_layout Plain Layout
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Grimes2017"
-literal "true"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-fullcite{Grimes2017}
-\end_layout
-
-\end_inset
-
-
+\series bold
+Hagen, A.
+\series default
+, Girard, M., Schwerdt, I., Gaumer, M., McDonald, L., Hodas, N., & Jurrus, E.
+ (2021).
+ Uranium Oxide Synthetic Pathway Discernment through Unsupervised Morphological
+ Analysis.
+ Journal of Nuclear Material.
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Note Comment
-status open
 
-\begin_layout Plain Layout
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Archambault2016d"
-literal "true"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-fullcite{Archambault2016d}
-\end_layout
-
-\end_inset
-
-
+\series bold
+Hagen, A.
+\series default
+, Loer, B., Orrell, J.
+ L., & Saldanha, R.
+ (2021).
+ Decision trees for optimizing the minimum detectable concentration of radioxeno
+n detectors.
+ Journal of Environmental Radioactivity, 229–230, 106542.
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Note Comment
-status open
 
-\begin_layout Plain Layout
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Hagen2015b"
-literal "true"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-fullcite{Hagen2015b}
-\end_layout
-
-\end_inset
-
-
+\series bold
+Hagen A.
+ R.
+\series default
+, J.
+ F.
+ Strube, S.
+ W.
+ Jackson, C.
+ M.
+ Hainje, J.
+ Kahn, and Haide, I.
+ (2020) A Proposed High Dimensional Kolmogorov-Smirnov Distance.
+ Presented by A.R.
+ Hagen at Machine Learning and the Physical Sciences: Workshop at the 34th
+ Conference on Neural Information Processing Systems, Online, Canada.
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Note Comment
-status open
 
-\begin_layout Plain Layout
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Hagen2014a"
-literal "true"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-fullcite{Hagen2014}
-\end_layout
-
-\end_inset
-
-
+\series bold
+Hagen, A.
+\series default
+, Church, E., Strube, J., Bhattacharya, K., & Amatya, V.
+ (2020).
+ Scaling the training of particle classifi- cation on simulated MicroBooNE
+ events to multiple GPUs.
+ Journal of Physics: Conference Series, 1525, 012104.
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Note Comment
-status open
-
-\begin_layout Plain Layout
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Taleyarkhan2013"
-literal "true"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-fullcite{Taleyarkhan2013}
-\end_layout
-
-\end_inset
-
-
+Kautz, E.
+ J., 
+\series bold
+Hagen, A.
+ R.
+\series default
+, Johns, J.
+ M., & Burkes, D.
+ E.
+ (2019).
+ A machine learning approach to thermal conductivity modeling: A case study
+ on irradiated uranium-molybdenum nuclear fuels.
+ Computational Materials Science, 161, 107–118.
+ 
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Note Comment
-status open
-
-\begin_layout Plain Layout
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Taleyarkhan2016"
-literal "true"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-fullcite{Taleyarkhan2016}
-\end_layout
-
-\end_inset
-
-
+Amole, C., ...
+ 
+\series bold
+Hagen, A.
+\series default
+, ...
+ Zhang, J.
+ (2019).
+ Data-driven modeling of electron recoil nucleation in PICO C3 F8 bubble
+ chambers.
+ Physical Review D, 100(8), 082006.
+ https://doi.org/10.1103/PhysRevD.100.082006
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Note Comment
-status open
-
-\begin_layout Plain Layout
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Archambault2014"
-literal "true"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-fullcite{Archambault2014}
-\end_layout
-
-\end_inset
-
-
+Grimes, T.
+ F., 
+\series bold
+Hagen, A.
+ R.
+\series default
+, Archambault, B.
+ C., & Taleyarkhan, R.
+ P.
+ (2018, November 12).
+ Interrogation of 1m 3 Suspicious Objects via IEC DD Interrogating Neutrons
+ and Tension Metastable Fluid Detectors.
+ 2017 IEEE Nuclear Science Symposium and Medical Imaging Conference, NSS/MIC
+ 2017 - Conference Proceedings.
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Note Comment
-status open
-
-\begin_layout Plain Layout
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Archambault2012d"
-literal "true"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-fullcite{Archambault2012d}
-\end_layout
-
-\end_inset
-
-
+Archambault, B., 
+\series bold
+Hagen, A.
+\series default
+, Masuda, K., Yamakawa, N., & Taleyarkhan, R.
+ P.
+ (2017).
+ Threshold Rejection Mode Active Interrogation of SNMs Using Continuous
+ Beam DD Neutrons With Centrifugal and Acoustic Tensioned Metastable Fluid
+ Detectors.
+ IEEE Transactions on Nuclear Science, 64(7), 1781–1788.
+ 
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Note Comment
-status open
-
-\begin_layout Plain Layout
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Hume2013a"
-literal "true"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-fullcite{Hume2013a}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Note Comment
-status open
-
-\begin_layout Plain Layout
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Webster2014"
-literal "true"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-fullcite{Webster2014}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Note Comment
-status open
-
-\begin_layout Plain Layout
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Bakken2016a"
-literal "true"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-fullcite{Bakken2016a}
-\end_layout
-
-\end_inset
-
-
+Archambault, B.
+ C., Webster, J.
+ A., Grimes, T.
+ F., Fischer, K.
+ F., 
+\series bold
+Hagen, A.
+ R.
+\series default
+, & Taleyakhan, R.
+ P.
+ (2015).
+ Advancements in the development of a directional-position sensing fast
+ neutron detector using acoustically tensioned metastable fluids.
+ Nuclear Instruments and Methods in Physics Research, Section A: Accelerators,
+ Spectrometers, Detectors and Associated Equipment, 784, 176–183.
 \end_layout
 
 \begin_layout Standard
@@ -2460,6 +2336,20 @@ itemsep{-0.50em}
 
 \end_inset
 
+Taleyarkhan, Archambault, Grimes, 
+\series bold
+Hagen.
+
+\series default
+ Systems and Methods for Interrogating Containers for Special Nuclear Materials.
+ 
+\emph on
+United States Patent # US 10,718,874
+\emph default
+, 2020
+\end_layout
+
+\begin_layout Itemize
 Taleyarkhan, Bakken, Fisher, 
 \series bold
 Hagen
@@ -2472,245 +2362,6 @@ Hagen
 World Patent # WO2014078720A1
 \emph default
 , 2014
-\end_layout
-
-\begin_layout Standard
-
-\family sans
-\series bold
-\size small
-\color blue
-LEADERSHIP AND COMMUNITY ROLES
-\family default
-\series default
-
-\begin_inset VSpace -10pt
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
-
-\begin_inset CommandInset line
-LatexCommand rule
-offset "0.5ex"
-width "100line%"
-height "1pt"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\size small
-\color blue
-\begin_inset VSpace -30pt
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-\noindent
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-setlength
-\backslash
-itemsep{-0.50em}
-\end_layout
-
-\end_inset
-
-
-\emph on
-\color blue
-Aug.
-\begin_inset space \space{}
-\end_inset
-
-2012
-\begin_inset space \space{}
-\end_inset
-
--
-\begin_inset space \space{}
-\end_inset
-
-May
-\begin_inset space ~
-\end_inset
-
-2017
-\emph default
-\color inherit
- President of NEGO (Nuclear Engineering Graduate Organization)
-\end_layout
-
-\begin_layout Itemize
-\noindent
-
-\emph on
-\color blue
-Aug.
-\begin_inset space \space{}
-\end_inset
-
-2014
-\begin_inset space \space{}
-\end_inset
-
--
-\begin_inset space \space{}
-\end_inset
-
-May
-\begin_inset space ~
-\end_inset
-
-2016
-\emph default
-\color inherit
- Chair of Purdue Graduate Student Government (PGSG) Advancment Committee
-\end_layout
-
-\begin_layout Itemize
-
-\shape slanted
-\color blue
-Aug.
-\begin_inset space ~
-\end_inset
-
-2015
-\begin_inset space ~
-\end_inset
-
--
-\begin_inset space ~
-\end_inset
-
-May
-\begin_inset space ~
-\end_inset
-
-2016
-\shape default
-\color inherit
- Clerk of Purdue Graduate Student Government
-\end_layout
-
-\begin_layout Itemize
-\noindent
-
-\emph on
-\color blue
-Aug.
-\begin_inset space \space{}
-\end_inset
-
-2013
-\begin_inset space \space{}
-\end_inset
-
--
-\begin_inset space \space{}
-\end_inset
-
-May
-\begin_inset space ~
-\end_inset
-
-2016
-\emph default
-\color inherit
- Senator representing Nuclear Engineering to Purdue Graduate Senate
-\end_layout
-
-\begin_layout Itemize
-
-\shape slanted
-\color blue
-Feb.
-\begin_inset space ~
-\end_inset
-
-2014
-\begin_inset space ~
-\end_inset
-
--
-\begin_inset space ~
-\end_inset
-
-June
-\begin_inset space ~
-\end_inset
-
-2015
-\shape default
-\color inherit
- Assistant Coach - Tippco U14 Girls Soccer Team
-\end_layout
-
-\begin_layout Itemize
-
-\shape slanted
-\color blue
-Aug.
-\begin_inset space ~
-\end_inset
-
-2013
-\begin_inset space ~
-\end_inset
-
--
-\begin_inset space ~
-\end_inset
-
-Oct.
-\begin_inset space ~
-\end_inset
-
-2013
-\shape default
-\color inherit
- Commentator for High School Soccer Games for Walton Webcasting
-\end_layout
-
-\begin_layout Itemize
-\noindent
-
-\emph on
-\color blue
-May.
-\begin_inset space \space{}
-\end_inset
-
-2011
-\begin_inset space \space{}
-\end_inset
-
--
-\begin_inset space \space{}
-\end_inset
-
-May
-\begin_inset space ~
-\end_inset
-
-2012
-\emph default
-\color inherit
- President and Captain of Purdue Men's Club Soccer
 \end_layout
 
 \begin_layout Standard
@@ -2805,6 +2456,78 @@ itemsep{-0.50em}
 
 \end_inset
 
+
+\emph on
+\color blue
+Dec
+\begin_inset space ~
+\end_inset
+
+2020
+\emph default
+\color inherit
+ Received PNNL's Outstanding Contribution Award
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+\color blue
+Dec
+\begin_inset space ~
+\end_inset
+
+2020
+\emph default
+\color inherit
+ Nominated for PNNL COmputing and Analytics' Core Value Award for Collaboration
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+\color blue
+Dec
+\begin_inset space ~
+\end_inset
+
+2019
+\emph default
+\color inherit
+ Nominated for PNNL National Security Directorate's Author of the Year Award
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+\color blue
+Dec
+\begin_inset space ~
+\end_inset
+
+2019
+\emph default
+\color inherit
+ Outstanding Performance Award for Radiation Portal Monitor Replacement
+ Program
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+\color blue
+April
+\begin_inset space ~
+\end_inset
+
+2019
+\emph default
+\color inherit
+ Outstanding Performance Award for Modeling Hydrogen Radiolysis from Fukushima
+ Fuel Debris Canisters
+\end_layout
+
+\begin_layout Itemize
 
 \emph on
 \color blue
@@ -2967,6 +2690,220 @@ May
 \series bold
 \size small
 \color blue
+LEADERSHIP AND COMMUNITY ROLES
+\family default
+\series default
+
+\begin_inset VSpace -10pt
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100line%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size small
+\color blue
+\begin_inset VSpace -30pt
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength
+\backslash
+itemsep{-0.50em}
+\end_layout
+
+\end_inset
+
+
+\emph on
+\color blue
+Aug.
+\begin_inset space \space{}
+\end_inset
+
+2018
+\begin_inset space \space{}
+\end_inset
+
+-
+\begin_inset space \space{}
+\end_inset
+
+May
+\begin_inset space ~
+\end_inset
+
+2020
+\emph default
+\color inherit
+ Member of PNNL's Scientist and Engineer Development Program
+\end_layout
+
+\begin_layout Itemize
+\noindent
+
+\emph on
+\color blue
+Aug.
+\begin_inset space \space{}
+\end_inset
+
+2012
+\begin_inset space \space{}
+\end_inset
+
+-
+\begin_inset space \space{}
+\end_inset
+
+May
+\begin_inset space ~
+\end_inset
+
+2017
+\emph default
+\color inherit
+ President of NEGO (Nuclear Engineering Graduate Organization)
+\end_layout
+
+\begin_layout Itemize
+\noindent
+
+\emph on
+\color blue
+Aug.
+\begin_inset space \space{}
+\end_inset
+
+2014
+\begin_inset space \space{}
+\end_inset
+
+-
+\begin_inset space \space{}
+\end_inset
+
+May
+\begin_inset space ~
+\end_inset
+
+2016
+\emph default
+\color inherit
+ Chair of Purdue Graduate Student Government (PGSG) Advancment Committee
+\end_layout
+
+\begin_layout Itemize
+
+\shape slanted
+\color blue
+Aug.
+\begin_inset space ~
+\end_inset
+
+2015
+\begin_inset space ~
+\end_inset
+
+-
+\begin_inset space ~
+\end_inset
+
+May
+\begin_inset space ~
+\end_inset
+
+2016
+\shape default
+\color inherit
+ Clerk of Purdue Graduate Student Government
+\end_layout
+
+\begin_layout Itemize
+\noindent
+
+\emph on
+\color blue
+Aug.
+\begin_inset space \space{}
+\end_inset
+
+2013
+\begin_inset space \space{}
+\end_inset
+
+-
+\begin_inset space \space{}
+\end_inset
+
+May
+\begin_inset space ~
+\end_inset
+
+2016
+\emph default
+\color inherit
+ Senator representing Nuclear Engineering to Purdue Graduate Senate
+\end_layout
+
+\begin_layout Itemize
+\noindent
+
+\emph on
+\color blue
+May.
+\begin_inset space \space{}
+\end_inset
+
+2011
+\begin_inset space \space{}
+\end_inset
+
+-
+\begin_inset space \space{}
+\end_inset
+
+May
+\begin_inset space ~
+\end_inset
+
+2012
+\emph default
+\color inherit
+ President and Captain of Purdue Men's Club Soccer
+\end_layout
+
+\begin_layout Standard
+
+\family sans
+\series bold
+\size small
+\color blue
 AFFILIATIONS
 \family default
 \series default
@@ -3015,18 +2952,26 @@ itemsep{-0.50em}
 
 \end_inset
 
-American Nuclear Society
+Institute of Electrical and Electronics Engineers
 \end_layout
 
 \begin_layout Itemize
-Health Physics Society
+American Nuclear Society (past)
 \end_layout
 
 \begin_layout Itemize
-American Society of Mechanical Engineers
+Health Physics Society (past)
+\end_layout
+
+\begin_layout Itemize
+American Society of Mechanical Engineers (past)
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 
 \family sans
 \series bold
@@ -3055,7 +3000,7 @@ height "1pt"
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \size small
 \color blue
@@ -3065,7 +3010,7 @@ height "1pt"
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset ERT
 status open
 
@@ -3105,7 +3050,7 @@ dialthree{Scientific
 \backslash
 
 \backslash
- Programming}{MATLAB}{10}{Fortran}{5}{Python}{5}
+ Programming}{MATLAB}{10}{Python}{7}{C++}{5}
 \end_layout
 
 \end_inset
@@ -3126,7 +3071,11 @@ status open
 
 
 \backslash
-dialtwo{3d CAD}{Solidworks}{8}{Blender}{3}
+dialtwo{Deep 
+\backslash
+
+\backslash
+Learning}{Pytorch}{2}{Keras}{2}
 \end_layout
 
 \end_inset
@@ -3151,7 +3100,7 @@ dialthree{Physical
 \backslash
 
 \backslash
- Simulation}{COMSOL}{6}{MCNP}{3}{LTSpice}{1}
+ Simulation}{COMSOL}{6}{MCNP}{3}{Geant4}{2}
 \end_layout
 
 \end_inset
@@ -3225,6 +3174,18 @@ dialthree{Electronic
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+dialtwo{3d CAD}{Solidworks}{8}{Blender}{5}
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -3256,6 +3217,11 @@ LatexCommand bibtex
 btprint "btPrintCited"
 bibfiles "/Users/hage581/bibs/authored"
 options "plain"
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 

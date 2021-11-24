@@ -1331,7 +1331,34 @@ Journal of Nuclear Engineering and Radiation Science
 , 2015
 \end_layout
 
+\begin_layout Itemize
+Kautz, Hagen, et al.
+ 
+\begin_inset Quotes sld
+\end_inset
+
+A machine learning approach to thermal conductivity modeling: A case study
+ on irradiated uranium-molybdenum nuclear fuels.
+\begin_inset Quotes srd
+\end_inset
+
+ 
+\emph on
+Computational Materials Science
+\emph default
+, 2019
+\end_layout
+
 \begin_layout Standard
+
+\family sans
+\series bold
+\size small
+\color blue
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 
 \family sans
 \series bold
@@ -1360,7 +1387,7 @@ height "1pt"
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \size small
 \color blue
@@ -1393,6 +1420,11 @@ Taleyarkhan, Bakken, Fisher, Hagen, Kostry.
 World Patent # WO2014078720A1
 \emph default
 , 2014
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1617,6 +1649,20 @@ itemsep{-0.50em}
 
 \end_inset
 
+
+\emph on
+\color blue
+Dec
+\begin_inset space ~
+\end_inset
+
+2019
+\emph default
+\color inherit
+ Nominee - PNNL National Security Directorate Author of the Year Award
+\end_layout
+
+\begin_layout Itemize
 
 \emph on
 \color blue
